@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   description:
     'We build and scale paid acquisition systems for brands ready to grow. Media buying, offer creation, and funnel strategy — engineered for ROI.',
   metadataBase: new URL('https://redemit1.com'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Redemit One — Growth Marketing That Scales Revenue',
     description:

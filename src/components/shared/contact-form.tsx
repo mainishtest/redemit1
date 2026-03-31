@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { ArrowRight, Loader2, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -10,6 +11,7 @@ const inputClasses =
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const router = useRouter()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -28,7 +30,7 @@ export function ContactForm() {
       })
 
       if (response.ok) {
-        setIsSubmitted(true)
+        router.push('/thank-you')
       } else {
         alert('Something went wrong. Please try again or email us directly.')
       }
