@@ -22,8 +22,8 @@ export function HeroVisual({ className }: { className?: string }) {
           <stop offset="100%" stopColor="#1C2432" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="hero-teal-glow" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="line-fade" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor="#1C2432" stopOpacity="0.6" />
@@ -63,7 +63,7 @@ export function HeroVisual({ className }: { className?: string }) {
       {/* Data flow highlight — teal accent line */}
       <path
         d="M120 380 L240 300 L360 260 L480 180 L600 120 L700 80"
-        stroke="#2BBCC0"
+        stroke="#14B8A6"
         strokeWidth="2"
         strokeLinecap="round"
         opacity="0.3"
@@ -91,11 +91,11 @@ export function HeroVisual({ className }: { className?: string }) {
         <circle cx="560" cy="160" r="5" fill="#253040" stroke="#556378" strokeWidth="1" />
 
         {/* Peak nodes — teal accent */}
-        <circle cx="600" cy="120" r="9" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
-        <circle cx="600" cy="120" r="4" fill="#2BBCC0" opacity="0.6" />
-        <circle cx="640" cy="160" r="4" fill="#253040" stroke="#2BBCC0" strokeWidth="0.8" opacity="0.5" />
-        <circle cx="700" cy="80" r="10" fill="#111820" stroke="#2BBCC0" strokeWidth="2" opacity="0.9" />
-        <circle cx="700" cy="80" r="4.5" fill="#2BBCC0" opacity="0.7" />
+        <circle cx="600" cy="120" r="9" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
+        <circle cx="600" cy="120" r="4" fill="#14B8A6" opacity="0.6" />
+        <circle cx="640" cy="160" r="4" fill="#253040" stroke="#14B8A6" strokeWidth="0.8" opacity="0.5" />
+        <circle cx="700" cy="80" r="10" fill="#111820" stroke="#14B8A6" strokeWidth="2" opacity="0.9" />
+        <circle cx="700" cy="80" r="4.5" fill="#14B8A6" opacity="0.7" />
       </g>
 
       {/* Floating data points — subtle ambient detail */}
@@ -114,7 +114,7 @@ export function HeroVisual({ className }: { className?: string }) {
       <g opacity="0.4">
         {/* Box near peak */}
         <rect x="720" y="60" width="60" height="28" rx="4" fill="#111820" stroke="#1C2432" strokeWidth="1" />
-        <text x="750" y="77" textAnchor="middle" fill="#2BBCC0" fontSize="11" fontWeight="600" fontFamily="system-ui">4.2x</text>
+        <text x="750" y="77" textAnchor="middle" fill="#14B8A6" fontSize="11" fontWeight="600" fontFamily="system-ui">4.2x</text>
 
         {/* Box mid-path */}
         <rect x="490" y="145" width="52" height="24" rx="4" fill="#111820" stroke="#1C2432" strokeWidth="1" />

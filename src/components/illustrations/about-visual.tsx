@@ -15,8 +15,8 @@ export function TeamNetworkVisual({ className }: IllustrationProps) {
     <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="team-glow" x1="0.5" y1="0" x2="0.5" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -88,9 +88,9 @@ export function TeamNetworkVisual({ className }: IllustrationProps) {
       </g>
 
       {/* Central command node — teal accent */}
-      <circle cx="300" cy="180" r="28" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
-      <circle cx="300" cy="180" r="12" fill="#2BBCC0" opacity="0.15" />
-      <circle cx="300" cy="180" r="5" fill="#2BBCC0" opacity="0.6" />
+      <circle cx="300" cy="180" r="28" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
+      <circle cx="300" cy="180" r="12" fill="#14B8A6" opacity="0.15" />
+      <circle cx="300" cy="180" r="5" fill="#14B8A6" opacity="0.6" />
 
       {/* Outer endpoint nodes */}
       <g opacity="0.4">
@@ -113,7 +113,7 @@ export function TeamNetworkVisual({ className }: IllustrationProps) {
       {/* Status label */}
       <g opacity="0.4">
         <rect x="268" y="215" width="64" height="20" rx="4" fill="#111820" stroke="#1C2432" strokeWidth="0.8" />
-        <text x="300" y="229" textAnchor="middle" fill="#2BBCC0" fontSize="8" fontFamily="system-ui" fontWeight="500" opacity="1.5">CONNECTED</text>
+        <text x="300" y="229" textAnchor="middle" fill="#14B8A6" fontSize="8" fontFamily="system-ui" fontWeight="500" opacity="1.5">CONNECTED</text>
       </g>
     </svg>
   )

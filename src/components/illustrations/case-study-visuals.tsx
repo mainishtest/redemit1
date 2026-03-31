@@ -17,8 +17,8 @@ export function EcommerceScaleVisual({ className }: IllustrationProps) {
     <svg viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="ecom-glow" x1="0.5" y1="1" x2="0.5" y2="0">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -32,7 +32,7 @@ export function EcommerceScaleVisual({ className }: IllustrationProps) {
         <rect x="180" y="165" width="40" height="115" rx="4" fill="#111820" stroke="#253040" strokeWidth="1.5" />
         <rect x="240" y="135" width="40" height="145" rx="4" fill="#111820" stroke="#253040" strokeWidth="1.5" />
         <rect x="300" y="100" width="40" height="180" rx="4" fill="#111820" stroke="#253040" strokeWidth="1.5" />
-        <rect x="360" y="60" width="40" height="220" rx="4" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
+        <rect x="360" y="60" width="40" height="220" rx="4" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
       </g>
 
       {/* Bar labels */}
@@ -42,12 +42,12 @@ export function EcommerceScaleVisual({ className }: IllustrationProps) {
         <text x="200" y="300" textAnchor="middle" fill="#556378" fontSize="9" fontFamily="system-ui">M3</text>
         <text x="260" y="300" textAnchor="middle" fill="#556378" fontSize="9" fontFamily="system-ui">M4</text>
         <text x="320" y="300" textAnchor="middle" fill="#556378" fontSize="9" fontFamily="system-ui">M5</text>
-        <text x="380" y="300" textAnchor="middle" fill="#2BBCC0" fontSize="9" fontFamily="system-ui" fontWeight="600" opacity="2">M6</text>
+        <text x="380" y="300" textAnchor="middle" fill="#14B8A6" fontSize="9" fontFamily="system-ui" fontWeight="600" opacity="2">M6</text>
       </g>
 
       {/* Growth line overlay */}
-      <path d="M80 215 L140 185 L200 158 L260 128 L320 92 L380 52" stroke="#2BBCC0" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
-      <circle cx="380" cy="52" r="4" fill="#2BBCC0" opacity="0.6" />
+      <path d="M80 215 L140 185 L200 158 L260 128 L320 92 L380 52" stroke="#14B8A6" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
+      <circle cx="380" cy="52" r="4" fill="#14B8A6" opacity="0.6" />
 
       {/* Product card abstractions — floating right */}
       <g>
@@ -55,7 +55,7 @@ export function EcommerceScaleVisual({ className }: IllustrationProps) {
         <rect x="452" y="92" width="66" height="44" rx="4" fill="#161D27" />
         <rect x="452" y="146" width="48" height="5" rx="2" fill="#253040" />
         <rect x="452" y="157" width="32" height="4" rx="1.5" fill="#1C2432" />
-        <rect x="452" y="172" width="40" height="10" rx="3" fill="#2BBCC0" opacity="0.12" stroke="#2BBCC0" strokeWidth="0.5" strokeOpacity="0.3" />
+        <rect x="452" y="172" width="40" height="10" rx="3" fill="#14B8A6" opacity="0.12" stroke="#14B8A6" strokeWidth="0.5" strokeOpacity="0.3" />
       </g>
 
       <g opacity="0.5">
@@ -68,7 +68,7 @@ export function EcommerceScaleVisual({ className }: IllustrationProps) {
       {/* Metric callout */}
       <g>
         <rect x="420" y="30" width="70" height="30" rx="6" fill="#111820" stroke="#1C2432" strokeWidth="1" />
-        <text x="455" y="50" textAnchor="middle" fill="#2BBCC0" fontSize="12" fontWeight="600" fontFamily="system-ui" opacity="0.7">7x</text>
+        <text x="455" y="50" textAnchor="middle" fill="#14B8A6" fontSize="12" fontWeight="600" fontFamily="system-ui" opacity="0.7">7x</text>
       </g>
     </svg>
   )
@@ -83,8 +83,8 @@ export function SaasAcquisitionVisual({ className }: IllustrationProps) {
     <svg viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="saas-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.05" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.05" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -106,7 +106,7 @@ export function SaasAcquisitionVisual({ className }: IllustrationProps) {
       <g opacity="0.4">
         <rect x="76" y="96" width="64" height="6" rx="2" fill="#253040" />
         <rect x="76" y="114" width="48" height="6" rx="2" fill="#253040" />
-        <rect x="76" y="132" width="56" height="6" rx="2" fill="#2BBCC0" opacity="0.5" />
+        <rect x="76" y="132" width="56" height="6" rx="2" fill="#14B8A6" opacity="0.5" />
         <rect x="76" y="150" width="44" height="6" rx="2" fill="#253040" />
         <rect x="76" y="168" width="52" height="6" rx="2" fill="#253040" />
       </g>
@@ -116,7 +116,7 @@ export function SaasAcquisitionVisual({ className }: IllustrationProps) {
         {/* Card 1 — CAC */}
         <rect x="180" y="92" width="140" height="64" rx="8" fill="#0D1117" stroke="#1C2432" strokeWidth="1" />
         <text x="196" y="112" fill="#556378" fontSize="9" fontFamily="system-ui">Cost per Trial</text>
-        <text x="196" y="136" fill="#2BBCC0" fontSize="20" fontWeight="600" fontFamily="system-ui" opacity="0.8">$48</text>
+        <text x="196" y="136" fill="#14B8A6" fontSize="20" fontWeight="600" fontFamily="system-ui" opacity="0.8">$48</text>
         <text x="264" y="136" fill="#556378" fontSize="10" fontFamily="system-ui" opacity="0.5">↓ from $120</text>
 
         {/* Card 2 — Signups */}
@@ -133,16 +133,16 @@ export function SaasAcquisitionVisual({ className }: IllustrationProps) {
         <path d="M200 196 L240 200 L280 194 L320 202 L360 198 L400 204 L440 196" stroke="#253040" strokeWidth="1.5" strokeDasharray="3 3" />
 
         {/* After line — lower, teal */}
-        <path d="M200 230 L240 226 L280 218 L320 212 L360 206 L400 200 L440 194" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.6" strokeLinecap="round" />
+        <path d="M200 230 L240 226 L280 218 L320 212 L360 206 L400 200 L440 194" stroke="#14B8A6" strokeWidth="1.5" opacity="0.6" strokeLinecap="round" />
 
         {/* End point */}
-        <circle cx="440" cy="194" r="3.5" fill="#2BBCC0" opacity="0.7" />
+        <circle cx="440" cy="194" r="3.5" fill="#14B8A6" opacity="0.7" />
       </g>
 
       {/* Labels */}
       <g opacity="0.25">
         <text x="200" y="250" fill="#556378" fontSize="8" fontFamily="system-ui">Before</text>
-        <text x="424" y="250" fill="#2BBCC0" fontSize="8" fontFamily="system-ui">After</text>
+        <text x="424" y="250" fill="#14B8A6" fontSize="8" fontFamily="system-ui">After</text>
       </g>
     </svg>
   )
@@ -157,12 +157,12 @@ export function InfoProductLaunchVisual({ className }: IllustrationProps) {
     <svg viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="launch-glow" x1="0.5" y1="0" x2="0.5" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.1" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.1" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="launch-fill" x1="0.5" y1="0" x2="0.5" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.08" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -195,7 +195,7 @@ export function InfoProductLaunchVisual({ className }: IllustrationProps) {
       {/* Launch spike — teal highlight section */}
       <path
         d="M300 230 L330 180 L350 100 L370 60"
-        stroke="#2BBCC0"
+        stroke="#14B8A6"
         strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
@@ -203,8 +203,8 @@ export function InfoProductLaunchVisual({ className }: IllustrationProps) {
       />
 
       {/* Peak node */}
-      <circle cx="370" cy="60" r="6" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.9" />
-      <circle cx="370" cy="60" r="2.5" fill="#2BBCC0" opacity="0.7" />
+      <circle cx="370" cy="60" r="6" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.9" />
+      <circle cx="370" cy="60" r="2.5" fill="#14B8A6" opacity="0.7" />
 
       {/* Launch day marker */}
       <line x1="330" y1="40" x2="330" y2="260" stroke="#253040" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
@@ -216,7 +216,7 @@ export function InfoProductLaunchVisual({ className }: IllustrationProps) {
       {/* Revenue callout at peak */}
       <g>
         <rect x="388" y="42" width="80" height="30" rx="6" fill="#111820" stroke="#1C2432" strokeWidth="1" />
-        <text x="428" y="62" textAnchor="middle" fill="#2BBCC0" fontSize="13" fontWeight="600" fontFamily="system-ui" opacity="0.7">$1.2M</text>
+        <text x="428" y="62" textAnchor="middle" fill="#14B8A6" fontSize="13" fontWeight="600" fontFamily="system-ui" opacity="0.7">$1.2M</text>
       </g>
 
       {/* Email list growth — secondary element */}
@@ -237,8 +237,8 @@ export function InfoProductLaunchVisual({ className }: IllustrationProps) {
         <rect x="300" y="275" width="80" height="28" rx="4" fill="#111820" stroke="#253040" strokeWidth="0.8" />
         <text x="340" y="293" textAnchor="middle" fill="#556378" fontSize="8" fontFamily="system-ui">Sales</text>
 
-        <rect x="400" y="275" width="80" height="28" rx="4" fill="#111820" stroke="#2BBCC0" strokeWidth="0.8" opacity="0.6" />
-        <text x="440" y="293" textAnchor="middle" fill="#2BBCC0" fontSize="8" fontFamily="system-ui" opacity="0.8">Close</text>
+        <rect x="400" y="275" width="80" height="28" rx="4" fill="#111820" stroke="#14B8A6" strokeWidth="0.8" opacity="0.6" />
+        <text x="440" y="293" textAnchor="middle" fill="#14B8A6" fontSize="8" fontFamily="system-ui" opacity="0.8">Close</text>
 
         {/* Arrows between stages */}
         <path d="M182 289 L198 289" stroke="#1C2432" strokeWidth="1" />

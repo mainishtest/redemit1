@@ -8,18 +8,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Primary: Solid teal — the ONLY place teal dominates
+        // Primary: Solid teal — premium hover lift effect
         primary:
-          'bg-brand-400 text-ink-primary rounded-lg hover:bg-brand-300 shadow-glow-sm hover:shadow-glow active:scale-[0.98] font-semibold',
-        // Secondary: Light fill, no teal
+          'bg-brand-400 text-ink-primary rounded-[10px] hover:bg-brand-500 shadow-glow-sm hover:shadow-glow hover:-translate-y-[1px] active:translate-y-0 active:shadow-glow-sm font-semibold',
+        // Secondary: Light fill, subtle
         secondary:
-          'bg-surface-200 text-txt-primary rounded-lg hover:bg-surface-300 border border-surface-400/50 active:scale-[0.98]',
-        // Outline: Border only
+          'bg-surface-200 text-txt-primary rounded-[10px] hover:bg-surface-300 border border-surface-400/50 hover:-translate-y-[1px] active:translate-y-0',
+        // Outline: White bg, light border, clean hover
         outline:
-          'border border-surface-400 text-txt-primary rounded-lg hover:bg-surface-100 hover:border-txt-muted active:scale-[0.98]',
+          'border border-[#E2E8F0] bg-white text-txt-primary rounded-[10px] hover:bg-[#F1F5F9] hover:border-[#CBD5E1] hover:-translate-y-[1px] active:translate-y-0',
         // Ghost: Text only
         ghost:
-          'text-txt-secondary rounded-lg hover:text-txt-primary hover:bg-surface-100',
+          'text-txt-secondary rounded-[10px] hover:text-txt-primary hover:bg-surface-100',
         // Link: Inline
         link:
           'text-txt-secondary underline-offset-4 hover:underline hover:text-txt-primary',

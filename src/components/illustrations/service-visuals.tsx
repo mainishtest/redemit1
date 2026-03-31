@@ -17,8 +17,8 @@ export function MediaBuyingVisual({ className }: IllustrationProps) {
     <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="mb-glow" x1="0.5" y1="0" x2="0.5" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.08" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -62,9 +62,9 @@ export function MediaBuyingVisual({ className }: IllustrationProps) {
       </g>
 
       {/* Center hub — teal accent */}
-      <circle cx="240" cy="180" r="24" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
-      <circle cx="240" cy="180" r="10" fill="#2BBCC0" opacity="0.4" />
-      <circle cx="240" cy="180" r="4" fill="#2BBCC0" opacity="0.7" />
+      <circle cx="240" cy="180" r="24" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
+      <circle cx="240" cy="180" r="10" fill="#14B8A6" opacity="0.4" />
+      <circle cx="240" cy="180" r="4" fill="#14B8A6" opacity="0.7" />
 
       {/* Data flow pulses */}
       <circle cx="170" cy="130" r="3" fill="#253040" />
@@ -103,10 +103,10 @@ export function OfferCreationVisual({ className }: IllustrationProps) {
         <text x="320" y="170" textAnchor="end" fill="#556378" fontSize="12" fontFamily="system-ui" fontWeight="500">Urgency</text>
 
         {/* Top layer — teal accent for the premium offer */}
-        <rect x="145" y="80" width="190" height="50" rx="8" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
-        <rect x="165" y="95" width="50" height="6" rx="2" fill="#2BBCC0" opacity="0.3" />
-        <rect x="165" y="107" width="36" height="4" rx="1.5" fill="#2BBCC0" opacity="0.2" />
-        <text x="305" y="110" textAnchor="end" fill="#2BBCC0" fontSize="12" fontFamily="system-ui" fontWeight="600" opacity="0.7">Offer</text>
+        <rect x="145" y="80" width="190" height="50" rx="8" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
+        <rect x="165" y="95" width="50" height="6" rx="2" fill="#14B8A6" opacity="0.3" />
+        <rect x="165" y="107" width="36" height="4" rx="1.5" fill="#14B8A6" opacity="0.2" />
+        <text x="305" y="110" textAnchor="end" fill="#14B8A6" fontSize="12" fontFamily="system-ui" fontWeight="600" opacity="0.7">Offer</text>
       </g>
 
       {/* Upward arrow — growth indication */}
@@ -120,7 +120,7 @@ export function OfferCreationVisual({ className }: IllustrationProps) {
         <text x="55" y="290" fill="#556378" fontSize="10" fontFamily="system-ui">$29</text>
         <text x="55" y="230" fill="#556378" fontSize="10" fontFamily="system-ui">$79</text>
         <text x="55" y="170" fill="#556378" fontSize="10" fontFamily="system-ui">$149</text>
-        <text x="55" y="110" fill="#2BBCC0" fontSize="11" fontFamily="system-ui" fontWeight="600">$297</text>
+        <text x="55" y="110" fill="#14B8A6" fontSize="11" fontFamily="system-ui" fontWeight="600">$297</text>
       </g>
     </svg>
   )
@@ -136,7 +136,7 @@ export function FunnelStrategyVisual({ className }: IllustrationProps) {
       <defs>
         <linearGradient id="funnel-grad" x1="0.5" y1="0" x2="0.5" y2="1">
           <stop offset="0%" stopColor="#1C2432" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0.08" />
         </linearGradient>
       </defs>
 
@@ -151,14 +151,14 @@ export function FunnelStrategyVisual({ className }: IllustrationProps) {
       />
       <path
         d="M190 230 L290 230 L270 300 L210 300 Z"
-        fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.7"
+        fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.7"
       />
 
       {/* Stage labels */}
       <g opacity="0.5">
         <text x="240" y="105" textAnchor="middle" fill="#8899AC" fontSize="11" fontFamily="system-ui" fontWeight="500">AWARENESS</text>
         <text x="240" y="190" textAnchor="middle" fill="#8899AC" fontSize="11" fontFamily="system-ui" fontWeight="500">CONSIDERATION</text>
-        <text x="240" y="272" textAnchor="middle" fill="#2BBCC0" fontSize="11" fontFamily="system-ui" fontWeight="600" opacity="1.4">CONVERSION</text>
+        <text x="240" y="272" textAnchor="middle" fill="#14B8A6" fontSize="11" fontFamily="system-ui" fontWeight="600" opacity="1.4">CONVERSION</text>
       </g>
 
       {/* Traffic dots entering the top */}
@@ -172,14 +172,14 @@ export function FunnelStrategyVisual({ className }: IllustrationProps) {
       </g>
 
       {/* Conversion indicator — teal */}
-      <circle cx="240" cy="320" r="8" fill="#111820" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.8" />
-      <circle cx="240" cy="320" r="3" fill="#2BBCC0" opacity="0.6" />
+      <circle cx="240" cy="320" r="8" fill="#111820" stroke="#14B8A6" strokeWidth="1.5" opacity="0.8" />
+      <circle cx="240" cy="320" r="3" fill="#14B8A6" opacity="0.6" />
 
       {/* Side metrics */}
       <g opacity="0.3">
         <text x="410" y="100" fill="#556378" fontSize="10" fontFamily="system-ui">10,000</text>
         <text x="410" y="190" fill="#556378" fontSize="10" fontFamily="system-ui">2,400</text>
-        <text x="410" y="270" fill="#2BBCC0" fontSize="10" fontFamily="system-ui" fontWeight="600">840</text>
+        <text x="410" y="270" fill="#14B8A6" fontSize="10" fontFamily="system-ui" fontWeight="600">840</text>
       </g>
 
       {/* Drop-off arrows */}
@@ -212,15 +212,15 @@ export function CreativeCopyVisual({ className }: IllustrationProps) {
       <rect x="92" y="220" width="100" height="6" rx="2" fill="#1C2432" />
       <rect x="92" y="234" width="120" height="6" rx="2" fill="#1C2432" />
       {/* CTA button */}
-      <rect x="92" y="260" width="90" height="32" rx="6" fill="#2BBCC0" opacity="0.15" stroke="#2BBCC0" strokeWidth="1" strokeOpacity="0.3" />
-      <rect x="108" y="272" width="58" height="6" rx="2" fill="#2BBCC0" opacity="0.4" />
+      <rect x="92" y="260" width="90" height="32" rx="6" fill="#14B8A6" opacity="0.15" stroke="#14B8A6" strokeWidth="1" strokeOpacity="0.3" />
+      <rect x="108" y="272" width="58" height="6" rx="2" fill="#14B8A6" opacity="0.4" />
 
       {/* Second ad frame — overlapping, smaller */}
       <rect x="240" y="80" width="170" height="230" rx="12" fill="#111820" stroke="#253040" strokeWidth="1.5" />
       {/* Image area */}
       <rect x="252" y="92" width="146" height="110" rx="6" fill="#161D27" />
       {/* Carousel dots */}
-      <circle cx="305" cy="210" r="3" fill="#2BBCC0" opacity="0.5" />
+      <circle cx="305" cy="210" r="3" fill="#14B8A6" opacity="0.5" />
       <circle cx="318" cy="210" r="3" fill="#253040" />
       <circle cx="331" cy="210" r="3" fill="#253040" />
       {/* Text lines */}
@@ -233,7 +233,7 @@ export function CreativeCopyVisual({ className }: IllustrationProps) {
       {/* Floating engagement metrics */}
       <g>
         <rect x="340" y="40" width="100" height="36" rx="8" fill="#111820" stroke="#253040" strokeWidth="1" />
-        <text x="360" y="62" fill="#2BBCC0" fontSize="13" fontWeight="600" fontFamily="system-ui" opacity="0.7">CTR 4.8%</text>
+        <text x="360" y="62" fill="#14B8A6" fontSize="13" fontWeight="600" fontFamily="system-ui" opacity="0.7">CTR 4.8%</text>
       </g>
 
       <g>

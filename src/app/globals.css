@@ -10,18 +10,18 @@
   :root {
     /* Surface (backgrounds / borders) — light defaults */
     --surface-0:   #FFFFFF;
-    --surface-50:  #FAFBFC;
-    --surface-100: #F4F6F8;
-    --surface-150: #EEF1F4;
-    --surface-200: #E5E9EE;
-    --surface-300: #D1D8E0;
-    --surface-400: #B8C2CE;
+    --surface-50:  #F8FAFC;
+    --surface-100: #F1F5F9;
+    --surface-150: #E8EDF3;
+    --surface-200: #E2E8F0;
+    --surface-300: #E2E8F0;
+    --surface-400: #CBD5E1;
 
     /* Text — light defaults (dark ink on light bg) */
-    --txt-primary:   #0F1419;
-    --txt-secondary: #4A5568;
-    --txt-muted:     #718096;
-    --txt-faint:     #A0AEC0;
+    --txt-primary:   #0F172A;
+    --txt-secondary: #334155;
+    --txt-muted:     #64748B;
+    --txt-faint:     #94A3B8;
   }
 
   * {
@@ -36,12 +36,13 @@
   }
 
   body {
-    background-color: var(--surface-50);
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    background-attachment: fixed;
     color: var(--txt-primary);
   }
 
   ::selection {
-    background-color: rgba(43, 188, 192, 0.2);
+    background-color: rgba(20, 184, 166, 0.2);
     color: var(--txt-primary);
   }
 
@@ -162,14 +163,14 @@
   /* ─── Focus ring (teal accent) ─── */
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
-    --tw-ring-color: rgba(43, 188, 192, 0.5);
+    --tw-ring-color: rgba(20, 184, 166, 0.5);
     --tw-ring-offset-color: var(--surface-50);
   }
 
   /* ─── Accent line — thin teal bar used for emphasis ─── */
   .accent-line {
     @apply h-px;
-    background: linear-gradient(to right, rgba(43, 188, 192, 0.6), rgba(43, 188, 192, 0.2), transparent);
+    background: linear-gradient(to right, rgba(20, 184, 166, 0.6), rgba(20, 184, 166, 0.2), transparent);
   }
 
   /* ─── Divider between sections ─── */

@@ -6,12 +6,18 @@ import { RESULTS } from '@/lib/constants'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden section-dark">
-      {/* Subtle ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[900px] bg-brand-400/[0.03] rounded-full blur-[120px]" />
+    <section className="relative overflow-hidden">
+      {/* Radial gradient ambient glow — soft teal hint */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle at 50% 30%, rgba(20,184,166,0.08), transparent 60%)',
+        }}
+      />
 
       <div className="relative section-padding">
-        <div className="section-container pt-36 pb-20 md:pt-44 md:pb-28 lg:pt-52 lg:pb-36">
+        <div className="section-container pt-[120px] pb-20 md:pt-[140px] md:pb-28 lg:pb-36">
           <div className="mx-auto max-w-[820px] text-center">
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-6">
               Growth Marketing Agency

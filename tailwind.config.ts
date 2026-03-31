@@ -12,17 +12,17 @@ const config: Config = {
         // Primary brand teal — extracted from logo accent on the "1"
         // Use sparingly: CTAs, key metrics, active indicators only
         brand: {
-          50:  '#eefcfc',
-          100: '#d4f6f7',
-          200: '#aeedee',
-          300: '#76dee1',
-          400: '#2BBCC0', // ← logo teal (primary accent)
-          500: '#1ea3a7',
-          600: '#17858a',
-          700: '#166c71',
-          800: '#17575c',
-          900: '#184a4e',
-          950: '#082e32',
+          50:  '#F0FDFA',
+          100: '#CCFBF1',
+          200: '#99F6E4',
+          300: '#5EEAD4',
+          400: '#14B8A6', // ← primary accent (Stripe/Linear quality teal)
+          500: '#0D9488', // ← hover state
+          600: '#0F766E',
+          700: '#115E59',
+          800: '#134E4A',
+          900: '#042F2E',
+          950: '#021C1B',
         },
         // ─── Context-aware surface system (auto-adapts via CSS vars) ───
         // Defaults to LIGHT values; .section-dark overrides to dark
@@ -45,19 +45,19 @@ const config: Config = {
         // ─── Static LIGHT tokens (always light, ignores context) ───
         light: {
           0:   '#FFFFFF',
-          50:  '#FAFBFC',
-          100: '#F4F6F8',
-          150: '#EEF1F4',
-          200: '#E5E9EE',
-          300: '#D1D8E0',
-          400: '#B8C2CE',
+          50:  '#F8FAFC',
+          100: '#F1F5F9',
+          150: '#E8EDF3',
+          200: '#E2E8F0',
+          300: '#E2E8F0',
+          400: '#CBD5E1',
         },
         // ─── Static INK tokens (always dark text, ignores context) ───
         ink: {
-          primary:   '#0F1419',
-          secondary: '#4A5568',
-          muted:     '#718096',
-          faint:     '#A0AEC0',
+          primary:   '#0F172A',
+          secondary: '#334155',
+          muted:     '#64748B',
+          faint:     '#94A3B8',
         },
         // ─── Static DARK tokens (for explicit dark-only use) ───
         dark: {
@@ -75,10 +75,10 @@ const config: Config = {
       },
       fontSize: {
         // Display scale — tight tracking, controlled line height
-        'display-xl': ['4.5rem',  { lineHeight: '1.04', letterSpacing: '-0.035em', fontWeight: '600' }],
-        'display-lg': ['3.75rem', { lineHeight: '1.06', letterSpacing: '-0.03em',  fontWeight: '600' }],
-        'display':    ['3rem',    { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '600' }],
-        'display-sm': ['2.25rem', { lineHeight: '1.12', letterSpacing: '-0.02em',  fontWeight: '600' }],
+        'display-xl': ['4.5rem',  { lineHeight: '1.04', letterSpacing: '-0.03em',  fontWeight: '700' }],
+        'display-lg': ['3.75rem', { lineHeight: '1.06', letterSpacing: '-0.025em', fontWeight: '700' }],
+        'display':    ['3rem',    { lineHeight: '1.08', letterSpacing: '-0.02em',  fontWeight: '700' }],
+        'display-sm': ['2.25rem', { lineHeight: '1.12', letterSpacing: '-0.02em',  fontWeight: '700' }],
         // Heading scale
         'heading-lg': ['1.75rem', { lineHeight: '1.2',  letterSpacing: '-0.015em', fontWeight: '600' }],
         'heading':    ['1.375rem',{ lineHeight: '1.25', letterSpacing: '-0.01em',  fontWeight: '600' }],
@@ -108,9 +108,9 @@ const config: Config = {
         '3xl': '1.5rem',
       },
       boxShadow: {
-        'glow-sm': '0 0 20px -5px rgba(43, 188, 192, 0.15)',
-        'glow':    '0 0 40px -10px rgba(43, 188, 192, 0.2)',
-        'glow-lg': '0 0 60px -15px rgba(43, 188, 192, 0.25)',
+        'glow-sm': '0 0 20px -5px rgba(20, 184, 166, 0.15)',
+        'glow':    '0 0 40px -10px rgba(20, 184, 166, 0.2)',
+        'glow-lg': '0 0 60px -15px rgba(20, 184, 166, 0.25)',
         'elevated': '0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2)',
         'elevated-lg': '0 2px 4px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.25)',
         'soft': '0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06)',

@@ -103,12 +103,12 @@ function HeroVisual() {
 
       <defs>
         <linearGradient id="vibe-glow" x1="0.5" y1="0" x2="0.5" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="vibe-line" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#2BBCC0" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#2BBCC0" stopOpacity="0.05" />
+          <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#14B8A6" stopOpacity="0.05" />
         </linearGradient>
       </defs>
 
@@ -127,21 +127,21 @@ function HeroVisual() {
 
       {/* V-I-B-E blocks — ascending */}
       <rect x="90" y="240" width="55" height="100" rx="6" fill="var(--surface-100)" stroke="var(--surface-300)" strokeWidth="1" />
-      <text x="117" y="298" textAnchor="middle" fill="#2BBCC0" fontSize="20" fontWeight="700" fontFamily="system-ui">V</text>
+      <text x="117" y="298" textAnchor="middle" fill="#14B8A6" fontSize="20" fontWeight="700" fontFamily="system-ui">V</text>
 
       <rect x="170" y="200" width="55" height="140" rx="6" fill="var(--surface-100)" stroke="var(--surface-300)" strokeWidth="1" />
-      <text x="197" y="280" textAnchor="middle" fill="#2BBCC0" fontSize="20" fontWeight="700" fontFamily="system-ui">I</text>
+      <text x="197" y="280" textAnchor="middle" fill="#14B8A6" fontSize="20" fontWeight="700" fontFamily="system-ui">I</text>
 
       <rect x="250" y="155" width="55" height="185" rx="6" fill="var(--surface-100)" stroke="var(--surface-300)" strokeWidth="1" />
-      <text x="277" y="258" textAnchor="middle" fill="#2BBCC0" fontSize="20" fontWeight="700" fontFamily="system-ui">B</text>
+      <text x="277" y="258" textAnchor="middle" fill="#14B8A6" fontSize="20" fontWeight="700" fontFamily="system-ui">B</text>
 
-      <rect x="330" y="105" width="55" height="235" rx="6" fill="var(--surface-100)" stroke="#2BBCC0" strokeWidth="1.5" opacity="0.9" />
-      <text x="357" y="233" textAnchor="middle" fill="#2BBCC0" fontSize="20" fontWeight="700" fontFamily="system-ui">E</text>
+      <rect x="330" y="105" width="55" height="235" rx="6" fill="var(--surface-100)" stroke="#14B8A6" strokeWidth="1.5" opacity="0.9" />
+      <text x="357" y="233" textAnchor="middle" fill="#14B8A6" fontSize="20" fontWeight="700" fontFamily="system-ui">E</text>
 
       {/* Growth trajectory line */}
       <path d="M117 235 L197 195 L277 148 L357 100" stroke="url(#vibe-line)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-      <circle cx="357" cy="100" r="5" fill="#2BBCC0" opacity="0.7" />
-      <circle cx="357" cy="100" r="10" fill="#2BBCC0" opacity="0.15" />
+      <circle cx="357" cy="100" r="5" fill="#14B8A6" opacity="0.7" />
+      <circle cx="357" cy="100" r="10" fill="#14B8A6" opacity="0.15" />
 
       {/* Connection nodes */}
       <circle cx="117" cy="235" r="3" fill="var(--surface-400)" />
@@ -152,7 +152,7 @@ function HeroVisual() {
       <text x="117" y="362" textAnchor="middle" fill="var(--txt-faint)" fontSize="9" fontFamily="system-ui">Validate</text>
       <text x="197" y="362" textAnchor="middle" fill="var(--txt-faint)" fontSize="9" fontFamily="system-ui">Implement</text>
       <text x="277" y="362" textAnchor="middle" fill="var(--txt-faint)" fontSize="9" fontFamily="system-ui">Build</text>
-      <text x="357" y="362" textAnchor="middle" fill="#2BBCC0" fontSize="9" fontWeight="600" fontFamily="system-ui">Execute</text>
+      <text x="357" y="362" textAnchor="middle" fill="#14B8A6" fontSize="9" fontWeight="600" fontFamily="system-ui">Execute</text>
 
       {/* Decorative dots */}
       <g fill="var(--surface-300)" opacity="0.5">
