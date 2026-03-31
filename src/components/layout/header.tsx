@@ -128,9 +128,6 @@ export function Header() {
             <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-txt-secondary transition-colors">
               {SITE_CONFIG.email}
             </a>
-            <a href={`tel:${SITE_CONFIG.phone}`} className="block hover:text-txt-secondary transition-colors">
-              {SITE_CONFIG.phone}
-            </a>
           </div>
         </div>
       </div>

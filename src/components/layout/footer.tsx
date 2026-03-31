@@ -104,11 +104,6 @@ export function Footer() {
                     {SITE_CONFIG.email}
                   </a>
                 </li>
-                <li>
-                  <a href={`tel:${SITE_CONFIG.phone}`} className="text-body-sm text-txt-secondary hover:text-txt-primary transition-colors duration-200">
-                    {SITE_CONFIG.phone}
-                  </a>
-                </li>
               </ul>
             </div>
           </div>

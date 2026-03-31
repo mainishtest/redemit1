@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Mail, Phone, Clock, Check } from 'lucide-react'
+import { Mail, Clock, Check } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/constants'
 import { ContactForm } from '@/components/shared/contact-form'
 
@@ -67,19 +67,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-100 border border-surface-300/40 text-txt-muted">
-                    <Phone className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <p className="text-caption text-txt-muted uppercase tracking-wider">Phone</p>
-                    <a href={`tel:${SITE_CONFIG.phone}`} className="text-body-sm text-txt-primary hover:text-brand-400 transition-colors">
-                      {SITE_CONFIG.phone}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
+<div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-100 border border-surface-300/40 text-txt-muted">
                     <Clock className="h-4 w-4" />
                   </div>
