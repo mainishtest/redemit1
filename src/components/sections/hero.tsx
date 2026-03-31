@@ -6,14 +6,13 @@ import { RESULTS } from '@/lib/constants'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Subtle ambient glow — barely visible, adds depth */}
+    <section className="relative overflow-hidden section-dark">
+      {/* Subtle ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[900px] bg-brand-400/[0.03] rounded-full blur-[120px]" />
 
       <div className="relative section-padding">
         <div className="section-container pt-36 pb-20 md:pt-44 md:pb-28 lg:pt-52 lg:pb-36">
           <div className="mx-auto max-w-[820px] text-center">
-            {/* Overline — no badge, cleaner */}
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-6">
               Growth Marketing Agency
             </p>
@@ -45,12 +44,12 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Hero visual — abstract growth network */}
+          {/* Hero visual */}
           <div className="mt-16 md:mt-20 mx-auto max-w-[700px]">
             <HeroVisual className="w-full h-auto" />
           </div>
 
-          {/* Stats Bar — clean grid, teal only on the metric numbers */}
+          {/* Stats Bar */}
           <div className="mt-20 md:mt-24">
             <div className="accent-line mb-8" />
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">

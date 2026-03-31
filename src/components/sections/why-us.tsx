@@ -34,17 +34,17 @@ export function WhyUs() {
           description="We built Redemit One because we were tired of agencies that overpromise and underdeliver. Here's how we're different."
         />
 
-        <div className="mt-16 grid gap-px bg-surface-300/30 rounded-xl overflow-hidden sm:grid-cols-2">
+        <div className="mt-16 grid gap-px bg-light-300/60 rounded-xl overflow-hidden sm:grid-cols-2">
           {differentiators.map((item, i) => {
             const Icon = item.icon
             return (
-              <div key={i} className="bg-surface-50 p-8 md:p-10 flex gap-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-100 border border-surface-300/40 text-txt-muted">
+              <div key={i} className="bg-light-0 p-8 md:p-10 flex gap-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-light-100 border border-light-300 text-ink-muted">
                   <Icon className="h-[18px] w-[18px]" />
                 </div>
                 <div>
-                  <h3 className="text-heading-sm text-txt-primary">{item.title}</h3>
-                  <p className="mt-2.5 text-body-sm text-txt-secondary leading-relaxed">
+                  <h3 className="text-heading-sm text-ink-primary">{item.title}</h3>
+                  <p className="mt-2.5 text-body-sm text-ink-secondary leading-relaxed">
                     {item.description}
                   </p>
                 </div>

@@ -24,22 +24,50 @@ const config: Config = {
           900: '#184a4e',
           950: '#082e32',
         },
-        // Surface system — blue-black tones for depth and premium feel
+        // ─── Context-aware surface system (auto-adapts via CSS vars) ───
+        // Defaults to LIGHT values; .section-dark overrides to dark
         surface: {
-          0:   '#05070A', // deepest background
-          50:  '#080B11', // body background
-          100: '#0D1117', // card / elevated surface
-          150: '#111820', // card hover / secondary surface
-          200: '#161D27', // input backgrounds
-          300: '#1C2432', // visible borders
-          400: '#253040', // strong borders / dividers
+          0:   'var(--surface-0)',
+          50:  'var(--surface-50)',
+          100: 'var(--surface-100)',
+          150: 'var(--surface-150)',
+          200: 'var(--surface-200)',
+          300: 'var(--surface-300)',
+          400: 'var(--surface-400)',
         },
-        // Text system — blue-tinted neutrals, softer than pure white/gray
+        // ─── Context-aware text system (auto-adapts via CSS vars) ───
         txt: {
-          primary:   '#E8ECF4', // headings, primary body
-          secondary: '#8899AC', // supporting text, descriptions
-          muted:     '#556378', // labels, captions, meta
-          faint:     '#3A4658', // disabled, decorative
+          primary:   'var(--txt-primary)',
+          secondary: 'var(--txt-secondary)',
+          muted:     'var(--txt-muted)',
+          faint:     'var(--txt-faint)',
+        },
+        // ─── Static LIGHT tokens (always light, ignores context) ───
+        light: {
+          0:   '#FFFFFF',
+          50:  '#FAFBFC',
+          100: '#F4F6F8',
+          150: '#EEF1F4',
+          200: '#E5E9EE',
+          300: '#D1D8E0',
+          400: '#B8C2CE',
+        },
+        // ─── Static INK tokens (always dark text, ignores context) ───
+        ink: {
+          primary:   '#0F1419',
+          secondary: '#4A5568',
+          muted:     '#718096',
+          faint:     '#A0AEC0',
+        },
+        // ─── Static DARK tokens (for explicit dark-only use) ───
+        dark: {
+          0:   '#05070A',
+          50:  '#080B11',
+          100: '#0D1117',
+          150: '#111820',
+          200: '#161D27',
+          300: '#1C2432',
+          400: '#253040',
         },
       },
       fontFamily: {
@@ -85,6 +113,8 @@ const config: Config = {
         'glow-lg': '0 0 60px -15px rgba(43, 188, 192, 0.25)',
         'elevated': '0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2)',
         'elevated-lg': '0 2px 4px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.25)',
+        'soft': '0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06)',
+        'soft-lg': '0 2px 4px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.08)',
       },
       keyframes: {
         'fade-up': {

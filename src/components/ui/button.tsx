@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         // Primary: Solid teal — the ONLY place teal dominates
         primary:
-          'bg-brand-400 text-surface-0 rounded-lg hover:bg-brand-300 shadow-glow-sm hover:shadow-glow active:scale-[0.98] font-semibold',
+          'bg-brand-400 text-ink-primary rounded-lg hover:bg-brand-300 shadow-glow-sm hover:shadow-glow active:scale-[0.98] font-semibold',
         // Secondary: Light fill, no teal
         secondary:
           'bg-surface-200 text-txt-primary rounded-lg hover:bg-surface-300 border border-surface-400/50 active:scale-[0.98]',

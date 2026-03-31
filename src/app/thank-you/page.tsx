@@ -47,7 +47,7 @@ export default function ThankYouPage() {
 
             <div className="rounded-xl bg-surface-100 border border-surface-300/40 overflow-hidden">
               <iframe
-                src="https://calendly.com/redemit?hide_gdpr_banner=1&background_color=111820&text_color=E8ECF4&primary_color=2BBCC0"
+                src="https://calendly.com/redemit?hide_gdpr_banner=1&background_color=F4F6F8&text_color=0F1419&primary_color=2BBCC0"
                 width="100%"
                 height="700"
                 frameBorder="0"

@@ -13,7 +13,7 @@ const caseStudyVisuals: Record<string, React.ReactNode> = {
 
 export function CaseStudiesPreview() {
   return (
-    <section className="section-spacing section-padding">
+    <section className="section-spacing section-padding bg-light-100">
       <div className="section-container">
         <SectionHeader
           label="Proof"
@@ -29,39 +29,39 @@ export function CaseStudiesPreview() {
               className="group surface-card-hover overflow-hidden"
             >
               {/* Visual — case study illustration */}
-              <div className="aspect-[16/10] bg-gradient-to-br from-surface-150 to-surface-200 relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 group-hover:bg-surface-300/10 transition-colors duration-300" />
+              <div className="aspect-[16/10] bg-gradient-to-br from-light-100 to-light-200 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 group-hover:bg-light-300/20 transition-colors duration-300" />
                 {caseStudyVisuals[study.slug] && (
-                  <div className="relative w-full h-full p-3 opacity-70 group-hover:opacity-90 transition-opacity duration-300">
+                  <div className="relative w-full h-full p-3 opacity-50 group-hover:opacity-70 transition-opacity duration-300">
                     {caseStudyVisuals[study.slug]}
                   </div>
                 )}
                 <div className="absolute bottom-3 left-3">
-                  <span className="text-overline uppercase text-txt-muted bg-surface-100/80 backdrop-blur-sm px-2 py-0.5 rounded">
+                  <span className="text-overline uppercase text-ink-muted bg-light-0/80 backdrop-blur-sm px-2 py-0.5 rounded">
                     {study.industry}
                   </span>
                 </div>
               </div>
 
               <div className="p-6">
-                <p className="text-overline uppercase text-txt-faint tracking-widest">
+                <p className="text-overline uppercase text-ink-faint tracking-widest">
                   {study.client}
                 </p>
-                <h3 className="mt-2 text-heading-sm text-txt-primary group-hover:text-txt-primary transition-colors text-balance">
+                <h3 className="mt-2 text-heading-sm text-ink-primary group-hover:text-ink-primary transition-colors text-balance">
                   {study.title}
                 </h3>
-                <p className="mt-2.5 text-body-sm text-txt-secondary leading-relaxed">
+                <p className="mt-2.5 text-body-sm text-ink-secondary leading-relaxed">
                   {study.description}
                 </p>
 
-                {/* Metrics — teal ONLY on the values */}
-                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-surface-300/40 pt-5">
+                {/* Metrics — teal on the values */}
+                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-light-300 pt-5">
                   {study.metrics.map((metric) => (
                     <div key={metric.label}>
-                      <div className="text-heading-sm text-brand-400">
+                      <div className="text-heading-sm text-brand-500">
                         {metric.value}
                       </div>
-                      <div className="text-caption text-txt-muted leading-tight mt-0.5">
+                      <div className="text-caption text-ink-muted leading-tight mt-0.5">
                         {metric.label}
                       </div>
                     </div>

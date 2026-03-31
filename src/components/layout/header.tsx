@@ -33,23 +33,23 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         isScrolled
-          ? 'bg-surface-50/90 backdrop-blur-2xl border-b border-surface-300/40'
+          ? 'bg-light-0/90 backdrop-blur-2xl border-b border-light-300/60 shadow-soft'
           : 'bg-transparent'
       )}
     >
       <div className="section-padding">
         <div className="section-container">
           <nav className="flex h-16 items-center justify-between lg:h-[72px]">
-            {/* Logo — matches brand: dark text + teal "1" */}
+            {/* Logo */}
             <Link
               href="/"
               className="relative z-50 flex items-center gap-0.5 text-[22px] tracking-tight"
             >
-              <span className="font-semibold text-txt-primary">Redemit</span>
+              <span className="font-semibold text-ink-primary">Redemit</span>
               <span className="font-semibold text-brand-400">1</span>
             </Link>
 
-            {/* Desktop Nav — minimal, no backgrounds on items */}
+            {/* Desktop Nav */}
             <div className="hidden items-center gap-8 lg:flex">
               {NAV_ITEMS.map((item) => (
                 <Link
@@ -58,8 +58,8 @@ export function Header() {
                   className={cn(
                     'text-body font-medium transition-colors duration-200',
                     pathname === item.href
-                      ? 'text-txt-primary'
-                      : 'text-txt-muted hover:text-txt-primary'
+                      ? 'text-ink-primary'
+                      : 'text-ink-muted hover:text-ink-primary'
                   )}
                 >
                   {item.label}
@@ -80,7 +80,7 @@ export function Header() {
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-txt-muted hover:text-txt-primary lg:hidden transition-colors"
+              className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-ink-muted hover:text-ink-primary lg:hidden transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -89,10 +89,10 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu — full screen, refined */}
+      {/* Mobile Menu — full screen */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-surface-50 transition-all duration-500 lg:hidden',
+          'fixed inset-0 z-40 bg-light-0 transition-all duration-500 lg:hidden',
           isMobileOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -105,10 +105,10 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'block py-4 text-[28px] font-semibold tracking-tight transition-colors border-b border-surface-300/30',
+                  'block py-4 text-[28px] font-semibold tracking-tight transition-colors border-b border-light-300/60',
                   pathname === item.href
-                    ? 'text-txt-primary'
-                    : 'text-txt-muted hover:text-txt-primary'
+                    ? 'text-ink-primary'
+                    : 'text-ink-muted hover:text-ink-primary'
                 )}
                 style={{ animationDelay: `${i * 50}ms` }}
               >
@@ -124,8 +124,8 @@ export function Header() {
               </Button>
             </Link>
           </div>
-          <div className="mt-10 space-y-1.5 text-body-sm text-txt-muted">
-            <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-txt-secondary transition-colors">
+          <div className="mt-10 space-y-1.5 text-body-sm text-ink-muted">
+            <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-ink-secondary transition-colors">
               {SITE_CONFIG.email}
             </a>
           </div>
