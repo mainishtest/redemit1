@@ -1,91 +1,73 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowLeft, PenTool, Repeat, FlaskConical, LineChart, Clapperboard, Rocket } from 'lucide-react'
-import { ResourceGateForm } from '@/components/shared/resource-gate-form'
+import { FlaskConical, Clapperboard, LineChart, Repeat, Rocket, PenTool } from 'lucide-react'
+import { ResourceLandingLayout } from '@/components/shared/resource-landing-layout'
 
 export const metadata: Metadata = {
-  title: 'Creative Testing Framework Walkthrough — Free Download',
-  description: 'A repeatable system for testing ad creatives, finding winners faster, and building a creative pipeline that sustains scale.',
+  title: 'Find Winning Ads 3x Faster — The Creative Testing Framework',
+  description: 'The systematic creative testing system behind 15-20 new concepts per week with a 15% hit rate. Hooks, angles, formats, decision thresholds, and iteration protocols.',
 }
 
 const benefits = [
-  { icon: FlaskConical, text: 'The Creative Testing Matrix: systematic approach to hooks, angles, and formats' },
-  { icon: Clapperboard, text: 'Testing infrastructure setup: campaign structure that separates testing from scaling' },
-  { icon: LineChart, text: 'Decision-making framework: how to read results and know exactly what to do next' },
-  { icon: Repeat, text: 'The Iteration Protocol: turning one winner into 5-10 high-performing variations' },
-  { icon: Rocket, text: 'Creative velocity benchmarks by spend level so you know how much to produce' },
-  { icon: PenTool, text: 'Hook categories, angle frameworks, and format templates you can use immediately' },
+  {
+    icon: FlaskConical,
+    title: 'The Creative Testing Matrix',
+    text: 'Stop testing randomly. This matrix systematically varies hooks, angles, and formats — so every single test generates usable learnings, not just noise.',
+  },
+  {
+    icon: Clapperboard,
+    title: 'Testing vs. Scaling Structure',
+    text: 'Campaign architecture that cleanly separates R&D spend from scaling spend. Your winners never get polluted by unproven creative.',
+  },
+  {
+    icon: LineChart,
+    title: 'Kill / Iterate / Scale Framework',
+    text: 'Exact thresholds for what to do with every test result. No more second-guessing — you will know within 72 hours what deserves more budget.',
+  },
+  {
+    icon: Repeat,
+    title: 'The Winner Iteration Protocol',
+    text: 'Turn 1 winning ad into 5-10 high-performing variations. Extend the lifespan of every winner by 3-5x before fatigue sets in.',
+  },
+  {
+    icon: Rocket,
+    title: 'Velocity Benchmarks by Spend',
+    text: 'Exactly how many new concepts to test per week at $1K, $3K, $5K, and $10K+/day — so your pipeline never bottlenecks your growth.',
+  },
+  {
+    icon: PenTool,
+    title: '8 Hook Categories + Templates',
+    text: 'Proven hook archetypes you can adapt to any product or industry. Start your next creative batch in minutes, not days.',
+  },
+]
+
+const chapters = [
+  { number: '01', title: 'Why Creative Is Targeting (The Algorithm Shift)' },
+  { number: '02', title: 'The Creative Testing Matrix (Hooks × Angles × Formats)' },
+  { number: '03', title: 'Testing Infrastructure Setup' },
+  { number: '04', title: 'Kill / Iterate / Scale — Decision Framework' },
+  { number: '05', title: 'The Winner Iteration Protocol (1 → 10)' },
+  { number: '06', title: 'Creative Velocity Benchmarks by Spend Level' },
+  { number: '07', title: '8 Hook Categories + Angle Templates' },
 ]
 
 export default function CreativeTestingPage() {
   return (
-    <>
-      <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
-          <Link
-            href="/resources"
-            className="inline-flex items-center gap-1.5 text-body-sm text-txt-muted hover:text-txt-primary transition-colors mb-10"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back to Resources
-          </Link>
-
-          <div className="grid gap-14 lg:grid-cols-5 lg:gap-20">
-            <div className="lg:col-span-3">
-              <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">Free Framework — 10 Pages</p>
-              <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
-                Creative Testing Framework Walkthrough
-              </h1>
-              <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-                In the age of algorithmic targeting, creative is targeting. The brands that test the most creative variations win — not because every test produces a winner, but because volume increases the probability of finding outlier performers.
-              </p>
-              <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
-                This framework is the exact system our team uses to test 15-20 new concepts per week with a 15% hit rate — enough to continuously refresh and scale any ad account.
-              </p>
-
-              <div className="mt-10">
-                <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">What You Will Learn</p>
-                <div className="space-y-4">
-                  {benefits.map((benefit) => {
-                    const Icon = benefit.icon
-                    return (
-                      <div key={benefit.text} className="flex items-start gap-3.5">
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-100 border border-surface-300/40 text-brand-400">
-                          <Icon className="h-4 w-4" />
-                        </div>
-                        <span className="text-body text-txt-secondary pt-1">{benefit.text}</span>
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
-
-              <div className="mt-10 p-5 rounded-lg bg-surface-0 border border-surface-300/30">
-                <p className="text-body-sm text-txt-secondary leading-relaxed">
-                  <span className="text-txt-primary font-medium">&ldquo;Volume is the strategy.&rdquo;</span>{' '}
-                  Our top-performing account tests 15-20 new concepts per week. Their hit rate is about 15%. That means 2-3 winners per week — enough to continuously refresh and scale.
-                </p>
-              </div>
-            </div>
-
-            <div className="lg:col-span-2">
-              <div className="surface-elevated p-6 md:p-8 sticky top-28">
-                <h2 className="text-heading text-txt-primary text-center mb-2">
-                  Download the Framework
-                </h2>
-                <p className="text-body-sm text-txt-muted text-center mb-6">
-                  Enter your email to unlock the free PDF.
-                </p>
-                <ResourceGateForm
-                  resourceTitle="Creative Testing Framework"
-                  downloadUrl="/downloads/creative-testing-framework.pdf"
-                  formTag="creative-testing-framework"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <ResourceLandingLayout
+      overline="Free Framework — 10 Pages"
+      title="The System That Produces 2-3 Winning Ads Per Week — On Repeat"
+      subtitle="Our top accounts test 15-20 new concepts per week with a 15% hit rate. This framework is the complete system — from test design to winner iteration."
+      description="In the age of algorithmic targeting, creative IS targeting. Meta's algorithm uses your ad creative to find the right audience — meaning your images, hooks, and copy determine who sees your ads as much as any audience setting. The brands that win are the ones testing the most creative at the highest velocity. Not because every test produces a winner, but because volume increases the probability of finding the outlier performers that drive 80% of results. This framework is the complete system: matrix-based test design, campaign structure that separates R&D from scaling, kill/iterate/scale decision thresholds, and the iteration protocol that turns one winning ad into an entire family of high-performers."
+      benefits={benefits}
+      chapters={chapters}
+      pullQuote="Volume is the strategy. 15-20 new concepts per week, 15% hit rate, 2-3 winners per week. That is enough to continuously refresh any ad account and sustain scale indefinitely."
+      pullQuoteAttribution="Redemit One Creative Team"
+      resourceTitle="Creative Testing Framework"
+      downloadUrl="/downloads/creative-testing-framework.pdf"
+      formTag="creative-testing-framework"
+      pageCount="10 pages"
+      ctaText="Download the Testing Framework"
+      socialProofLine="The exact system our team uses to produce 2-3 winners per week"
+      whoItsFor={['Creative Strategists', 'Media Buyers', 'Brand Owners', 'Performance Teams']}
+    />
   )
 }
