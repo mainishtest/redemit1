@@ -103,11 +103,11 @@ export function ContactForm() {
           Website URL
         </label>
         <input
-          type="url"
+          type="text"
           id="website"
           name="website"
           className={inputClasses}
-          placeholder="https://yourcompany.com"
+          placeholder="yourcompany.com"
         />
       </div>
 
