@@ -15,11 +15,28 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // TODO: Connect to form backend (Formspree, Netlify Forms, or custom API route)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch('https://formspree.io/f/xqegbnry', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        alert('Something went wrong. Please try again or email us directly.')
+      }
+    } catch {
+      alert('Something went wrong. Please try again or email us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {

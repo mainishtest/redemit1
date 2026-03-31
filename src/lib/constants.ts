@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   tagline: 'Growth Marketing That Scales Revenue',
   description: 'We build and scale paid acquisition systems for brands ready to grow. Media buying, offer creation, and funnel strategy — engineered for ROI.',
   url: 'https://redemit1.com',
-  email: 'hello@redemit1.com',
+  email: 'david@redemit1.com',
   phone: '(555) 000-0000',
   social: {
     twitter: 'https://twitter.com/redemitone',
