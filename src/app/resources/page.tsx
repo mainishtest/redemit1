@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Download, BarChart3, Target, GitBranch, PenTool, FileText, Video, Sparkles, Phone, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Download, BarChart3, Target, GitBranch, PenTool, FileText, Video, Sparkles, Phone, CheckCircle2, Code2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
@@ -9,19 +9,28 @@ export const metadata: Metadata = {
 }
 
 const featuredResource = {
-  icon: Video,
-  title: 'The Video Ad "Cheat Code"',
-  subtitle: 'Hook formulas, pacing structures, and script templates for winning video ads.',
-  description: 'The exact video ad structures behind the highest-performing campaigns we have ever run. 7 hook archetypes, second-by-second pacing frameworks, 5 fill-in-the-blank script templates, and a production shortcut system for creating 10+ ads per week.',
-  pageCount: '14 pages',
-  tag: 'New Release',
-  href: '/resources/video-ad-cheat-code',
+  icon: Code2,
+  title: 'The VIBE Coding Cheat Code',
+  subtitle: 'The system smart founders are using to build faster than everyone else.',
+  description: 'Turn ideas into live funnels, offers, and revenue-generating assets using AI — without developers, delays, or overthinking. The complete VIBE framework: Validate, Implement, Build, Execute. Includes checklists, tool stack, and real-world examples.',
+  pageCount: '16 pages',
+  tag: 'New — Featured',
+  href: '/resources/vibe-coding-cheat-code',
 }
 
 const resources = [
   {
-    icon: BarChart3,
+    icon: Video,
     number: '01',
+    title: 'The Video Ad "Cheat Code"',
+    description: 'The exact video ad structures behind the highest-performing campaigns we have ever run. 7 hook archetypes, second-by-second pacing frameworks, and a production shortcut system for 10+ ads per week.',
+    pageCount: '14 pages',
+    tag: 'Creative',
+    href: '/resources/video-ad-cheat-code',
+  },
+  {
+    icon: BarChart3,
+    number: '02',
     title: 'Facebook Ads Scaling Playbook',
     description: 'Scale from $1K to $10K/day with the stage-gated budget expansion protocol, creative fatigue management, and KPI action triggers behind $12M+ in managed spend.',
     pageCount: '12 pages',
@@ -30,7 +39,7 @@ const resources = [
   },
   {
     icon: Target,
-    number: '02',
+    number: '03',
     title: 'Offer Engineering Framework',
     description: 'Build offers that convert 2-3x higher. Value stack architecture, pricing psychology for cold traffic, 4 differentiation strategies, and an 8-point scoring rubric.',
     pageCount: '10 pages',
@@ -39,7 +48,7 @@ const resources = [
   },
   {
     icon: GitBranch,
-    number: '03',
+    number: '04',
     title: 'Funnel Architecture for Paid Traffic',
     description: 'Convert cold traffic 3-5x better with the exact funnel structures deployed across 50+ brands. Page sequence logic, friction reduction, and stage-by-stage benchmarks.',
     pageCount: '10 pages',
@@ -48,7 +57,7 @@ const resources = [
   },
   {
     icon: PenTool,
-    number: '04',
+    number: '05',
     title: 'Creative Testing Framework',
     description: 'Find 2-3 winning ads per week using systematic testing. The creative matrix, kill/iterate/scale thresholds, the iteration protocol, and 8 hook category templates.',
     pageCount: '10 pages',
@@ -107,14 +116,14 @@ export default function ResourcesPage() {
                 </p>
                 <div className="mt-6">
                   <span className="inline-flex items-center gap-2 text-body font-semibold text-brand-400 group-hover:gap-3 transition-all duration-300">
-                    Get the Cheat Code — Free
+                    Get the VIBE Cheat Code — Free
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </div>
               </div>
               <div className="shrink-0 flex items-center justify-center">
                 <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-brand-400/10 border border-brand-400/20 text-brand-400 group-hover:scale-105 transition-transform duration-300">
-                  <Video className="h-10 w-10" />
+                  <Code2 className="h-10 w-10" />
                 </div>
               </div>
             </div>
