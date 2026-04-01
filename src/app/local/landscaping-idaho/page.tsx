@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import {
   ArrowRight,
   Search,
@@ -33,6 +34,17 @@ export const metadata: Metadata = {
     description:
       'Get more landscaping leads in the Treasure Valley. Free website & marketing audit for landscaping and hardscaping businesses.',
   },
+}
+
+/* ── Unsplash image URLs (free, high-quality, landscaping-relevant) ── */
+const IMAGES = {
+  hero: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=800&fit=crop&q=80',
+  lawnMowing: 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=600&fit=crop&q=80',
+  patio: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80',
+  gardenPath: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop&q=80',
+  backyard: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop&q=80',
+  aerialLawn: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=600&fit=crop&q=80',
+  retainingWall: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop&q=80',
 }
 
 /* ═══════════════════════════════════════════════════
@@ -83,49 +95,27 @@ function HeroSection() {
               </div>
             </div>
 
-            {/* Right: Trust indicators + visual */}
+            {/* Right: Hero image */}
             <div className="relative">
-              <div className="rounded-2xl border border-surface-300 bg-white p-8 shadow-soft">
-                <div className="flex items-center gap-3 mb-6">
+              <div className="rounded-2xl overflow-hidden shadow-soft-lg">
+                <Image
+                  src={IMAGES.hero}
+                  alt="Professional landscaping work — green lawn with manicured garden beds"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+              {/* Floating stats card */}
+              <div className="absolute -bottom-6 -left-4 md:left-auto md:-right-6 rounded-xl border border-surface-300 bg-white p-4 shadow-soft-lg">
+                <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-400/10">
-                    <BarChart3 className="h-5 w-5 text-brand-400" />
+                    <TrendingUp className="h-5 w-5 text-brand-400" />
                   </div>
                   <div>
-                    <p className="text-heading-sm text-txt-primary">Local Growth Audit</p>
-                    <p className="text-caption text-txt-muted">Free — No obligation</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { icon: Globe, text: 'Website conversion review' },
-                    { icon: Search, text: 'Local SEO ranking analysis' },
-                    { icon: TrendingUp, text: 'Lead generation opportunities' },
-                    { icon: Target, text: 'Competitor comparison' },
-                    { icon: MessageSquare, text: 'Actionable recommendations' },
-                  ].map((item) => (
-                    <div key={item.text} className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-100">
-                        <item.icon className="h-4 w-4 text-brand-400" />
-                      </div>
-                      <span className="text-body text-txt-secondary">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 pt-5 border-t border-surface-300">
-                  <div className="flex items-center gap-2">
-                    <div className="flex -space-x-1.5">
-                      {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="h-7 w-7 rounded-full bg-surface-200 border-2 border-white flex items-center justify-center"
-                        >
-                          <Users className="h-3 w-3 text-txt-muted" />
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-caption text-txt-muted">
-                      Trusted by Treasure Valley businesses
-                    </p>
+                    <p className="text-heading-sm text-txt-primary">3x More Leads</p>
+                    <p className="text-caption text-txt-muted">Average client result</p>
                   </div>
                 </div>
               </div>
@@ -214,6 +204,8 @@ function SolutionSection() {
     {
       icon: Globe,
       title: 'Website That Converts',
+      image: IMAGES.patio,
+      imageAlt: 'Beautiful patio and outdoor living space — the kind of work that sells itself online',
       description:
         'We turn your website into a lead-generating machine. Clear messaging, strong calls to action, mobile-friendly, fast-loading — built to convert visitors into calls and form fills.',
       points: ['Conversion-focused design', 'Mobile-first performance', 'Clear calls to action'],
@@ -221,6 +213,8 @@ function SolutionSection() {
     {
       icon: Search,
       title: 'Local SEO That Ranks',
+      image: IMAGES.gardenPath,
+      imageAlt: 'Landscaped garden pathway showcasing professional outdoor design',
       description:
         'Show up when local homeowners search for what you do. Google Business Profile optimization, local keyword targeting, and review strategy — so you show up first, not your competitor.',
       points: ['Google Business Profile setup', 'Local keyword targeting', '"Near me" search visibility'],
@@ -228,6 +222,8 @@ function SolutionSection() {
     {
       icon: TrendingUp,
       title: 'Lead System That Runs',
+      image: IMAGES.lawnMowing,
+      imageAlt: 'Freshly mowed lawn with clean stripes — consistent quality, consistent leads',
       description:
         'A repeatable system that brings you leads every month. No more feast-or-famine. Paid ads, retargeting, and follow-up sequences that keep your pipeline full year-round.',
       points: ['Consistent monthly leads', 'Automated follow-up', 'Measurable ROI tracking'],
@@ -253,25 +249,37 @@ function SolutionSection() {
           {solutions.map((solution) => (
             <div
               key={solution.title}
-              className="surface-card p-7"
+              className="surface-card overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 mb-5">
-                <solution.icon className="h-6 w-6 text-brand-400" />
+              {/* Card image */}
+              <div className="relative h-48 w-full">
+                <Image
+                  src={solution.image}
+                  alt={solution.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h3 className="text-heading text-txt-primary mb-3">
-                {solution.title}
-              </h3>
-              <p className="text-body text-txt-secondary leading-relaxed mb-5">
-                {solution.description}
-              </p>
-              <ul className="space-y-2.5">
-                {solution.points.map((point) => (
-                  <li key={point} className="flex items-center gap-2 text-body-sm text-txt-secondary">
-                    <CheckCircle2 className="h-4 w-4 text-brand-400 shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              <div className="p-7">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-400/10 mb-4">
+                  <solution.icon className="h-5 w-5 text-brand-400" />
+                </div>
+                <h3 className="text-heading text-txt-primary mb-3">
+                  {solution.title}
+                </h3>
+                <p className="text-body text-txt-secondary leading-relaxed mb-5">
+                  {solution.description}
+                </p>
+                <ul className="space-y-2.5">
+                  {solution.points.map((point) => (
+                    <li key={point} className="flex items-center gap-2 text-body-sm text-txt-secondary">
+                      <CheckCircle2 className="h-4 w-4 text-brand-400 shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
@@ -358,11 +366,55 @@ function WhatYouGetSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 5: LOCAL AUTHORITY
+   SECTION 5: PHOTO BREAK — Full-width showcase
+   ═══════════════════════════════════════════════════ */
+function PhotoBreakSection() {
+  return (
+    <section className="section-padding bg-surface-100">
+      <div className="section-container py-16 md:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden col-span-2 md:col-span-1">
+            <Image
+              src={IMAGES.backyard}
+              alt="Modern backyard landscape design with clean lines"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <Image
+              src={IMAGES.retainingWall}
+              alt="Professional retaining wall and stone work"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <Image
+              src={IMAGES.gardenPath}
+              alt="Manicured garden pathway with lush plantings"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+        <p className="text-center mt-6 text-caption text-txt-muted">
+          The kind of work that deserves to be seen — let&apos;s make sure homeowners find you.
+        </p>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════
+   SECTION 6: LOCAL AUTHORITY
    ═══════════════════════════════════════════════════ */
 function LocalAuthoritySection() {
   return (
-    <section className="section-padding bg-surface-100">
+    <section className="section-padding">
       <div className="section-container section-spacing">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Copy */}
@@ -395,35 +447,47 @@ function LocalAuthoritySection() {
             </div>
           </div>
 
-          {/* Right: Local proof card */}
-          <div className="rounded-2xl border border-surface-300 bg-white p-8 shadow-soft">
-            <h3 className="text-heading text-txt-primary mb-6">
-              Services We Help Market
-            </h3>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { icon: TreePine, label: 'Landscaping' },
-                { icon: Home, label: 'Hardscaping' },
-                { icon: Shovel, label: 'Patio & Pavers' },
-                { icon: TreePine, label: 'Lawn Care' },
-                { icon: Home, label: 'Outdoor Kitchens' },
-                { icon: Shovel, label: 'Retaining Walls' },
-                { icon: Globe, label: 'Irrigation' },
-                { icon: Star, label: 'Snow Removal' },
-              ].map((service) => (
-                <div
-                  key={service.label}
-                  className="flex items-center gap-2.5 rounded-lg border border-surface-300 bg-surface-100 px-3.5 py-3"
-                >
-                  <service.icon className="h-4 w-4 text-brand-400 shrink-0" />
-                  <span className="text-body-sm text-txt-primary">{service.label}</span>
-                </div>
-              ))}
+          {/* Right: Services card with image */}
+          <div>
+            {/* Aerial lawn photo */}
+            <div className="relative h-48 rounded-t-2xl overflow-hidden">
+              <Image
+                src={IMAGES.aerialLawn}
+                alt="Aerial view of a professionally maintained lawn and property"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
-            <div className="mt-6 pt-5 border-t border-surface-300">
-              <p className="text-body-sm text-txt-muted">
-                Whether you do residential, commercial, or both — we tailor your marketing to the services you want to sell most.
-              </p>
+            <div className="rounded-b-2xl border border-t-0 border-surface-300 bg-white p-8 shadow-soft">
+              <h3 className="text-heading text-txt-primary mb-6">
+                Services We Help Market
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: TreePine, label: 'Landscaping' },
+                  { icon: Home, label: 'Hardscaping' },
+                  { icon: Shovel, label: 'Patio & Pavers' },
+                  { icon: TreePine, label: 'Lawn Care' },
+                  { icon: Home, label: 'Outdoor Kitchens' },
+                  { icon: Shovel, label: 'Retaining Walls' },
+                  { icon: Globe, label: 'Irrigation' },
+                  { icon: Star, label: 'Snow Removal' },
+                ].map((service) => (
+                  <div
+                    key={service.label}
+                    className="flex items-center gap-2.5 rounded-lg border border-surface-300 bg-surface-100 px-3.5 py-3"
+                  >
+                    <service.icon className="h-4 w-4 text-brand-400 shrink-0" />
+                    <span className="text-body-sm text-txt-primary">{service.label}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 pt-5 border-t border-surface-300">
+                <p className="text-body-sm text-txt-muted">
+                  Whether you do residential, commercial, or both — we tailor your marketing to the services you want to sell most.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -433,7 +497,7 @@ function LocalAuthoritySection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 6: PROCESS (4 Steps)
+   SECTION 7: PROCESS (4 Steps)
    ═══════════════════════════════════════════════════ */
 function ProcessSection() {
   const steps = [
@@ -460,14 +524,14 @@ function ProcessSection() {
   ]
 
   return (
-    <section className="section-padding">
+    <section className="section-dark section-padding">
       <div className="section-container section-spacing">
         <div className="text-center max-w-[680px] mx-auto mb-16">
           <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
             How It Works
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Simple. Straightforward. No BS.
+            Simple. No BS.
           </h2>
         </div>
 
@@ -502,7 +566,7 @@ function ProcessSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 7: TESTIMONIAL PLACEHOLDERS
+   SECTION 8: TESTIMONIAL PLACEHOLDERS
    ═══════════════════════════════════════════════════ */
 function TestimonialsSection() {
   const testimonials = [
@@ -577,7 +641,7 @@ function TestimonialsSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 8: CTA — AUDIT FORM
+   SECTION 9: CTA — AUDIT FORM
    ═══════════════════════════════════════════════════ */
 function CTASection() {
   return (
@@ -636,7 +700,7 @@ function CTASection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 9: FAQ
+   SECTION 10: FAQ
    ═══════════════════════════════════════════════════ */
 function FAQSection() {
   const faqs = [
@@ -708,7 +772,7 @@ function FAQSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 10: FINAL CTA
+   SECTION 11: FINAL CTA
    ═══════════════════════════════════════════════════ */
 function FinalCTASection() {
   return (
@@ -753,6 +817,7 @@ export default function LandscapingIdahoPage() {
       <ProblemSection />
       <SolutionSection />
       <WhatYouGetSection />
+      <PhotoBreakSection />
       <LocalAuthoritySection />
       <ProcessSection />
       <TestimonialsSection />

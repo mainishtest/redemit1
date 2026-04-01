@@ -131,6 +131,9 @@
     --txt-secondary: #8899AC;
     --txt-muted:     #556378;
     --txt-faint:     #3A4658;
+
+    background-color: #080B11;
+    color: #E8ECF4;
   }
 
   /* Dark section cards get heavier shadows */
