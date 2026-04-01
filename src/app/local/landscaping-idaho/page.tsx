@@ -9,9 +9,9 @@ import {
   MapPin,
   CheckCircle2,
   XCircle,
+  AlertTriangle,
   ClipboardList,
   BarChart3,
-  MessageSquare,
   Target,
   Shield,
   Star,
@@ -20,10 +20,13 @@ import {
   TreePine,
   Home,
   Users,
+  Eye,
+  MousePointer,
+  Clock,
 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { InlineAuditForm } from './audit-form'
+import { HeroAuditForm, FullAuditForm } from './audit-form'
 
 export const metadata: Metadata = {
   title: 'Landscaping Marketing — Meridian, Boise & Nampa | Redemit One',
@@ -36,24 +39,22 @@ export const metadata: Metadata = {
   },
 }
 
-/* ── Unsplash image URLs (free, high-quality, landscaping-relevant) ── */
+/* ── Unsplash images ── */
 const IMAGES = {
   hero: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=800&fit=crop&q=80',
-  lawnMowing: 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=600&fit=crop&q=80',
   patio: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80',
   gardenPath: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop&q=80',
-  backyard: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop&q=80',
+  lawnMowing: 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=600&fit=crop&q=80',
   aerialLawn: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=600&fit=crop&q=80',
-  retainingWall: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop&q=80',
 }
 
 /* ═══════════════════════════════════════════════════
    SECTION 1: HERO
+   Headline → Subheadline → Low-friction form (2 fields)
    ═══════════════════════════════════════════════════ */
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Ambient gradient */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -65,7 +66,7 @@ function HeroSection() {
       <div className="relative section-padding">
         <div className="section-container pt-[120px] pb-16 md:pt-[140px] md:pb-24">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left: Copy */}
+            {/* Left: Copy + inline form */}
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-brand-400/20 bg-brand-400/5 px-4 py-1.5 mb-6">
                 <MapPin className="h-3.5 w-3.5 text-brand-400" />
@@ -75,23 +76,16 @@ function HeroSection() {
               </div>
 
               <h1 className="text-display-sm text-txt-primary text-balance sm:text-display-lg lg:text-display">
-                Get More Landscaping Jobs Without Chasing Referrals
+                Your Landscaping Business Deserves More Than Referrals
               </h1>
 
               <p className="mt-6 max-w-[520px] text-body-lg text-txt-secondary leading-relaxed text-pretty">
-                We help landscaping and hardscaping companies across the Treasure Valley get found online, generate consistent leads, and book more jobs — month after month.
+                We find what&apos;s costing you leads, fix your online presence, and build a system that brings Treasure Valley homeowners straight to your phone. Starting with a free audit.
               </p>
 
-              <div className="mt-8">
-                <Link href="#audit">
-                  <Button variant="primary" size="xl">
-                    Get Your Free Growth Audit
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <p className="mt-3 text-caption text-txt-faint">
-                  100% free &middot; No contracts &middot; Takes 2 minutes
-                </p>
+              {/* Low-friction hero form */}
+              <div className="mt-8 max-w-[420px]">
+                <HeroAuditForm />
               </div>
             </div>
 
@@ -100,14 +94,13 @@ function HeroSection() {
               <div className="rounded-2xl overflow-hidden shadow-soft-lg">
                 <Image
                   src={IMAGES.hero}
-                  alt="Professional landscaping work — green lawn with manicured garden beds"
+                  alt="Professional landscaping — manicured lawn with garden beds in the Treasure Valley"
                   width={1200}
                   height={800}
                   className="w-full h-auto object-cover"
                   priority
                 />
               </div>
-              {/* Floating stats card */}
               <div className="absolute -bottom-6 -left-4 md:left-auto md:-right-6 rounded-xl border border-surface-300 bg-white p-4 shadow-soft-lg">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-400/10">
@@ -128,33 +121,163 @@ function HeroSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 2: PROBLEM
+   SECTION 2: PATTERN INTERRUPT
+   "We looked at your site" angle — bridges cold email to page
    ═══════════════════════════════════════════════════ */
-function ProblemSection() {
-  const problems = [
+function PatternInterruptSection() {
+  const findings = [
     {
-      icon: Globe,
-      title: 'Your website looks fine — but doesn\'t bring leads',
-      description:
-        'You paid someone to build it. It looks decent. But nobody fills out the form. Nobody calls. It\'s just sitting there.',
-    },
-    {
-      icon: Users,
-      title: 'You\'re relying on referrals and word of mouth',
-      description:
-        'Referrals are great until they slow down. Then you\'re scrambling. You need a system that generates leads whether or not someone refers you.',
+      icon: Eye,
+      title: 'Your website gets visitors — but they leave',
+      detail: 'No clear call to action. No reason to pick up the phone. Visitors hit your site and bounce in seconds.',
     },
     {
       icon: Search,
-      title: 'Competitors show up on Google — you don\'t',
+      title: 'You\'re invisible in local search',
+      detail: 'When someone searches "landscaping Meridian" or "patio installers near me," your competitors show up. You don\'t.',
+    },
+    {
+      icon: MousePointer,
+      title: 'No system to capture leads',
+      detail: 'No follow-up. No retargeting. No way to turn a website visitor into a booked estimate. Leads slip through the cracks.',
+    },
+  ]
+
+  return (
+    <section className="section-padding border-t border-surface-300">
+      <div className="section-container py-16 md:py-24">
+        <div className="max-w-[800px] mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50">
+              <AlertTriangle className="h-5 w-5 text-amber-500" />
+            </div>
+            <p className="text-overline uppercase text-amber-600 tracking-widest font-semibold">
+              We reviewed 50+ landscaping sites in the Treasure Valley
+            </p>
+          </div>
+
+          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
+            Here&apos;s What We Keep Finding
+          </h2>
+          <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed max-w-[640px]">
+            Most landscaping websites in Meridian, Boise, and Nampa have the same three problems. Chances are, yours does too.
+          </p>
+
+          <div className="mt-10 space-y-6">
+            {findings.map((item) => (
+              <div
+                key={item.title}
+                className="flex gap-4 p-5 rounded-xl border border-surface-300 bg-white"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 shrink-0">
+                  <item.icon className="h-5 w-5 text-red-400" />
+                </div>
+                <div>
+                  <h3 className="text-heading-sm text-txt-primary mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-body text-txt-secondary leading-relaxed">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-xl border border-brand-400/20 bg-brand-400/5 p-5">
+            <p className="text-body text-txt-primary font-medium">
+              Want to know exactly where <span className="text-brand-400">your</span> site is losing leads?
+            </p>
+            <p className="text-body-sm text-txt-secondary mt-1">
+              Drop your website URL above and we&apos;ll send you a personalized audit within 24 hours. Free, no strings attached.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════
+   SECTION 3: PROBLEM
+   Visceral, specific frustrations — not abstract
+   ═══════════════════════════════════════════════════ */
+function ProblemSection() {
+  return (
+    <section className="section-dark section-padding">
+      <div className="section-container section-spacing">
+        <div className="text-center max-w-[700px] mx-auto mb-14">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+            Sound Familiar?
+          </p>
+          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
+            You Do Great Work. But the Phone Isn&apos;t Ringing.
+          </h2>
+        </div>
+
+        <div className="max-w-[800px] mx-auto space-y-5">
+          {[
+            'You paid for a website. It looks fine. But it doesn\'t generate a single lead.',
+            'You\'re booked out in June — then scrambling by August. No consistency.',
+            'When someone searches "landscaping Meridian," your competitors are there. You\'re not.',
+            'Referrals keep you alive, but they\'re unpredictable. One slow month and you\'re stressed.',
+            'You\'ve talked to marketing companies before. They promised the world. Nothing changed.',
+            'You know you need to "do something online" — but you don\'t know what actually works.',
+          ].map((problem) => (
+            <div key={problem} className="flex items-start gap-3">
+              <XCircle className="h-5 w-5 text-red-400 shrink-0 mt-0.5" />
+              <p className="text-body-lg text-txt-secondary leading-relaxed">
+                {problem}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-body-lg text-txt-primary font-medium">
+            It&apos;s not your work. It&apos;s your marketing.
+          </p>
+          <p className="text-body text-txt-secondary mt-2 max-w-[520px] mx-auto">
+            You don&apos;t need to become a marketing expert. You need a system that brings qualified homeowners to you — automatically.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════
+   SECTION 4: SOLUTION
+   Simple explanation with images
+   ═══════════════════════════════════════════════════ */
+function SolutionSection() {
+  const solutions = [
+    {
+      icon: Globe,
+      title: 'A Website That Actually Works',
+      image: IMAGES.patio,
+      imageAlt: 'Beautiful patio installation — the kind of project your website should be selling',
       description:
-        'When homeowners search "landscaping near me" or "patio installers Meridian," your competitors are there. You\'re invisible.',
+        'We rebuild your site around one goal: getting homeowners to call you. Clear messaging, fast load times, mobile-ready, and a design that builds trust in 3 seconds.',
+      points: ['Phone number front and center', 'Quote request form on every page', 'Built to load fast on phones'],
+    },
+    {
+      icon: Search,
+      title: 'Found on Google — Locally',
+      image: IMAGES.gardenPath,
+      imageAlt: 'Manicured garden path — what homeowners want when they search for landscapers',
+      description:
+        'When someone in Meridian types "landscaping near me," you show up. Google Business Profile, local keywords, reviews — all optimized so you rank above the competition.',
+      points: ['Rank for "landscaping + your city"', 'Google Maps visibility', 'Review strategy that builds trust'],
     },
     {
       icon: TrendingUp,
-      title: 'You get busy, then slow, then busy again',
+      title: 'Leads That Come to You',
+      image: IMAGES.lawnMowing,
+      imageAlt: 'Professional lawn maintenance — consistent work from consistent leads',
       description:
-        'No consistency. No pipeline. You go from booked out to wondering where the next job is coming from. It doesn\'t have to be like that.',
+        'A system that runs whether you\'re on a job site or not. Targeted ads, retargeting, automated follow-up — so your phone rings with qualified homeowners every month.',
+      points: ['Targeted Treasure Valley ads', 'Automatic lead follow-up', 'Know your exact cost per lead'],
     },
   ]
 
@@ -163,119 +286,41 @@ function ProblemSection() {
       <div className="section-container section-spacing">
         <div className="text-center max-w-[680px] mx-auto mb-16">
           <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
-            Sound Familiar?
-          </p>
-          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Good Work Doesn&apos;t Sell Itself
-          </h2>
-          <p className="mt-5 text-body-lg text-txt-secondary text-pretty">
-            You do great landscaping. Your customers love you. But you shouldn&apos;t have to wait by the phone hoping the next job shows up.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {problems.map((problem) => (
-            <div
-              key={problem.title}
-              className="surface-card p-7 hover:shadow-soft-lg transition-shadow duration-300"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 mb-4">
-                <XCircle className="h-5 w-5 text-red-400" />
-              </div>
-              <h3 className="text-heading-sm text-txt-primary mb-2">
-                {problem.title}
-              </h3>
-              <p className="text-body text-txt-secondary leading-relaxed">
-                {problem.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ═══════════════════════════════════════════════════
-   SECTION 3: SOLUTION
-   ═══════════════════════════════════════════════════ */
-function SolutionSection() {
-  const solutions = [
-    {
-      icon: Globe,
-      title: 'Website That Converts',
-      image: IMAGES.patio,
-      imageAlt: 'Beautiful patio and outdoor living space — the kind of work that sells itself online',
-      description:
-        'We turn your website into a lead-generating machine. Clear messaging, strong calls to action, mobile-friendly, fast-loading — built to convert visitors into calls and form fills.',
-      points: ['Conversion-focused design', 'Mobile-first performance', 'Clear calls to action'],
-    },
-    {
-      icon: Search,
-      title: 'Local SEO That Ranks',
-      image: IMAGES.gardenPath,
-      imageAlt: 'Landscaped garden pathway showcasing professional outdoor design',
-      description:
-        'Show up when local homeowners search for what you do. Google Business Profile optimization, local keyword targeting, and review strategy — so you show up first, not your competitor.',
-      points: ['Google Business Profile setup', 'Local keyword targeting', '"Near me" search visibility'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Lead System That Runs',
-      image: IMAGES.lawnMowing,
-      imageAlt: 'Freshly mowed lawn with clean stripes — consistent quality, consistent leads',
-      description:
-        'A repeatable system that brings you leads every month. No more feast-or-famine. Paid ads, retargeting, and follow-up sequences that keep your pipeline full year-round.',
-      points: ['Consistent monthly leads', 'Automated follow-up', 'Measurable ROI tracking'],
-    },
-  ]
-
-  return (
-    <section className="section-dark section-padding">
-      <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
             How We Fix It
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            A Marketing System Built for Landscapers
+            Three Things That Actually Move the Needle
           </h2>
           <p className="mt-5 text-body-lg text-txt-secondary text-pretty">
-            Not generic templates. Not cookie-cutter SEO packages. A tailored system designed for how landscaping businesses actually get customers in the Treasure Valley.
+            Not a 47-page strategy deck. Not a 12-month SEO contract. Three concrete things that get landscaping companies more jobs in the Treasure Valley.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {solutions.map((solution) => (
-            <div
-              key={solution.title}
-              className="surface-card overflow-hidden"
-            >
-              {/* Card image */}
+          {solutions.map((s) => (
+            <div key={s.title} className="rounded-xl border border-surface-300 bg-white overflow-hidden hover:shadow-soft transition-shadow duration-300">
               <div className="relative h-48 w-full">
                 <Image
-                  src={solution.image}
-                  alt={solution.imageAlt}
+                  src={s.image}
+                  alt={s.imageAlt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="p-7">
+              <div className="p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-400/10 mb-4">
-                  <solution.icon className="h-5 w-5 text-brand-400" />
+                  <s.icon className="h-5 w-5 text-brand-400" />
                 </div>
-                <h3 className="text-heading text-txt-primary mb-3">
-                  {solution.title}
-                </h3>
-                <p className="text-body text-txt-secondary leading-relaxed mb-5">
-                  {solution.description}
+                <h3 className="text-heading text-txt-primary mb-2">{s.title}</h3>
+                <p className="text-body-sm text-txt-secondary leading-relaxed mb-4">
+                  {s.description}
                 </p>
-                <ul className="space-y-2.5">
-                  {solution.points.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-body-sm text-txt-secondary">
-                      <CheckCircle2 className="h-4 w-4 text-brand-400 shrink-0" />
-                      {point}
+                <ul className="space-y-2">
+                  {s.points.map((p) => (
+                    <li key={p} className="flex items-center gap-2 text-body-sm text-txt-secondary">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-brand-400 shrink-0" />
+                      {p}
                     </li>
                   ))}
                 </ul>
@@ -289,121 +334,54 @@ function SolutionSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 4: WHAT YOU GET (Bullets)
+   SECTION 5: WHAT YOU ACTUALLY GET
+   Outcome-focused bullets — tangible, not vague
    ═══════════════════════════════════════════════════ */
-function WhatYouGetSection() {
-  const outcomes = [
-    {
-      icon: Phone,
-      title: 'More calls from homeowners in your area',
-      description: 'People searching for landscaping, hardscaping, patios, and lawn care in Meridian, Boise, and Nampa — calling you instead of your competitor.',
-    },
-    {
-      icon: Search,
-      title: 'Show up on Google when people search landscaping',
-      description: 'Rank in local search results and Google Maps. When someone types "landscaping near me," you\'re what they find.',
-    },
-    {
-      icon: Globe,
-      title: 'Turn your website into a lead machine',
-      description: 'A website that actually works — drives form fills, phone calls, and quote requests. Not just a digital brochure.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'A steady stream of jobs — not feast or famine',
-      description: 'Predictable lead flow so you can plan crews, buy materials, and stop guessing where the next project is coming from.',
-    },
-    {
-      icon: Target,
-      title: 'Marketing that pays for itself',
-      description: 'Every dollar tracked. Every lead measured. You\'ll know exactly what\'s working and what your cost per lead is.',
-    },
-    {
-      icon: Star,
-      title: 'Stand out from every other landscaper in town',
-      description: 'Professional online presence that makes you look like the obvious choice — not just another name in a list.',
-    },
-  ]
-
-  return (
-    <section className="section-padding">
-      <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
-            What You Get
-          </p>
-          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Real Results, Not Marketing Fluff
-          </h2>
-          <p className="mt-5 text-body-lg text-txt-secondary text-pretty">
-            Here&apos;s what working with us actually looks like for your landscaping business.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {outcomes.map((outcome) => (
-            <div
-              key={outcome.title}
-              className="flex gap-4 p-6 rounded-xl border border-surface-300 bg-white hover:shadow-soft transition-shadow duration-300"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-400/10 shrink-0">
-                <outcome.icon className="h-5 w-5 text-brand-400" />
-              </div>
-              <div>
-                <h3 className="text-heading-sm text-txt-primary mb-1.5">
-                  {outcome.title}
-                </h3>
-                <p className="text-body-sm text-txt-secondary leading-relaxed">
-                  {outcome.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ═══════════════════════════════════════════════════
-   SECTION 5: PHOTO BREAK — Full-width showcase
-   ═══════════════════════════════════════════════════ */
-function PhotoBreakSection() {
+function OutcomesSection() {
   return (
     <section className="section-padding bg-surface-100">
-      <div className="section-container py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden col-span-2 md:col-span-1">
-            <Image
-              src={IMAGES.backyard}
-              alt="Modern backyard landscape design with clean lines"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
+      <div className="section-container section-spacing">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+              What Changes
+            </p>
+            <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
+              What This Looks Like for Your Business
+            </h2>
+            <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed text-pretty">
+              This isn&apos;t about impressions or clicks. Here&apos;s what actually changes when your marketing works:
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {[
+                'Your phone rings with homeowners who found you on Google — not just referrals',
+                'You show up first when someone searches "landscaping Meridian" or "patio installers Boise"',
+                'Your website brings in quote requests while you\'re on the job site',
+                'You stop guessing where next month\'s work is coming from',
+                'You can plan crews and materials because you know leads are coming',
+                'You look more professional than every other landscaper in town — online',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-brand-400 shrink-0 mt-0.5" />
+                  <p className="text-body text-txt-secondary leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+
+          {/* Image side */}
+          <div className="relative rounded-2xl overflow-hidden shadow-soft-lg">
             <Image
-              src={IMAGES.retainingWall}
-              alt="Professional retaining wall and stone work"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 50vw, 33vw"
-            />
-          </div>
-          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
-            <Image
-              src={IMAGES.gardenPath}
-              alt="Manicured garden pathway with lush plantings"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 50vw, 33vw"
+              src={IMAGES.aerialLawn}
+              alt="Aerial view of a professionally maintained property in the Treasure Valley"
+              width={1200}
+              height={600}
+              className="w-full h-auto object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>
-        <p className="text-center mt-6 text-caption text-txt-muted">
-          The kind of work that deserves to be seen — let&apos;s make sure homeowners find you.
-        </p>
       </div>
     </section>
   )
@@ -417,27 +395,25 @@ function LocalAuthoritySection() {
     <section className="section-padding">
       <div className="section-container section-spacing">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Copy */}
           <div>
             <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
-              Why Local Matters
+              Why Us
             </p>
             <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-              We Know the Treasure Valley
+              We Only Work With Local Service Businesses in the Treasure Valley
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed text-pretty">
-              We&apos;re not a big agency out of New York or LA trying to sell you a one-size-fits-all package. We focus on the Boise metro — Meridian, Nampa, Eagle, Caldwell, Star — and we understand what works here.
+              We&apos;re not a big agency that treats you like account #4,372. We work exclusively with contractors and service businesses in Ada and Canyon County — and we know what moves the needle here.
             </p>
             <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed text-pretty">
-              We know the seasonal patterns. We know the neighborhoods. We know what homeowners in Ada and Canyon County are searching for. That local knowledge is what makes the difference between marketing that works and money down the drain.
+              We know the seasonal patterns. We know which neighborhoods are spending on outdoor projects. We know how Treasure Valley homeowners search for landscapers. That local knowledge is the difference.
             </p>
-
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
-                { label: 'Treasure Valley Focus', icon: MapPin },
-                { label: 'Local Market Data', icon: BarChart3 },
-                { label: 'Contractor-Friendly', icon: Shovel },
-                { label: 'No Cookie-Cutter', icon: Shield },
+                { label: 'Treasure Valley Only', icon: MapPin },
+                { label: 'Contractor-Focused', icon: Shovel },
+                { label: 'Real Local Data', icon: BarChart3 },
+                { label: 'No Generic Packages', icon: Shield },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2.5">
                   <item.icon className="h-4 w-4 text-brand-400 shrink-0" />
@@ -447,47 +423,27 @@ function LocalAuthoritySection() {
             </div>
           </div>
 
-          {/* Right: Services card with image */}
-          <div>
-            {/* Aerial lawn photo */}
-            <div className="relative h-48 rounded-t-2xl overflow-hidden">
-              <Image
-                src={IMAGES.aerialLawn}
-                alt="Aerial view of a professionally maintained lawn and property"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="rounded-b-2xl border border-t-0 border-surface-300 bg-white p-8 shadow-soft">
-              <h3 className="text-heading text-txt-primary mb-6">
-                Services We Help Market
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { icon: TreePine, label: 'Landscaping' },
-                  { icon: Home, label: 'Hardscaping' },
-                  { icon: Shovel, label: 'Patio & Pavers' },
-                  { icon: TreePine, label: 'Lawn Care' },
-                  { icon: Home, label: 'Outdoor Kitchens' },
-                  { icon: Shovel, label: 'Retaining Walls' },
-                  { icon: Globe, label: 'Irrigation' },
-                  { icon: Star, label: 'Snow Removal' },
-                ].map((service) => (
-                  <div
-                    key={service.label}
-                    className="flex items-center gap-2.5 rounded-lg border border-surface-300 bg-surface-100 px-3.5 py-3"
-                  >
-                    <service.icon className="h-4 w-4 text-brand-400 shrink-0" />
-                    <span className="text-body-sm text-txt-primary">{service.label}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 pt-5 border-t border-surface-300">
-                <p className="text-body-sm text-txt-muted">
-                  Whether you do residential, commercial, or both — we tailor your marketing to the services you want to sell most.
-                </p>
-              </div>
+          {/* Services grid */}
+          <div className="rounded-2xl border border-surface-300 bg-white p-8 shadow-soft">
+            <h3 className="text-heading text-txt-primary mb-6">
+              We Help Market These Services
+            </h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { icon: TreePine, label: 'Landscaping' },
+                { icon: Home, label: 'Hardscaping' },
+                { icon: Shovel, label: 'Patio & Pavers' },
+                { icon: TreePine, label: 'Lawn Care' },
+                { icon: Home, label: 'Outdoor Kitchens' },
+                { icon: Shovel, label: 'Retaining Walls' },
+                { icon: Globe, label: 'Irrigation' },
+                { icon: Star, label: 'Snow Removal' },
+              ].map((s) => (
+                <div key={s.label} className="flex items-center gap-2.5 rounded-lg border border-surface-300 bg-surface-100 px-3.5 py-3">
+                  <s.icon className="h-4 w-4 text-brand-400 shrink-0" />
+                  <span className="text-body-sm text-txt-primary">{s.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -497,67 +453,96 @@ function LocalAuthoritySection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 7: PROCESS (4 Steps)
+   SECTION 7: PROCESS — 3 Steps (not 4)
    ═══════════════════════════════════════════════════ */
 function ProcessSection() {
   const steps = [
     {
-      number: '01',
-      title: 'Request Your Audit',
-      description: 'Fill out the quick form below. Tell us about your business and drop your website URL. Takes about 2 minutes.',
+      number: '1',
+      title: 'Send Us Your Website',
+      description: 'Drop your URL in the form. Takes 30 seconds. If you don\'t have a site, that\'s fine — just tell us your business name.',
     },
     {
-      number: '02',
-      title: 'We Review Everything',
-      description: 'Our team reviews your website, Google presence, competitors, and local rankings. We identify exactly what\'s holding you back.',
+      number: '2',
+      title: 'We Audit Everything',
+      description: 'Within 24 hours, we review your site, your Google rankings, your competitors, and exactly where you\'re losing leads.',
     },
     {
-      number: '03',
-      title: 'Get Your Breakdown',
-      description: 'Within 24 hours, you get a clear, actionable breakdown of what\'s wrong, what to fix, and how to start getting more leads.',
-    },
-    {
-      number: '04',
-      title: 'Decide Your Next Step',
-      description: 'No pressure. If the audit gives you what you need, great. If you want us to implement it, we\'ll lay out a plan and pricing.',
+      number: '3',
+      title: 'You Get a Clear Playbook',
+      description: 'Not a generic report. A specific list of what to fix, in order, to start getting more calls from local homeowners.',
     },
   ]
 
   return (
     <section className="section-dark section-padding">
       <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
+        <div className="text-center max-w-[680px] mx-auto mb-14">
           <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
             How It Works
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Simple. No BS.
+            Three Steps. No BS.
           </h2>
         </div>
 
-        <div className="max-w-[800px] mx-auto">
-          <div className="space-y-0">
-            {steps.map((step, i) => (
-              <div key={step.number} className="relative flex gap-6 pb-12 last:pb-0">
-                {/* Connector line */}
-                {i < steps.length - 1 && (
-                  <div className="absolute left-[23px] top-12 bottom-0 w-px bg-surface-300" />
-                )}
-                {/* Step number */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-400 font-bold text-body shrink-0 relative z-10">
-                  {step.number}
-                </div>
-                {/* Content */}
-                <div className="pt-1">
-                  <h3 className="text-heading text-txt-primary mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-body text-txt-secondary leading-relaxed max-w-[560px]">
-                    {step.description}
-                  </p>
-                </div>
+        <div className="max-w-[700px] mx-auto grid md:grid-cols-3 gap-8">
+          {steps.map((step) => (
+            <div key={step.number} className="text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-400 font-bold text-heading-lg mb-5">
+                {step.number}
               </div>
-            ))}
+              <h3 className="text-heading-sm text-txt-primary mb-2">{step.title}</h3>
+              <p className="text-body-sm text-txt-secondary leading-relaxed">{step.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="#audit">
+            <Button variant="primary" size="xl">
+              Start With Your Free Audit
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════════════════
+   SECTION 8: SOFT SCARCITY + OFFER
+   ═══════════════════════════════════════════════════ */
+function OfferSection() {
+  return (
+    <section className="section-padding bg-surface-100">
+      <div className="section-container py-16 md:py-24">
+        <div className="max-w-[700px] mx-auto text-center">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+            Limited Availability
+          </p>
+          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
+            We Only Take On a Handful of Landscaping Companies at a Time
+          </h2>
+          <p className="mt-5 text-body-lg text-txt-secondary text-pretty leading-relaxed">
+            To keep results high, we limit how many businesses we work with in each market. We won&apos;t take on your competitor if we&apos;re already working with you. That means the sooner you get your audit, the sooner you lock in your area.
+          </p>
+
+          <div className="mt-8 inline-flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-5 py-3">
+            <Clock className="h-5 w-5 text-amber-600 shrink-0" />
+            <p className="text-body-sm text-amber-800 font-medium text-left">
+              We&apos;re currently reviewing landscaping businesses in Meridian, Boise, and Nampa. Spots fill on a first-come basis.
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <Link href="#audit">
+              <Button variant="primary" size="xl">
+                Claim Your Free Audit
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -566,107 +551,31 @@ function ProcessSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 8: TESTIMONIAL PLACEHOLDERS
-   ═══════════════════════════════════════════════════ */
-function TestimonialsSection() {
-  const testimonials = [
-    {
-      quote: 'We went from maybe one or two leads a month to consistent calls every week. They actually understand what landscaping businesses need.',
-      name: 'Landscaping Business Owner',
-      location: 'Meridian, ID',
-      placeholder: true,
-    },
-    {
-      quote: 'Finally, a marketing company that speaks my language. No fluff, no jargon — just results. Our Google ranking went from page 3 to the top of page 1.',
-      name: 'Hardscaping Company Owner',
-      location: 'Boise, ID',
-      placeholder: true,
-    },
-    {
-      quote: 'Before working with them, our website was basically a business card. Now it actually generates leads. Wish I\'d done this two years ago.',
-      name: 'Lawn Care Business Owner',
-      location: 'Nampa, ID',
-      placeholder: true,
-    },
-  ]
-
-  return (
-    <section className="section-padding bg-surface-100">
-      <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
-            What Clients Say
-          </p>
-          <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Results Speak for Themselves
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="surface-card p-7"
-            >
-              <div className="flex gap-0.5 mb-4">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={s} className="h-4 w-4 fill-brand-400 text-brand-400" />
-                ))}
-              </div>
-              <p className="text-body text-txt-secondary leading-relaxed italic mb-5">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-3 pt-4 border-t border-surface-300">
-                <div className="h-9 w-9 rounded-full bg-surface-200 flex items-center justify-center">
-                  <Users className="h-4 w-4 text-txt-muted" />
-                </div>
-                <div>
-                  <p className="text-body-sm text-txt-primary font-medium">
-                    {t.name}
-                    {t.placeholder && <span className="text-txt-faint"> *</span>}
-                  </p>
-                  <p className="text-caption text-txt-muted">{t.location}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p className="text-center mt-8 text-caption text-txt-faint">
-          * Placeholder testimonials — real client reviews coming soon.
-        </p>
-      </div>
-    </section>
-  )
-}
-
-/* ═══════════════════════════════════════════════════
-   SECTION 9: CTA — AUDIT FORM
+   SECTION 9: CTA — FULL AUDIT FORM
    ═══════════════════════════════════════════════════ */
 function CTASection() {
   return (
     <section id="audit" className="section-dark section-padding">
       <div className="section-container section-spacing">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left: Copy */}
           <div>
             <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
-              Free — No Obligation
+              Your Free Audit
             </p>
             <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-              Get Your Free Local Growth Audit
+              Find Out Exactly What&apos;s Costing You Leads
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed text-pretty">
-              We&apos;ll review your website, check your Google rankings, analyze your competition, and give you a clear breakdown of what&apos;s working, what&apos;s not, and exactly what to fix.
+              In 24 hours, you&apos;ll know exactly where your online presence is falling short — and what to do about it. No fluff. No generic advice. Specific to your business, your market, your competition.
             </p>
 
             <div className="mt-8 space-y-4">
               {[
-                'Complete website conversion review',
-                'Local SEO and Google Maps analysis',
-                'Competitor comparison for your area',
-                'Specific, actionable recommendations',
-                'No commitment — it\'s yours to keep',
+                'Full website conversion audit — what\'s working, what\'s not',
+                'Local SEO snapshot — where you rank vs. competitors',
+                'Google Business Profile review — are you showing up in Maps?',
+                'Top 3 quick wins you can implement immediately',
+                'Custom recommendation — not a cookie-cutter template',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="h-4 w-4 text-brand-400 shrink-0" />
@@ -678,20 +587,19 @@ function CTASection() {
             <div className="mt-8 flex items-center gap-3 rounded-xl border border-brand-400/20 bg-brand-400/5 p-4">
               <ClipboardList className="h-5 w-5 text-brand-400 shrink-0" />
               <p className="text-body-sm text-txt-secondary">
-                <span className="text-txt-primary font-medium">Response time:</span> We review your audit within 24 hours and follow up personally. No bots. No runaround.
+                <span className="text-txt-primary font-medium">Real human review.</span> Not an automated tool. We personally review your site and send you actionable findings.
               </p>
             </div>
           </div>
 
-          {/* Right: Form */}
           <div className="rounded-2xl border border-[#1C2432] bg-[#0D1117] p-8">
             <h3 className="text-heading text-[#E8ECF4] mb-2">
-              Request Your Free Audit
+              Get Your Free Audit
             </h3>
             <p className="text-body-sm text-[#8899AC] mb-6">
-              Fill this out and we&apos;ll have your audit ready within 24 hours.
+              Fill this out and we&apos;ll have your personalized audit ready within 24 hours.
             </p>
-            <InlineAuditForm variant="dark" />
+            <FullAuditForm variant="dark" />
           </div>
         </div>
       </div>
@@ -705,34 +613,34 @@ function CTASection() {
 function FAQSection() {
   const faqs = [
     {
-      question: 'Is this really free?',
+      question: 'Is this really free? What\'s the catch?',
       answer:
-        'Yes. 100% free. We do the audit because it\'s the best way to show you what we can do. There\'s no catch, no hidden upsell. You get a real breakdown of your marketing — and you decide what to do with it.',
+        'No catch. We do the audit for free because it\'s the best way to show you what we can do. You get a real, personalized breakdown of your marketing — and you decide if you want our help implementing it. If not, no hard feelings. The audit is yours to keep.',
     },
     {
-      question: 'Do I have to commit to anything?',
+      question: 'I already have a website. Do I still need this?',
       answer:
-        'No. The audit is yours whether you work with us or not. If you want help implementing the recommendations, great — we\'ll put together a plan and pricing. If not, no hard feelings.',
+        'Especially if you already have a website. Most landscaping websites look fine but aren\'t built to convert visitors into phone calls. We\'ll show you the specific things on your site that are costing you leads — and exactly how to fix them.',
     },
     {
-      question: 'What if I already have a website?',
+      question: 'How is this different from the last marketing company that burned me?',
       answer:
-        'Perfect. We\'ll review it and show you exactly what\'s working and what\'s costing you leads. Most landscaping websites look fine but aren\'t built to convert visitors into calls. We\'ll show you the difference.',
+        'We hear this a lot. The difference: we only work with local service businesses in the Treasure Valley. We don\'t sell generic SEO packages. We build specific systems for how landscaping companies actually get customers in this market. And we start by proving we know what we\'re talking about — with the free audit.',
     },
     {
-      question: 'How is this different from other marketing agencies?',
+      question: 'I\'m not a tech person. Is that a problem?',
       answer:
-        'We focus specifically on local service businesses in the Treasure Valley. We\'re not selling you a generic SEO package — we build marketing systems tailored to how landscaping companies actually get customers in this market.',
+        'That\'s the whole point. You focus on doing great landscaping work — we handle the website, the Google stuff, the ads, all of it. We explain everything in plain English, not marketing jargon.',
     },
     {
-      question: 'How long does the audit take?',
+      question: 'How fast will I see results?',
       answer:
-        'You\'ll hear back from us within 24 hours. The form takes about 2 minutes. We do the heavy lifting — reviewing your site, checking your rankings, analyzing competitors — and send you a clear breakdown.',
+        'You\'ll get your audit within 24 hours. If you choose to work with us, most clients see an increase in leads within the first 30-60 days. SEO takes longer (3-6 months to rank), but we start with quick wins so you see momentum right away.',
     },
     {
-      question: 'I\'m not great with tech stuff. Is that okay?',
+      question: 'Do you work with my competitors?',
       answer:
-        'Absolutely. That\'s the whole point. You focus on doing great landscaping work — we handle the marketing, the website, the Google stuff. We explain everything in plain English, not jargon.',
+        'No. We limit the number of landscaping companies we work with in each area. If we\'re already working with a landscaper in your zip code, we won\'t take on another one. That\'s why getting your audit sooner matters.',
     },
   ]
 
@@ -772,7 +680,7 @@ function FAQSection() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SECTION 11: FINAL CTA
+   SECTION 11: FINAL CTA — Urgency close
    ═══════════════════════════════════════════════════ */
 function FinalCTASection() {
   return (
@@ -780,26 +688,27 @@ function FinalCTASection() {
       <div className="section-container py-20 md:py-28">
         <div className="text-center max-w-[640px] mx-auto">
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
-            Ready to Get More Landscaping Jobs?
+            Your Competitors Are Getting Found Online Right Now
           </h2>
           <p className="mt-5 text-body-lg text-txt-secondary text-pretty">
-            Your competitors are getting found online. Your next customers are searching right now. Let&apos;s make sure they find you.
+            Every day without a marketing system is another day homeowners are calling someone else. The audit takes 30 seconds to request and could change your business.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="#audit">
               <Button variant="primary" size="xl">
-                Get Your Free Audit
+                Get Your Free Audit Now
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
             <Link href="/contact">
               <Button variant="outline" size="xl">
-                Or Book a Call Directly
+                Or Call Us Directly
+                <Phone className="h-4 w-4" />
               </Button>
             </Link>
           </div>
           <p className="mt-4 text-caption text-txt-faint">
-            Free &middot; No obligation &middot; Takes 2 minutes
+            Free &middot; No obligation &middot; Limited spots per market
           </p>
         </div>
       </div>
@@ -814,13 +723,13 @@ export default function LandscapingIdahoPage() {
   return (
     <>
       <HeroSection />
+      <PatternInterruptSection />
       <ProblemSection />
       <SolutionSection />
-      <WhatYouGetSection />
-      <PhotoBreakSection />
+      <OutcomesSection />
       <LocalAuthoritySection />
       <ProcessSection />
-      <TestimonialsSection />
+      <OfferSection />
       <CTASection />
       <FAQSection />
       <FinalCTASection />
