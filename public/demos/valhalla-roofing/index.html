@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valhalla Roofing | Free Roof Inspection – Boise, Eagle, Meridian Idaho</title>
+  <meta name="description" content="Valhalla Roofing LLC offers free roof inspections for homeowners in the Treasure Valley. Licensed, insured, and trusted by hundreds of Idaho families.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ═══════════════════════════════════════
+       DESIGN TOKENS
+       ═══════════════════════════════════════ */
+    :root {
+      --red: #C62828;
+      --red-dark: #A11F1F;
+      --red-light: #FFEBEE;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+      --shadow-xl: 0 20px 48px rgba(0,0,0,0.16);
+      --radius: 8px;
+      --radius-lg: 12px;
+      --max-width: 1140px;
+    }
+
+    /* ═══════════════════════════════════════
+       UTILITIES
+       ═══════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-pad { padding: 64px 0; }
+    @media (min-width: 768px) { .section-pad { padding: 80px 0; } }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(198,40,40,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(198,40,40,0.4);
+    }
+    .btn-outline {
+      background: var(--white);
+      color: var(--slate-800);
+      border: 2px solid var(--slate-200);
+    }
+    .btn-outline:hover {
+      border-color: var(--red);
+      color: var(--red);
+      transform: translateY(-1px);
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--red);
+      font-weight: 700;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-white:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-lg);
+    }
+    .btn-lg { padding: 16px 32px; font-size: 18px; }
+    .btn-full { width: 100%; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--red-light);
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .section-heading {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      color: var(--slate-900);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--slate-600);
+      max-width: 620px;
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════
+       TOP BAR
+       ═══════════════════════════════════════ */
+    .topbar {
+      background: var(--slate-900);
+      color: var(--white);
+      padding: 10px 0;
+      font-size: 14px;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a {
+      color: var(--white);
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .topbar a:hover { opacity: 0.8; }
+    .topbar-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+    }
+
+    /* ═══════════════════════════════════════
+       HEADER / NAV
+       ═══════════════════════════════════════ */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--slate-900);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .logo-text span { color: var(--red); }
+    .logo-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-phone {
+      font-weight: 700;
+      color: var(--slate-900);
+      font-size: 16px;
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .header-phone { display: flex; align-items: center; gap: 6px; }
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, var(--slate-900) 0%, #1a2744 100%);
+      color: var(--white);
+      padding: 48px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=1400&q=70&auto=format') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .hero { padding: 64px 0 72px; }
+      .hero-inner { grid-template-columns: 1fr 380px; gap: 48px; }
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #EF5350;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+    .hero-checks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-checks li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+    }
+    .hero-checks li svg {
+      flex-shrink: 0;
+      color: #66BB6A;
+    }
+    .hero-phone-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .hero-phone-cta a {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+    }
+    .hero-phone-cta a strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO FORM
+       ═══════════════════════════════════════ */
+    .hero-form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-xl);
+      color: var(--slate-800);
+    }
+    .hero-form-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--slate-900);
+    }
+    .hero-form-card .form-sub {
+      font-size: 14px;
+      color: var(--slate-500);
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate-700);
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--slate-800);
+      background: var(--white);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(198,40,40,0.1);
+    }
+    .form-group input::placeholder { color: var(--slate-400); }
+    .form-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--slate-500);
+    }
+    .form-trust span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ═══════════════════════════════════════
+       SOCIAL PROOF BAR
+       ═══════════════════════════════════════ */
+    .proof-bar {
+      background: var(--slate-50);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 20px 0;
+    }
+    .proof-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px 40px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+    .proof-item svg { color: var(--red); flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════
+       PROBLEM SECTION
+       ═══════════════════════════════════════ */
+    .problem {
+      background: var(--white);
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      .problem-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .problem-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .problem-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .problem-card .icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--red-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .problem-card .icon-wrap svg { color: var(--red); }
+    .problem-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+    .problem-card p {
+      font-size: 15px;
+      color: var(--slate-600);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════
+       SOLUTION / WHY US
+       ═══════════════════════════════════════ */
+    .solution {
+      background: var(--slate-50);
+      border-top: 1px solid var(--slate-200);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      .solution-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .solution-content { order: 2; }
+    @media (min-width: 768px) { .solution-content { order: 1; } }
+    .solution-img-wrap {
+      order: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 768px) { .solution-img-wrap { order: 2; } }
+    .solution-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+    }
+    .solution-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .solution-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .solution-list li .check-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #E8F5E9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .solution-list li .check-icon svg { color: #2E7D32; }
+    .solution-list li div h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 2px;
+    }
+    .solution-list li div p {
+      font-size: 14px;
+      color: var(--slate-600);
+      line-height: 1.55;
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES
+       ═══════════════════════════════════════ */
+    .services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    @media (min-width: 600px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .service-card:hover {
+      border-color: var(--red);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-card .s-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--red-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .service-card .s-icon svg { color: var(--red); }
+    .service-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--slate-600);
+      line-height: 1.55;
+    }
+
+    /* ═══════════════════════════════════════
+       TRUST / REVIEWS
+       ═══════════════════════════════════════ */
+    .trust {
+      background: var(--slate-50);
+      border-top: 1px solid var(--slate-200);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+    .trust-badge svg { color: var(--red); flex-shrink: 0; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    .review-stars {
+      color: #F59E0B;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 2px;
+    }
+    .review-card p {
+      font-size: 15px;
+      color: var(--slate-700);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--slate-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--slate-600);
+    }
+    .review-name { font-size: 14px; font-weight: 700; color: var(--slate-900); }
+    .review-location { font-size: 12px; color: var(--slate-500); }
+
+    /* ═══════════════════════════════════════
+       PROCESS
+       ═══════════════════════════════════════ */
+    .process { background: var(--white); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      .process-steps { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      font-size: 24px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+    .step p {
+      font-size: 15px;
+      color: var(--slate-600);
+      line-height: 1.6;
+    }
+    /* Arrow connectors on desktop */
+    @media (min-width: 768px) {
+      .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 28px;
+        right: -12px;
+        width: 24px;
+        height: 2px;
+        background: var(--slate-300);
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--red) 0%, #B71C1C 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-section .btn-white { font-size: 18px; padding: 16px 36px; }
+
+    /* ═══════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════ */
+    .faq { background: var(--slate-50); border-top: 1px solid var(--slate-200); }
+    .faq-list {
+      max-width: 720px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--slate-900);
+      text-align: left;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--slate-50); }
+    .faq-question svg {
+      flex-shrink: 0;
+      transition: transform 0.3s;
+      color: var(--slate-400);
+    }
+    .faq-item.open .faq-question svg { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 20px 18px;
+      font-size: 15px;
+      color: var(--slate-600);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ */
+    .footer {
+      background: var(--slate-900);
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0 24px;
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a { transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ═══════════════════════════════════════
+       MODAL
+       ═══════════════════════════════════════ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      animation: fadeIn 0.2s ease;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 440px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-xl);
+      animation: slideUp 0.25s cubic-bezier(0.16,1,0.3,1);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--slate-400);
+      transition: all 0.2s;
+      z-index: 2;
+    }
+    .modal-close:hover { background: var(--slate-100); color: var(--slate-700); }
+    .modal-body { padding: 28px 24px; }
+    .modal-body h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+    }
+    .modal-body .form-sub {
+      font-size: 14px;
+      color: var(--slate-500);
+      margin-bottom: 20px;
+    }
+    .modal-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .modal-success.active { display: block; }
+    .modal-success .check-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #E8F5E9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .modal-success .check-circle svg { color: #2E7D32; }
+    .modal-success h3 { margin-bottom: 8px; }
+    .modal-success p { color: var(--slate-600); font-size: 15px; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: scale(0.95) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════
+       BODY SCROLL LOCK
+       ═══════════════════════════════════════ */
+    body.modal-open { overflow: hidden; }
+
+    /* ═══════════════════════════════════════
+       DEMO BANNER
+       ═══════════════════════════════════════ */
+    .demo-banner {
+      background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .demo-banner strong { color: #EF5350; }
+    .demo-banner a { color: #90CAF9; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     DEMO BANNER
+     ═══════════════════════════════════════ -->
+<div class="demo-banner">
+  <strong>DEMO</strong> — This is a conversion-optimized landing page concept for Valhalla Roofing, built by <a href="https://redemit1.com" target="_blank">Redemit One</a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TOP BAR
+     ═══════════════════════════════════════ -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>Serving Boise, Eagle, Meridian &amp; the Treasure Valley</span>
+    <a href="tel:12089413770" class="topbar-phone">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (208) 941-3770
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════ -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <!-- Valhalla logo mark -->
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+        <path d="M20 4C14 4 8 10 8 18c0 6 4 12 12 18 8-6 12-12 12-18 0-8-6-14-12-14z" fill="#C62828" opacity="0.15"/>
+        <path d="M13 14l7 16 7-16" stroke="#C62828" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 14l4 9 4-9" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+      <div>
+        <div class="logo-text">Valhalla <span>Roofing</span></div>
+        <div class="logo-sub">A Higher Standard</div>
+      </div>
+    </div>
+    <div class="header-cta">
+      <a href="tel:12089413770" class="header-phone">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (208) 941-3770
+      </a>
+      <button class="btn btn-primary open-modal">Get Free Inspection</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        Locally Owned &amp; Operated — Treasure Valley, Idaho
+      </div>
+      <h1>Your Roof Protects Everything. <em>We Protect Your Roof.</em></h1>
+      <p class="hero-sub">Valhalla Roofing gives Idaho homeowners honest answers, quality work, and a roof they can count on — backed by a free inspection with zero pressure.</p>
+      <ul class="hero-checks">
+        <li>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          100% Free Roof Inspection — No Strings Attached
+        </li>
+        <li>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          Licensed, Insured &amp; Certified (RCE# 66490)
+        </li>
+        <li>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          We Handle Insurance Claims For You
+        </li>
+        <li>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          Trusted By Hundreds of Idaho Homeowners
+        </li>
+      </ul>
+      <div class="hero-phone-cta">
+        <a href="tel:12089413770">Or call now: <strong>(208) 941-3770</strong></a>
+      </div>
+    </div>
+
+    <!-- HERO FORM -->
+    <div class="hero-form-card">
+      <h3>Get Your Free Roof Inspection</h3>
+      <p class="form-sub">Takes 30 seconds. We'll call you to schedule.</p>
+      <form id="heroForm" onsubmit="handleHeroSubmit(event)">
+        <div class="form-group">
+          <label for="hero-name">First Name *</label>
+          <input type="text" id="hero-name" name="name" placeholder="Your first name" required>
+        </div>
+        <div class="form-group">
+          <label for="hero-phone">Phone Number *</label>
+          <input type="tel" id="hero-phone" name="phone" placeholder="(208) 555-1234" required>
+        </div>
+        <div class="form-group">
+          <label for="hero-address">Address <span style="font-weight:400;color:var(--slate-400)">(optional)</span></label>
+          <input type="text" id="hero-address" name="address" placeholder="123 Main St, Boise">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">
+          Get My Free Inspection
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-trust">
+          <span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            No obligation
+          </span>
+          <span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            We respond same day
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SOCIAL PROOF BAR
+     ═══════════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="container proof-bar-inner">
+    <div class="proof-item">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      5-Star Rated
+    </div>
+    <div class="proof-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed &amp; Insured
+    </div>
+    <div class="proof-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      Locally Owned
+    </div>
+    <div class="proof-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      Malarkey Emerald Pro Certified
+    </div>
+    <div class="proof-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+      Since 2023
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PROBLEM SECTION
+     ═══════════════════════════════════════ -->
+<section class="problem section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <p class="section-label">The Problem</p>
+      <h2 class="section-heading">Most Homeowners Don't Know Their Roof Is Failing — Until It's Too Late</h2>
+      <p class="section-sub" style="margin:16px auto 0;">Idaho weather is brutal on roofs. Hail, wind, snow, and sun damage add up quietly. By the time you notice a leak, the damage is already expensive.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+        </div>
+        <h3>Leaks &amp; Water Damage</h3>
+        <p>A small leak becomes a big problem fast. Water damage to your attic, walls, and ceilings can cost thousands if you wait.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 16.9A5 5 0 0018 7h-1.26A8 8 0 104 15.25"/><path d="M13 11l-4 6h6l-4 6"/></svg>
+        </div>
+        <h3>Storm &amp; Hail Damage</h3>
+        <p>After a storm, damage might not be obvious from the ground. Missing shingles and dents mean your roof is compromised.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <h3>Insurance Confusion</h3>
+        <p>Filing a roof claim is stressful and confusing. Most homeowners leave money on the table because they don't know the process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SOLUTION / WHY US
+     ═══════════════════════════════════════ -->
+<section class="solution section-pad">
+  <div class="container">
+    <div class="solution-grid">
+      <div class="solution-content">
+        <p class="section-label">Why Valhalla</p>
+        <h2 class="section-heading">Fast, Honest Roofing From a Team That Actually Cares</h2>
+        <p class="section-sub" style="margin-top:12px;">We're not a franchise. We're not a sales machine. We're a local crew that does the job right, treats you like a neighbor, and stands behind every roof.</p>
+        <ul class="solution-list">
+          <li>
+            <div class="check-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <div>
+              <h4>Free, No-Pressure Inspection</h4>
+              <p>We'll climb up, check every inch, and give you an honest assessment — even if you don't need a new roof.</p>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <div>
+              <h4>We Handle Your Insurance Claim</h4>
+              <p>We work directly with your insurance company to make sure you get what you're owed. No runaround.</p>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <div>
+              <h4>Premium Materials, Clean Job Site</h4>
+              <p>We use top-tier Malarkey shingles, protect your property, and leave it cleaner than we found it.</p>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <div>
+              <h4>Project Manager On Every Job</h4>
+              <p>Your dedicated project manager is there at the start and at the end to make sure nothing is missed.</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn btn-primary open-modal" style="margin-top:28px;">
+          Schedule Free Inspection
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="solution-img-wrap">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=75&auto=format" alt="Beautiful Idaho home with new roof" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SERVICES
+     ═══════════════════════════════════════ -->
+<section class="services section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto;">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-heading">Roofing Services Built Around You</h2>
+      <p class="section-sub" style="margin:12px auto 0;">Whether it's a small repair or a full replacement, we've got you covered.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="s-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>New Roofs</h3>
+        <p>Full roof installation with premium materials and a clean, professional finish.</p>
+      </div>
+      <div class="service-card">
+        <div class="s-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Roof Repairs</h3>
+        <p>Quick, reliable fixes for leaks, missing shingles, flashing issues, and more.</p>
+      </div>
+      <div class="service-card">
+        <div class="s-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 16.9A5 5 0 0018 7h-1.26A8 8 0 104 15.25"/><path d="M13 11l-4 6h6l-4 6"/></svg>
+        </div>
+        <h3>Storm Damage</h3>
+        <p>Post-storm assessment and emergency repairs to protect your home fast.</p>
+      </div>
+      <div class="service-card">
+        <div class="s-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Insurance Help</h3>
+        <p>We walk you through every step of the claims process so nothing falls through the cracks.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <button class="btn btn-primary open-modal">
+        Get Free Inspection
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TRUST / REVIEWS
+     ═══════════════════════════════════════ -->
+<section class="trust section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 40px;">
+      <p class="section-label">Trusted Locally</p>
+      <h2 class="section-heading">What Idaho Homeowners Say About Us</h2>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured — RCE# 66490
+      </div>
+      <div class="trust-badge">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Malarkey Emerald Pro Contractor
+      </div>
+      <div class="trust-badge">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        Proud BNI Member
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Bob and his crew were incredible. They found storm damage our old roofer missed, handled our insurance claim, and had the roof done in a day. Couldn't be happier."</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-name">Jared M.</div>
+            <div class="review-location">Eagle, ID</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Totally trustworthy. They gave us an honest assessment — even told us we didn't need a full replacement yet. That's rare. When we do, they'll be the first call."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sarah T.</div>
+            <div class="review-location">Meridian, ID</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"After the hailstorm last summer, Valhalla was the only company that actually got on our roof and showed us photos. Professional from start to finish. Highly recommend."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mike &amp; Linda K.</div>
+            <div class="review-location">Boise, ID</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PROCESS
+     ═══════════════════════════════════════ -->
+<section class="process section-pad">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto;">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-heading">Three Simple Steps to a Solid Roof</h2>
+      <p class="section-sub" style="margin:12px auto 0;">No pressure. No runaround. Just straightforward roofing done right.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Request Your Free Inspection</h3>
+        <p>Fill out the form or give us a call. We'll schedule a time that works for you — usually within 48 hours.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Inspect &amp; Give You Options</h3>
+        <p>We'll get on your roof, take photos, and walk you through exactly what we find. Honest assessment, no upselling.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Get Your Roof Done Right</h3>
+        <p>If you're ready, we handle everything — materials, scheduling, insurance, cleanup. You just enjoy the peace of mind.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <button class="btn btn-primary btn-lg open-modal">
+        Start With a Free Inspection
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA SECTION
+     ═══════════════════════════════════════ -->
+<section class="cta-section section-pad">
+  <div class="container">
+    <h2>Don't Wait Until a Small Problem Becomes a Big One</h2>
+    <p>Get your free roof inspection today. We'll give you an honest answer — even if that answer is "your roof is fine."</p>
+    <button class="btn btn-white btn-lg open-modal">
+      Get My Free Inspection Now
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div style="margin-top:16px;opacity:0.8;font-size:14px;">
+      Or call <a href="tel:12089413770" style="color:white;text-decoration:underline;font-weight:700;">(208) 941-3770</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════ -->
+<section class="faq section-pad">
+  <div class="container">
+    <div style="text-align:center;">
+      <p class="section-label">Common Questions</p>
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is the roof inspection really free?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, 100% free with zero obligation. We'll inspect your roof, take photos, and give you an honest assessment. If your roof is fine, we'll tell you. There's no pressure and no catch.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you help with insurance claims?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely. We work directly with your insurance company, handle the documentation, meet with the adjuster, and make sure you get what you're owed. Most homeowners leave money on the table — we make sure that doesn't happen.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What areas do you serve?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We serve the entire Treasure Valley including Boise, Eagle, Meridian, Kuna, Star, Nampa, Caldwell, and surrounding areas. We also work in Valley County including McCall, Donnelly, and Cascade.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does a roof replacement take?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Most residential roof replacements take 1–2 days depending on the size and complexity. We show up on time, work clean, and get it done right the first time.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What roofing materials do you use?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We're a Malarkey Emerald Pro certified contractor and use their premium shingle lines. We also work with flat roofs, metal, tile, and asphalt depending on your needs and budget. We'll help you pick the right material for your home.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are you licensed and insured?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. Valhalla Roofing LLC is fully licensed (RCE# 66490) and insured in the state of Idaho. We carry general liability and workers' compensation insurance to protect you and your property.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">Valhalla <span>Roofing</span></div>
+    <div class="footer-links">
+      <a href="tel:12089413770">(208) 941-3770</a>
+      <a href="mailto:office@valhallaroofingllc.com">office@valhallaroofingllc.com</a>
+    </div>
+    <p>Valhalla Roofing LLC &middot; RCE# 66490 &middot; Boise, Eagle, Meridian, Idaho</p>
+    <p style="font-size:12px;opacity:0.5;margin-top:4px;">Demo page built by Redemit One &middot; &copy; 2025 Valhalla Roofing LLC</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     MODAL
+     ═══════════════════════════════════════ -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-body">
+      <!-- Form state -->
+      <div id="modalForm">
+        <h3>Get Your Free Roof Inspection</h3>
+        <p class="form-sub">Fill this out and we'll call you to schedule — usually same day.</p>
+        <form onsubmit="handleModalSubmit(event)">
+          <div class="form-group">
+            <label for="modal-name">First Name *</label>
+            <input type="text" id="modal-name" name="name" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="modal-phone">Phone Number *</label>
+            <input type="tel" id="modal-phone" name="phone" placeholder="(208) 555-1234" required>
+          </div>
+          <div class="form-group">
+            <label for="modal-address">Address <span style="font-weight:400;color:var(--slate-400)">(optional)</span></label>
+            <input type="text" id="modal-address" name="address" placeholder="123 Main St, Boise">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">
+            Get My Free Inspection
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-trust">
+            <span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              No obligation
+            </span>
+            <span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Same-day response
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="modal-success" id="modalSuccess">
+        <div class="check-circle">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>You're All Set!</h3>
+        <p>We'll give you a call shortly to schedule your free roof inspection. Keep an eye on your phone.</p>
+        <div style="margin-top:24px;">
+          <a href="tel:12089413770" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now Instead
+          </a>
+        </div>
+        <button onclick="closeModal()" style="margin-top:12px;font-size:14px;color:var(--slate-500);padding:8px;">Close this window</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════ -->
+<script>
+  // Modal open/close
+  const modal = document.getElementById('contactModal');
+  const modalNameInput = document.getElementById('modal-name');
+
+  document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', () => openModal());
+  });
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    setTimeout(() => modalNameInput.focus(), 100);
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    // Reset to form state after close
+    setTimeout(() => {
+      document.getElementById('modalForm').style.display = '';
+      document.getElementById('modalSuccess').classList.remove('active');
+    }, 300);
+  }
+
+  // Close on overlay click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
+
+  // Hero form submit
+  function handleHeroSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.innerHTML = '<svg width="18" height="18" style="animation:spin 1s linear infinite" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Sending...';
+    btn.disabled = true;
+
+    // Simulate form submission (replace with real endpoint)
+    setTimeout(() => {
+      form.innerHTML = '<div style="text-align:center;padding:20px 0;"><div style="width:56px;height:56px;border-radius:50%;background:#E8F5E9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><svg width="28" height="28" fill="none" stroke="#2E7D32" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3 style="font-size:20px;font-weight:800;color:#0f172a;margin-bottom:6px;">You\'re All Set!</h3><p style="font-size:15px;color:#475569;">We\'ll call you shortly to schedule your inspection.</p><a href="tel:12089413770" class="btn btn-primary" style="margin-top:16px;">Or Call Us Now</a></div>';
+    }, 1200);
+  }
+
+  // Modal form submit
+  function handleModalSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.innerHTML = '<svg width="18" height="18" style="animation:spin 1s linear infinite" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Sending...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').classList.add('active');
+    }, 1200);
+  }
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    // Open this one if it was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+</script>
+
+<!-- Spin animation for loading state -->
+<style>
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+</body>
+</html>
