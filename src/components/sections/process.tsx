@@ -6,9 +6,9 @@ export function Process() {
     <section className="section-spacing section-padding section-dark">
       <div className="section-container">
         <SectionHeader
-          label="How We Work"
-          title="From Diagnosis to Scale in 30 Days"
-          description="A proven, structured process designed to find what's working, fix what isn't, and scale what converts."
+          label="How It Works"
+          title="From Audit to Leads in 30 Days"
+          description="A simple, proven process — we find what's broken, fix it, and start driving real customers to your business."
         />
 
         <div className="mt-16 grid gap-0 md:grid-cols-4">

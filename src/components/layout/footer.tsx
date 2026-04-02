@@ -15,21 +15,21 @@ export function Footer() {
                 Next Step
               </p>
               <h2 className="text-display-sm text-txt-primary text-balance md:text-display">
-                Ready to scale your growth?
+                Ready to get more customers?
               </h2>
               <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed">
-                Book a free strategy call. We&apos;ll audit your current acquisition system and show you exactly where the opportunities are.
+                Get a free audit of your website and marketing. We&apos;ll show you exactly where you&apos;re losing leads and how to fix it.
               </p>
               <div className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
                 <Link href="/contact">
                   <Button variant="primary" size="xl">
-                    Book Your Strategy Call
+                    Get Your Free Audit
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>
               <p className="mt-4 text-caption text-txt-faint">
-                No commitment. No pressure. Just clarity.
+                No commitment. No contracts. Just a clear plan.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ export function Footer() {
                   <span className="font-semibold text-brand-400">1</span>
                 </Link>
                 <p className="mt-4 text-body-sm text-txt-muted leading-relaxed max-w-xs">
-                  Growth marketing that scales revenue. Media buying, offer creation, and funnel strategy — engineered for ROI.
+                  Marketing that fills your schedule. Websites, ads, and lead systems built for local businesses that want more customers.
                 </p>
               </div>
 

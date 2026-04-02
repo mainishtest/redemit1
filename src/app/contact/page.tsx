@@ -4,14 +4,14 @@ import { SITE_CONFIG } from '@/lib/constants'
 import { ContactForm } from '@/components/shared/contact-form'
 
 export const metadata: Metadata = {
-  title: 'Book a Strategy Call',
-  description: 'Get a free growth audit and strategy call. We\'ll show you exactly where the opportunities are in your acquisition system.',
+  title: 'Get Your Free Audit',
+  description: 'Get a free audit of your website and marketing. We\'ll show you exactly where you\'re losing leads and how to fix it.',
 }
 
 const benefits = [
-  'Full audit of your current acquisition system',
-  'Identification of your biggest revenue opportunities',
-  'Custom growth roadmap for your business',
+  'Full audit of your website, ads, and online presence',
+  'Find out exactly where you\'re losing leads',
+  'Custom marketing plan for your business',
   'No commitment required — just clarity',
 ]
 
@@ -24,10 +24,10 @@ export default function ContactPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Get Started</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
-              Let&apos;s Build Your Growth Engine
+              Get Your Free Marketing Audit
             </h1>
             <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-              Book a free strategy call. We&apos;ll audit your current setup and show you exactly where the biggest opportunities are.
+              Tell us about your business and we&apos;ll show you exactly where you&apos;re losing leads — and how to fix it. No commitment, no pressure.
             </p>
           </div>
         </div>

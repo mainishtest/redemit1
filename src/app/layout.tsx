@@ -12,11 +12,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Redemit One — Growth Marketing That Scales Revenue',
+    default: 'Redemit One — Marketing That Fills Your Schedule',
     template: '%s | Redemit One',
   },
   description:
-    'We build and scale paid acquisition systems for brands ready to grow. Media buying, offer creation, and funnel strategy — engineered for ROI.',
+    'We help local businesses get more customers through high-converting websites, paid ads, and marketing systems that actually work.',
   metadataBase: new URL('https://redemit1.com'),
   icons: {
     icon: [
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'Redemit One — Growth Marketing That Scales Revenue',
+    title: 'Redemit One — Marketing That Fills Your Schedule',
     description:
-      'We build and scale paid acquisition systems for brands ready to grow. Media buying, offer creation, and funnel strategy — engineered for ROI.',
+      'Websites, ads, and lead systems built for local businesses that want more customers. No fluff. Real results.',
     url: 'https://redemit1.com',
     siteName: 'Redemit One',
     locale: 'en_US',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Redemit One — Growth Marketing That Scales Revenue',
+    title: 'Redemit One — Marketing That Fills Your Schedule',
     description:
-      'We build and scale paid acquisition systems for brands ready to grow.',
+      'We help local businesses get more customers through websites, ads, and lead systems that actually work.',
   },
   robots: {
     index: true,

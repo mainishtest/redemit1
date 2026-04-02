@@ -6,9 +6,9 @@ import { EcommerceScaleVisual, SaasAcquisitionVisual, InfoProductLaunchVisual } 
 import { CASE_STUDIES } from '@/lib/constants'
 
 const caseStudyVisuals: Record<string, React.ReactNode> = {
-  'ecommerce-scale': <EcommerceScaleVisual className="w-full h-full" />,
-  'saas-acquisition': <SaasAcquisitionVisual className="w-full h-full" />,
-  'info-product-launch': <InfoProductLaunchVisual className="w-full h-full" />,
+  'roofing-lead-gen': <EcommerceScaleVisual className="w-full h-full" />,
+  'landscaping-growth': <SaasAcquisitionVisual className="w-full h-full" />,
+  'baseball-training': <InfoProductLaunchVisual className="w-full h-full" />,
 }
 
 export function CaseStudiesPreview() {
@@ -17,8 +17,8 @@ export function CaseStudiesPreview() {
       <div className="section-container">
         <SectionHeader
           label="Proof"
-          title="Results That Speak for Themselves"
-          description="We don't just talk about growth — we deliver it. Here are some of the brands we've scaled."
+          title="Real Results for Real Businesses"
+          description="We don't just talk about marketing — we deliver customers. Here's what we've done for businesses like yours."
         />
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">

@@ -12,10 +12,10 @@ const iconMap: Record<string, React.ElementType> = {
 }
 
 const visualMap: Record<string, React.ElementType> = {
-  'media-buying': MediaBuyingVisual,
-  'offer-creation': OfferCreationVisual,
-  'funnel-strategy': FunnelStrategyVisual,
-  'creative-copy': CreativeCopyVisual,
+  'local-ads': MediaBuyingVisual,
+  'websites': OfferCreationVisual,
+  'lead-systems': FunnelStrategyVisual,
+  'brand-content': CreativeCopyVisual,
 }
 
 export function ServicesOverview() {
@@ -24,8 +24,8 @@ export function ServicesOverview() {
       <div className="section-container">
         <SectionHeader
           label="What We Do"
-          title="A Full-Stack Growth Engine"
-          description="Most agencies manage your ads. We engineer your entire acquisition system — the offer, the funnel, the creative, and the media buy."
+          title="Everything Your Business Needs to Grow"
+          description="Most agencies sell you one thing. We build the entire system — website, ads, lead capture, and follow-up — so everything works together to fill your schedule."
         />
 
         <div className="mt-16 grid gap-px bg-light-300/60 rounded-xl overflow-hidden sm:grid-cols-2">

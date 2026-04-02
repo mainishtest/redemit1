@@ -8,7 +8,7 @@ import { SERVICES } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Media buying, offer creation, funnel strategy, and performance creative — a full-stack growth engine for brands ready to scale.',
+  description: 'Websites, local ads, lead systems, and brand strategy — everything your local business needs to get more customers and stay booked.',
 }
 
 const iconMap: Record<string, React.ElementType> = {
@@ -19,10 +19,10 @@ const iconMap: Record<string, React.ElementType> = {
 }
 
 const serviceVisualMap: Record<string, React.ElementType> = {
-  'media-buying': MediaBuyingVisual,
-  'offer-creation': OfferCreationVisual,
-  'funnel-strategy': FunnelStrategyVisual,
-  'creative-copy': CreativeCopyVisual,
+  'local-ads': MediaBuyingVisual,
+  'websites': OfferCreationVisual,
+  'lead-systems': FunnelStrategyVisual,
+  'brand-content': CreativeCopyVisual,
 }
 
 export default function ServicesPage() {
@@ -34,10 +34,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Our Services</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
-              Everything You Need to Scale Profitably
+              Everything Your Business Needs to Grow
             </h1>
             <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-              We don&apos;t do one thing. We build the entire acquisition machine — from offer to ad to funnel to sale.
+              We don&apos;t do one thing. We build your entire marketing system — website, ads, lead capture, and follow-up — so customers keep coming in.
             </p>
           </div>
         </div>
@@ -121,15 +121,15 @@ export default function ServicesPage() {
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-display-sm text-txt-primary md:text-display">
-              Not Sure Which Service You Need?
+              Not Sure Where to Start?
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary">
-              Book a free strategy call and we&apos;ll audit your current setup. We&apos;ll tell you exactly where the biggest opportunities are.
+              Get a free audit of your website and marketing. We&apos;ll show you exactly where you&apos;re losing leads and how to fix it.
             </p>
             <div className="mt-10">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
-                  Book Your Free Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

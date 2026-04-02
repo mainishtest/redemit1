@@ -8,9 +8,9 @@ import { EcommerceScaleVisual, SaasAcquisitionVisual, InfoProductLaunchVisual } 
 import { CASE_STUDIES } from '@/lib/constants'
 
 const caseStudyVisuals: Record<string, React.ElementType> = {
-  'ecommerce-scale': EcommerceScaleVisual,
-  'saas-acquisition': SaasAcquisitionVisual,
-  'info-product-launch': InfoProductLaunchVisual,
+  'roofing-lead-gen': EcommerceScaleVisual,
+  'landscaping-growth': SaasAcquisitionVisual,
+  'baseball-training': InfoProductLaunchVisual,
 }
 
 interface Props {
@@ -103,12 +103,12 @@ export default function CaseStudyPage({ params }: Props) {
         <div className="section-container max-w-[680px]">
           <h2 className="text-heading-lg text-txt-primary">The Challenge</h2>
           <p className="text-body-lg text-txt-secondary leading-relaxed mt-5">
-            This client came to us with a solid product but an underperforming acquisition system. Their cost per acquisition was too high, their funnel had significant drop-off, and their creative was fatiguing fast. They needed a complete overhaul of their growth engine.
+            This business came to us with a strong service but almost no online presence. Their website wasn&apos;t converting, they had no system to capture and follow up with leads, and they were relying on word-of-mouth to fill their schedule. They needed a complete marketing system.
           </p>
 
           <h2 className="text-heading-lg text-txt-primary mt-14">Our Approach</h2>
           <div className="mt-5 space-y-3">
-            {['Conducted full-funnel audit to identify revenue leaks', 'Rebuilt offer positioning and pricing strategy', 'Designed and launched new landing page system', 'Restructured ad account with creative testing framework', 'Implemented post-purchase flows to increase LTV'].map((item) => (
+            {['Audited their website, ads, and online presence', 'Built a conversion-focused website and landing pages', 'Launched targeted local ads on Facebook and Google', 'Set up automated lead capture and follow-up system', 'Implemented review requests and reputation management'].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <Check className="h-4 w-4 text-brand-400 mt-1 shrink-0" />
                 <span className="text-body-lg text-txt-secondary">{item}</span>
@@ -118,7 +118,7 @@ export default function CaseStudyPage({ params }: Props) {
 
           <h2 className="text-heading-lg text-txt-primary mt-14">The Results</h2>
           <p className="text-body-lg text-txt-secondary leading-relaxed mt-5">
-            Within 90 days, we had transformed their acquisition economics. The restructured offer drove higher conversion rates, the new creative framework maintained performance at scale, and the optimized funnel turned every dollar of ad spend into predictable revenue.
+            Within 60 days, leads were flowing consistently. The new website converted visitors into calls, the ad campaigns drove a steady stream of local customers, and the follow-up system made sure no lead fell through the cracks. Their schedule went from empty to fully booked.
           </p>
         </div>
       </section>
@@ -131,12 +131,12 @@ export default function CaseStudyPage({ params }: Props) {
               Want Results Like These?
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary">
-              Let&apos;s talk about what&apos;s possible for your brand.
+              Let&apos;s talk about what&apos;s possible for your business.
             </p>
             <div className="mt-10">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
-                  Book Your Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

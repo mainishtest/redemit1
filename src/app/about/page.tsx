@@ -8,24 +8,24 @@ import { RESULTS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Redemit One is a growth marketing agency built by operators, not account managers. We build acquisition systems that scale revenue.',
+  description: 'Redemit One helps local businesses get more customers through websites, ads, and lead systems that actually work. Based in Idaho, serving businesses everywhere.',
 }
 
 const values = [
   {
     icon: Target,
     title: 'Results Over Activity',
-    description: 'We don\'t measure success by how busy we are. We measure it by how much revenue we generate for our clients.',
+    description: 'We don\'t measure success by how many posts we make or reports we send. We measure it by how many customers walk through your door.',
   },
   {
     icon: Users,
-    title: 'Operators, Not Managers',
-    description: 'Every person on our team has built and scaled brands themselves. We don\'t read playbooks — we write them.',
+    title: 'We Know Local Business',
+    description: 'We specialize in helping service businesses grow — roofers, landscapers, contractors, and more. We understand your market because we work in it every day.',
   },
   {
     icon: TrendingUp,
-    title: 'Compound Growth',
-    description: 'We don\'t chase quick wins that fade. We build systems that compound — so month 6 is always better than month 1.',
+    title: 'Systems That Compound',
+    description: 'We don\'t chase quick wins that fade. We build marketing systems that get stronger over time — so month 6 is always better than month 1.',
   },
 ]
 
@@ -33,17 +33,17 @@ const team = [
   {
     name: 'David',
     role: 'Founder & CEO',
-    bio: 'Former performance marketer who\'s managed $12M+ in ad spend. Built Redemit One to be the agency he wished existed.',
+    bio: 'Former performance marketer who\'s helped local businesses generate millions in revenue. Built Redemit One to be the marketing partner he wished existed for small businesses.',
   },
   {
-    name: 'Growth Team',
-    role: 'Media Buyers & Strategists',
-    bio: 'Senior operators with deep platform expertise across Meta, Google, TikTok, and YouTube. No juniors on your account.',
+    name: 'Marketing Team',
+    role: 'Ads & Strategy',
+    bio: 'Hands-on marketers with deep expertise in Facebook, Google, and local advertising. No juniors on your account — only people who know how to drive leads.',
   },
   {
-    name: 'Creative Team',
-    role: 'Creatives & Copywriters',
-    bio: 'Direct-response specialists who understand that creative is a growth lever, not a branding exercise.',
+    name: 'Build Team',
+    role: 'Web & Systems',
+    bio: 'Designers and developers who build fast, conversion-focused websites and lead capture systems. Everything is built to get your phone ringing.',
   },
 ]
 
@@ -56,10 +56,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">About Us</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
-              Built by Operators. Driven by Results.
+              We Help Local Businesses Get More Customers
             </h1>
             <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-              Redemit One exists because most agencies are broken. They overpromise, underdeliver, and hide behind vanity metrics. We built the agency we wished existed.
+              Redemit One exists because most marketing agencies don&apos;t understand local business. They sell vanity metrics and generic packages. We build systems that actually fill your schedule.
             </p>
           </div>
         </div>
@@ -73,13 +73,13 @@ export default function AboutPage() {
           <h2 className="text-heading-lg text-txt-primary">The Short Version</h2>
           <div className="mt-6 space-y-5 text-body-lg text-txt-secondary leading-relaxed">
             <p>
-              We started as brand operators — spending our own money on ads, building our own funnels, and learning what actually drives revenue. Not theory. Not frameworks. Actual results with real dollars on the line.
+              We started by helping a few local businesses in Idaho get more customers — building their websites, running their ads, and setting up systems to capture and follow up with every lead. Not theory. Real results with real money on the line.
             </p>
             <p>
-              When we started consulting for other brands, we realized the same problems kept showing up: fragmented strategies, agencies that only manage ads without touching the offer or funnel, and a total disconnect between creative and media buying.
+              The same problems kept showing up everywhere: websites that don&apos;t convert, ads that waste money, and no system to follow up with leads before they go cold. Most agencies only fix one piece. The rest falls through the cracks.
             </p>
             <p>
-              So we built Redemit One to solve that. One team. Full stack. Every piece of the acquisition engine working together — because that&apos;s the only way it actually scales.
+              So we built Redemit One to solve that. One team handles everything — your website, your ads, your lead capture, and your follow-up. It all works together because we build it all together.
             </p>
           </div>
         </div>
@@ -138,8 +138,8 @@ export default function AboutPage() {
         <div className="section-container">
           <SectionHeader
             label="The Team"
-            title="Senior Operators. Not Junior Account Managers."
-            description="Your account is never handed off to someone learning on the job. Every person at Redemit One has real scaling experience."
+            title="Real Marketers. Not Junior Account Managers."
+            description="Your business is never handed off to someone learning on the job. Every person at Redemit One has hands-on experience driving leads for local businesses."
           />
 
           {/* Team network visual */}
@@ -169,15 +169,15 @@ export default function AboutPage() {
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-display-sm text-txt-primary md:text-display">
-              Ready to Work With a Team That Delivers?
+              Ready to Get More Customers?
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary">
-              Let&apos;s talk about your growth goals. No fluff, no sales pitch — just a real conversation about what&apos;s possible.
+              Get a free audit of your website and marketing. No fluff, no sales pitch — just a clear look at where you&apos;re leaving money on the table.
             </p>
             <div className="mt-10">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
-                  Book a Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

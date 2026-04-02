@@ -7,14 +7,14 @@ import { EcommerceScaleVisual, SaasAcquisitionVisual, InfoProductLaunchVisual } 
 import { CASE_STUDIES } from '@/lib/constants'
 
 const caseStudyVisuals: Record<string, React.ReactNode> = {
-  'ecommerce-scale': <EcommerceScaleVisual className="w-full h-full" />,
-  'saas-acquisition': <SaasAcquisitionVisual className="w-full h-full" />,
-  'info-product-launch': <InfoProductLaunchVisual className="w-full h-full" />,
+  'roofing-lead-gen': <EcommerceScaleVisual className="w-full h-full" />,
+  'landscaping-growth': <SaasAcquisitionVisual className="w-full h-full" />,
+  'baseball-training': <InfoProductLaunchVisual className="w-full h-full" />,
 }
 
 export const metadata: Metadata = {
   title: 'Case Studies',
-  description: 'Real results from real brands. See how we\'ve scaled revenue for e-commerce, SaaS, and info-product businesses.',
+  description: 'Real results for real local businesses. See how we\'ve helped roofers, landscapers, and more get more leads and customers.',
 }
 
 export default function CaseStudiesPage() {
@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
               Proof Over Promises
             </h1>
             <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-              We let the numbers do the talking. Here&apos;s what happens when strategy, creative, and media buying work together.
+              We let the numbers do the talking. Here&apos;s what happens when your website, ads, and lead systems actually work together.
             </p>
           </div>
         </div>
@@ -116,12 +116,12 @@ export default function CaseStudiesPage() {
               Want Results Like These?
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary">
-              Every engagement starts with a free strategy call. We&apos;ll show you where the opportunities are in your business.
+              Every engagement starts with a free audit. We&apos;ll show you exactly where you&apos;re losing leads and how to fix it.
             </p>
             <div className="mt-10">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
-                  Book Your Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

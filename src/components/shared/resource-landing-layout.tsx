@@ -266,7 +266,7 @@ export function ResourceLandingLayout({
               </Link>
             </div>
             <p className="mt-4 text-caption text-txt-faint">
-              Best for brands spending $3K+/mo on paid acquisition or preparing to scale
+              Best for local businesses that want more customers and a clear plan to get them
             </p>
           </div>
         </div>

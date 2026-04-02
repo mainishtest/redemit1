@@ -116,7 +116,7 @@ export function ResourceGateForm({
               </Link>
             </div>
             <p className="mt-2.5 text-center text-caption text-txt-faint">
-              For brands spending $3K+/mo on ads or ready to start
+              For local businesses that want more customers
             </p>
           </div>
         </div>

@@ -20,33 +20,33 @@ export function Hero() {
         <div className="section-container pt-[120px] pb-20 md:pt-[140px] md:pb-28 lg:pb-36">
           <div className="mx-auto max-w-[820px] text-center">
             <p className="text-overline uppercase text-txt-muted tracking-widest mb-6">
-              Growth Marketing Agency
+              Local Business Marketing
             </p>
 
             <h1 className="text-display-sm text-txt-primary text-balance sm:text-display-lg lg:text-display-xl">
-              We Build Acquisition Systems That Scale Revenue
+              More Customers. More Calls. More Revenue.
             </h1>
 
             <p className="mx-auto mt-7 max-w-[580px] text-body-lg text-txt-secondary leading-relaxed text-pretty">
-              Media buying, offer creation, and funnel strategy — engineered for brands spending on ads and ready to grow profitably.
+              We build websites, run ads, and create marketing systems that help local businesses get found, get leads, and stay booked.
             </p>
 
             <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
-                  Book a Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/case-studies">
                 <Button variant="outline" size="xl">
-                  See Our Results
+                  See Our Work
                 </Button>
               </Link>
             </div>
 
             <p className="mt-5 text-caption text-txt-faint">
-              Free audit included &middot; No contracts required
+              Free audit included &middot; No contracts &middot; Real results
             </p>
           </div>
 

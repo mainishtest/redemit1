@@ -4,23 +4,23 @@ import { SectionHeader } from '@/components/ui/section-header'
 const differentiators = [
   {
     icon: Zap,
-    title: 'Full-Stack, Not Fragmented',
-    description: 'We don\'t just run your ads. We build your offer, design your funnel, write your copy, and manage your media — all under one roof.',
+    title: 'Everything Under One Roof',
+    description: 'Website, ads, follow-up, content — we build your entire marketing system so everything works together. No juggling five different vendors.',
   },
   {
     icon: TrendingUp,
-    title: 'Revenue-Obsessed',
-    description: 'We don\'t optimize for vanity metrics. Every decision we make is tied to revenue. If it doesn\'t drive growth, we don\'t do it.',
+    title: 'Built for Leads, Not Likes',
+    description: 'We don\'t care about vanity metrics. Every decision we make is tied to getting your phone to ring and your schedule filled.',
   },
   {
     icon: Shield,
     title: 'No Long-Term Contracts',
-    description: '90-day engagement cycles. We earn your business every quarter through results — not legal lock-ins.',
+    description: 'Month-to-month or 90-day cycles. We keep your business by delivering results — not by locking you into a contract you can\'t escape.',
   },
   {
     icon: Users,
-    title: 'Operator-Led',
-    description: 'Your account is managed by senior operators who\'ve scaled brands themselves — not junior account managers reading a playbook.',
+    title: 'We Know Local Business',
+    description: 'We specialize in helping service businesses grow — roofers, landscapers, contractors, and more. We understand your market because we work in it every day.',
   },
 ]
 
@@ -30,8 +30,8 @@ export function WhyUs() {
       <div className="section-container">
         <SectionHeader
           label="Why Redemit One"
-          title="Built Different"
-          description="We built Redemit One because we were tired of agencies that overpromise and underdeliver. Here's how we're different."
+          title="Marketing That Actually Works for Local Businesses"
+          description="Most agencies sell you fluff. We build systems that put customers in your pipeline — and keep them coming."
         />
 
         <div className="mt-16 grid gap-px bg-light-300/60 rounded-xl overflow-hidden sm:grid-cols-2">

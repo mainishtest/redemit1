@@ -4,8 +4,8 @@ import { ArrowRight, Download, BarChart3, Target, GitBranch, PenTool, FileText, 
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'Free Growth Resources — Playbooks, Frameworks & Guides',
-  description: 'Free expert-level resources on scaling ads, building offers, architecting funnels, and producing winning creative. The same systems used across 50+ brand engagements.',
+  title: 'Free Marketing Resources — Guides, Playbooks & Frameworks',
+  description: 'Free resources on running ads, building websites that convert, and getting more leads for your local business. The same systems we use for our clients.',
 }
 
 const featuredResource = {
@@ -78,10 +78,10 @@ export default function ResourcesPage() {
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-overline uppercase text-brand-400 tracking-widest mb-5">Free Resources — No Fluff</p>
               <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
-                The Same Playbooks We Use to Scale 50+ Brands
+                The Same Playbooks We Use for Our Clients
               </h1>
               <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
-                Expert-level frameworks on media buying, offer creation, funnels, and creative strategy. Not theory — the exact systems behind $12M+ in managed ad spend. Free.
+                Practical guides on running ads, building landing pages, and generating leads. Not theory — the exact systems we use to help local businesses get more customers. Free.
               </p>
             </div>
           </div>
@@ -197,22 +197,22 @@ export default function ResourcesPage() {
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-400 text-caption font-medium mb-6">
               <Phone className="h-3.5 w-3.5" />
-              For Serious Growth Teams Only
+              For Business Owners Who Want Results
             </div>
             <h2 className="text-display-sm text-txt-primary md:text-display">
-              Want a Custom Growth Plan — Not Just Frameworks?
+              Want a Custom Marketing Plan — Not Just Guides?
             </h2>
             <p className="mt-5 text-body-lg text-txt-secondary max-w-xl mx-auto">
-              Our resources give you the systems. A strategy call gives you the <strong className="text-txt-primary">specific moves for YOUR business</strong> — ad account audit, funnel review, and a 90-day scaling roadmap tailored to your goals.
+              Our resources give you the knowledge. A free audit gives you the <strong className="text-txt-primary">specific plan for YOUR business</strong> — website review, ad account audit, and a clear roadmap to get more customers.
             </p>
             <div className="mt-6 grid sm:grid-cols-3 gap-4 text-left max-w-lg mx-auto">
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="h-4 w-4 text-brand-400 mt-0.5 shrink-0" />
-                <span className="text-body-sm text-txt-secondary">Full account audit</span>
+                <span className="text-body-sm text-txt-secondary">Full website audit</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="h-4 w-4 text-brand-400 mt-0.5 shrink-0" />
-                <span className="text-body-sm text-txt-secondary">90-day growth roadmap</span>
+                <span className="text-body-sm text-txt-secondary">Custom marketing plan</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <CheckCircle2 className="h-4 w-4 text-brand-400 mt-0.5 shrink-0" />
@@ -222,13 +222,13 @@ export default function ResourcesPage() {
             <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl" className="shadow-glow-sm">
-                  Book Your Free Strategy Call
+                  Get Your Free Audit
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
             <p className="mt-4 text-caption text-txt-faint">
-              Best for brands spending $3K+/mo on paid acquisition or preparing to scale
+              Best for local businesses that want more customers and a clear plan to get them
             </p>
           </div>
         </div>
