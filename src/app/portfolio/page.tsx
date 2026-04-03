@@ -25,20 +25,6 @@ interface PortfolioProject {
 
 const projects: PortfolioProject[] = [
   {
-    name: 'TenX & Company',
-    slug: 'tenx-and-company',
-    url: 'https://www.tenxandcompany.com',
-    industry: 'General Contractor',
-    type: 'Client Website',
-    location: 'Kuna, Idaho',
-    description: 'Full website build for a premier general contractor specializing in commercial construction, custom homes, and farm & agricultural buildings. Designed to establish authority and drive free estimate requests.',
-    services: ['Website Design & Build', 'Brand Positioning', 'Lead Capture'],
-    gradient: 'from-amber-900/90 via-stone-800/80 to-stone-900/90',
-    textColor: 'text-amber-200',
-    accentColor: 'bg-amber-400',
-    featured: true,
-  },
-  {
     name: 'Building With Valor',
     slug: 'building-with-valor',
     url: 'https://www.buildingwithvalor.com',
@@ -138,12 +124,16 @@ function PortfolioCard({ project, index }: { project: PortfolioProject; index: n
           </div>
         </div>
 
-        {/* Image placeholder — replace with real screenshots */}
-        {/* Drop screenshots in /public/images/portfolio/{slug}.jpg and uncomment: */}
-        {/* <img src={`/images/portfolio/${project.slug}.jpg`} alt={project.name} className="absolute inset-0 w-full h-full object-cover object-top pt-8" /> */}
+        {/* Screenshot preview image */}
+        {/* Run: node scripts/capture-portfolio-screenshots.mjs */}
+        <img
+          src={`/images/portfolio/${project.slug}.jpg`}
+          alt={project.name}
+          className="absolute inset-0 w-full h-full object-cover object-top pt-8"
+        />
 
-        {/* Stylized content preview */}
-        <div className="absolute inset-0 pt-12 px-6 md:px-10">
+        {/* Gradient fallback (visible if screenshot hasn't loaded yet) */}
+        <div className="absolute inset-0 pt-12 px-6 md:px-10 -z-10">
           <div className={`text-2xl md:text-3xl ${project.featured ? 'lg:text-4xl' : ''} font-bold text-white/90 leading-tight max-w-md`}>
             {project.name}
           </div>

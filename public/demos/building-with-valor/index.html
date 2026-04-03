@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building With Valor | Commercial Construction in Boise & Treasure Valley</title>
+<meta name="description" content="Boise's trusted commercial general contractor. Tenant improvements, build-outs, and renovations — on time, on budget, built with integrity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#2c4a3e;
+  --forest-deep:#1e3529;
+  --sage:#a8bfad;
+  --sage-light:#d4e2d7;
+  --sage-pale:#edf3ee;
+  --cream:#f8f5f0;
+  --gold:#c9a84c;
+  --gold-light:#dfc778;
+  --charcoal:#1a1a1a;
+  --text:#2d2d2d;
+  --text-light:#5a5a5a;
+  --white:#ffffff;
+  --radius:8px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);line-height:1.6;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:var(--forest-deep)}
+/* ===================== NAV ===================== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(44,74,62,0.08);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--forest-deep)}
+.nav-logo .logo-icon{width:40px;height:40px;background:var(--forest);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:1rem;font-family:'Playfair Display',serif}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:.875rem;font-weight:500}
+.nav-links a{color:var(--text-light);transition:color .2s}
+.nav-links a:hover{color:var(--forest)}
+.nav-phone{display:flex;align-items:center;gap:6px;color:var(--forest);font-weight:600;font-size:.9rem}
+.nav-phone svg{width:16px;height:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:all .25s;font-family:'Inter',sans-serif}
+.btn-primary{background:var(--forest);color:var(--white)}
+.btn-primary:hover{background:var(--forest-deep);transform:translateY(-1px);box-shadow:0 4px 16px rgba(44,74,62,0.3)}
+.btn-outline{background:transparent;color:var(--forest);border:2px solid var(--forest)}
+.btn-outline:hover{background:var(--forest);color:var(--white)}
+.btn-gold{background:var(--gold);color:var(--forest-deep)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,0.35)}
+.btn-white{background:var(--white);color:var(--forest-deep)}
+.btn-white:hover{background:var(--cream);transform:translateY(-1px)}
+.btn-nav{padding:10px 20px;font-size:.85rem}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--forest);margin:5px 0;transition:.3s}
+/* ===================== HERO ===================== */
+.hero{padding:140px 0 100px;background:linear-gradient(135deg,var(--forest-deep) 0%,var(--forest) 60%,#3d6b55 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="none"/><path d="M0 20h40M20 0v40" stroke="rgba(168,191,173,0.07)" stroke-width="1"/></pattern></defs><rect fill="url(%23g)" width="800" height="800"/></svg>');opacity:.5}
+.hero::after{content:'';position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,transparent 70%);border-radius:50%}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-content{color:var(--white)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);border-radius:100px;font-size:.8rem;font-weight:600;color:var(--gold-light);margin-bottom:24px;letter-spacing:.02em}
+.hero-badge svg{width:14px;height:14px}
+.hero h1{font-size:3.2rem;font-weight:800;line-height:1.1;margin-bottom:20px;color:var(--white)}
+.hero h1 span{color:var(--gold-light)}
+.hero-sub{font-size:1.15rem;line-height:1.7;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:520px}
+.hero-ctas{display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.12)}
+.hero-proof-item{text-align:center}
+.hero-proof-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold-light)}
+.hero-proof-label{font-size:.75rem;color:rgba(255,255,255,0.6);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.hero-visual{position:relative}
+.hero-card{background:var(--white);border-radius:16px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,0.2);position:relative}
+.hero-card-label{font-size:.7rem;font-weight:600;color:var(--text-light);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.hero-card h3{font-size:1.4rem;color:var(--forest-deep);margin-bottom:12px}
+.hero-card p{font-size:.9rem;color:var(--text-light);line-height:1.6;margin-bottom:20px}
+.hero-card-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hero-card-stat{background:var(--sage-pale);border-radius:8px;padding:16px;text-align:center}
+.hero-card-stat .num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--forest)}
+.hero-card-stat .label{font-size:.7rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.hero-float{position:absolute;top:-20px;right:-20px;background:var(--gold);color:var(--forest-deep);padding:14px 20px;border-radius:12px;box-shadow:0 8px 24px rgba(201,168,76,0.3);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:8px}
+.hero-float svg{width:18px;height:18px}
+/* ===================== TRUST BAR ===================== */
+.trust-bar{padding:48px 0;background:var(--cream);border-bottom:1px solid rgba(44,74,62,0.06)}
+.trust-bar-inner{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--text-light);font-weight:500}
+.trust-item svg{width:20px;height:20px;color:var(--forest);flex-shrink:0}
+.trust-item strong{color:var(--forest-deep)}
+/* ===================== SERVICES ===================== */
+.services{padding:100px 0;background:var(--white)}
+.section-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-size:2.5rem;margin-bottom:16px}
+.section-sub{font-size:1.05rem;color:var(--text-light);max-width:600px;margin-bottom:56px;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);border:1px solid rgba(44,74,62,0.08);border-radius:14px;padding:36px 28px;transition:all .3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--forest),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.service-card:hover{border-color:var(--forest);box-shadow:0 8px 32px rgba(44,74,62,0.08);transform:translateY(-4px)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:52px;height:52px;background:var(--sage-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-icon svg{width:24px;height:24px;color:var(--forest)}
+.service-card h3{font-size:1.2rem;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:700;color:var(--forest-deep)}
+.service-card p{font-size:.9rem;color:var(--text-light);line-height:1.65;margin-bottom:16px}
+.service-link{font-size:.85rem;font-weight:600;color:var(--forest);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+.service-link:hover{gap:10px}
+.service-link svg{width:14px;height:14px}
+/* ===================== WHY CHOOSE ===================== */
+.why{padding:100px 0;background:var(--forest-deep);color:var(--white);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);border-radius:50%}
+.why .section-label{color:var(--gold-light)}
+.why .section-title{color:var(--white);margin-bottom:56px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;z-index:2}
+.why-card{padding:32px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;transition:all .3s}
+.why-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(201,168,76,0.3)}
+.why-card-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:rgba(201,168,76,0.3);margin-bottom:16px}
+.why-card h3{font-size:1.1rem;font-family:'Inter',sans-serif;font-weight:700;color:var(--white);margin-bottom:10px}
+.why-card p{font-size:.88rem;color:rgba(255,255,255,0.6);line-height:1.65}
+.why-cta-row{text-align:center;margin-top:56px;position:relative;z-index:2}
+/* ===================== PROCESS ===================== */
+.process{padding:100px 0;background:var(--sage-pale)}
+.process .section-title{text-align:center}
+.process .section-label{text-align:center}
+.process .section-sub{text-align:center;margin-left:auto;margin-right:auto}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--forest),var(--gold),var(--forest));opacity:.2}
+.process-step{text-align:center;position:relative;z-index:2}
+.step-num{width:64px;height:64px;border-radius:50%;background:var(--white);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--forest);transition:all .3s;box-shadow:0 4px 12px rgba(44,74,62,0.08)}
+.process-step:hover .step-num{background:var(--forest);color:var(--white)}
+.process-step h3{font-size:1.05rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:8px;color:var(--forest-deep)}
+.process-step p{font-size:.85rem;color:var(--text-light);line-height:1.6;max-width:220px;margin:0 auto}
+/* ===================== PROJECTS ===================== */
+.projects{padding:100px 0;background:var(--white)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.project-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--sage);cursor:pointer;group:true}
+.project-card-img{width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,var(--sage) 0%,var(--forest) 100%);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.project-overlay{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(transparent,rgba(30,53,41,0.9));color:var(--white);transform:translateY(10px);opacity:0;transition:all .3s}
+.project-card:hover .project-overlay{transform:translateY(0);opacity:1}
+.project-overlay h4{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;margin-bottom:4px}
+.project-overlay p{font-size:.8rem;opacity:.7}
+.projects-cta{text-align:center}
+/* ===================== TESTIMONIAL ===================== */
+.testimonial{padding:80px 0;background:var(--cream)}
+.testimonial-inner{max-width:800px;margin:0 auto;text-align:center}
+.testimonial-stars{display:flex;justify-content:center;gap:4px;margin-bottom:24px}
+.testimonial-stars svg{width:24px;height:24px;color:var(--gold)}
+.testimonial-quote{font-family:'Playfair Display',serif;font-size:1.6rem;line-height:1.5;color:var(--forest-deep);margin-bottom:24px;font-style:italic}
+.testimonial-author{font-size:.9rem;color:var(--text-light)}
+.testimonial-author strong{color:var(--forest-deep);font-weight:600}
+/* ===================== FAQ ===================== */
+.faq{padding:100px 0;background:var(--white)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.faq-content .section-title{margin-bottom:16px}
+.faq-content .section-sub{margin-bottom:32px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid rgba(44,74,62,0.1);border-radius:10px;overflow:hidden;transition:border-color .3s}
+.faq-item:hover{border-color:var(--forest)}
+.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.95rem;color:var(--forest-deep);background:var(--white);border:none;width:100%;text-align:left;font-family:'Inter',sans-serif;transition:background .2s}
+.faq-q:hover{background:var(--sage-pale)}
+.faq-q svg{width:18px;height:18px;color:var(--forest);transition:transform .3s;flex-shrink:0;margin-left:12px}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;font-size:.9rem;color:var(--text-light);line-height:1.7}
+.faq-item.open .faq-a{padding:0 24px 20px;max-height:300px}
+/* ===================== CTA FINAL ===================== */
+.final-cta{padding:100px 0;background:linear-gradient(135deg,var(--forest-deep) 0%,var(--forest) 100%);position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.1),transparent 70%);border-radius:50%}
+.final-cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2}
+.final-cta-content{color:var(--white)}
+.final-cta-content .section-label{color:var(--gold-light)}
+.final-cta-content .section-title{color:var(--white);font-size:2.5rem;margin-bottom:16px}
+.final-cta-content p{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:24px}
+.final-cta-content .contact-direct{display:flex;flex-direction:column;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)}
+.final-cta-content .contact-direct a{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.7);font-size:.9rem;transition:color .2s}
+.final-cta-content .contact-direct a:hover{color:var(--gold-light)}
+.final-cta-content .contact-direct svg{width:18px;height:18px;color:var(--gold)}
+.contact-form{background:var(--white);border-radius:16px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
+.contact-form h3{font-size:1.4rem;margin-bottom:6px;color:var(--forest-deep)}
+.contact-form .form-sub{font-size:.85rem;color:var(--text-light);margin-bottom:28px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--text);margin-bottom:6px;letter-spacing:.02em}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1px solid rgba(44,74,62,0.15);border-radius:var(--radius);font-size:.9rem;font-family:'Inter',sans-serif;color:var(--text);transition:border-color .2s;background:var(--white)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(44,74,62,0.08)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-submit{width:100%;padding:16px;font-size:1rem;margin-top:8px}
+.form-note{text-align:center;font-size:.75rem;color:var(--text-light);margin-top:12px}
+/* ===================== FOOTER ===================== */
+.footer{padding:48px 0 24px;background:var(--charcoal);color:rgba(255,255,255,0.5)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--white)}
+.footer-links{display:flex;gap:24px;font-size:.8rem}
+.footer-links a{color:rgba(255,255,255,0.5);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.75rem;width:100%;text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)}
+/* ===================== STICKY MOBILE CTA ===================== */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;padding:12px 16px;background:var(--white);box-shadow:0 -4px 20px rgba(0,0,0,0.1);border-top:1px solid rgba(44,74,62,0.08)}
+.sticky-cta .btn{width:100%;padding:16px}
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:1024px){
+  .hero h1{font-size:2.6rem}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-visual{max-width:500px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .faq-grid{grid-template-columns:1fr}
+  .final-cta-inner{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-mobile-toggle{display:block}
+  .hero{padding:120px 0 60px}
+  .hero h1{font-size:2rem}
+  .hero-proof{gap:24px}
+  .section-title{font-size:2rem}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:repeat(2,1fr);gap:32px}
+  .process-steps::before{display:none}
+  .projects-grid{grid-template-columns:1fr 1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%;text-align:center}
+  .form-row{grid-template-columns:1fr}
+  .sticky-cta{display:block}
+  .final-cta{padding-bottom:120px}
+  .hero-proof-num{font-size:1.6rem}
+  .testimonial-quote{font-size:1.3rem}
+}
+@media(max-width:480px){
+  .hero h1{font-size:1.7rem}
+  .projects-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .trust-bar-inner{flex-direction:column;gap:20px;align-items:flex-start;padding-left:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">V</div>
+      Building With Valor
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:2089010911" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (208) 901-0911
+      </a>
+      <a href="#contact" class="btn btn-primary btn-nav">Get a Consultation</a>
+    </div>
+    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Trusted Commercial Contractor — Boise & Treasure Valley
+        </div>
+        <h1>Commercial Construction<br>Built on <span>Precision,</span><br>Delivered with <span>Integrity</span></h1>
+        <p class="hero-sub">From tenant improvements to full build-outs, we help property owners and businesses across the Treasure Valley get projects done right — on time, on budget, and without the headaches.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-gold">Request a Free Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="tel:2089010911" class="btn btn-outline" style="border-color:rgba(255,255,255,.3);color:var(--white)">Call (208) 901-0911</a>
+        </div>
+        <div class="hero-proof">
+          <div class="hero-proof-item">
+            <div class="hero-proof-num">100+</div>
+            <div class="hero-proof-label">Projects Completed</div>
+          </div>
+          <div class="hero-proof-item">
+            <div class="hero-proof-num">15+</div>
+            <div class="hero-proof-label">Years Experience</div>
+          </div>
+          <div class="hero-proof-item">
+            <div class="hero-proof-num">100%</div>
+            <div class="hero-proof-label">Client Focused</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-float">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Licensed & Insured
+          </div>
+          <div class="hero-card-label">What We Deliver</div>
+          <h3>Commercial Projects That Meet Your Standards</h3>
+          <p>We handle the complexity so you can focus on running your business. Every project gets a dedicated project manager, clear communication, and a commitment to your timeline.</p>
+          <div class="hero-card-stats">
+            <div class="hero-card-stat">
+              <div class="num">On-Time</div>
+              <div class="label">Delivery Record</div>
+            </div>
+            <div class="hero-card-stat">
+              <div class="num">On-Budget</div>
+              <div class="label">Cost Control</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span><strong>Licensed</strong> & Insured</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span><strong>Commercial</strong> Specialists</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span><strong>On-Time</strong> Delivery</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span><strong>Boise</strong> & Treasure Valley</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <span><strong>Dedicated</strong> Project Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Commercial Construction Solutions<br>That Drive Results</h2>
+    <p class="section-sub">We specialize in commercial projects that help businesses operate better, attract more customers, and grow in the Treasure Valley.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Tenant Improvements</h3>
+        <p>Customize your commercial space to match your brand, workflow, and business goals. We handle everything from design coordination to final finishes — minimizing downtime so you can get open faster.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Commercial Build-Outs</h3>
+        <p>Transform raw or existing spaces into fully operational commercial environments. Our team manages every phase — permits, subcontractors, inspections — so you have one point of contact from start to finish.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Commercial Remodels</h3>
+        <p>Revitalize your office, retail, or commercial property to improve function and appearance. We work within your operational schedule to reduce disruption while delivering a space that elevates your business.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Construction Planning</h3>
+        <p>Get clarity before ground breaks. We provide detailed scoping, budgeting, and scheduling so you know exactly what to expect — no surprises, no scope creep, no blown timelines.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v4"/></svg>
+        </div>
+        <h3>General Contracting</h3>
+        <p>One reliable partner for your entire project. As your general contractor, we coordinate every trade, manage every deadline, and keep you informed every step of the way.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Custom Homes</h3>
+        <p>Bring your vision to life with a custom-built home designed around your lifestyle. We manage every detail from foundation to finish, ensuring quality craftsmanship throughout.</p>
+        <a href="#contact" class="service-link">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY CHOOSE ==================== -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-label">Why Building With Valor</div>
+    <h2 class="section-title">Six Reasons Clients Trust Us<br>With Their Projects</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-num">01</div>
+        <h3>Clear, Consistent Communication</h3>
+        <p>You'll never wonder what's happening on your project. We provide regular updates, answer calls promptly, and keep you informed at every stage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-num">02</div>
+        <h3>On-Time, On-Budget Delivery</h3>
+        <p>We build realistic timelines and stick to them. Our detailed planning process means you get accurate budgets — not inflated estimates that change later.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-num">03</div>
+        <h3>Detail-Oriented Execution</h3>
+        <p>Precision isn't just a word for us. Every joint, every finish, every detail is held to a standard that ensures your space looks and performs exactly as planned.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-num">04</div>
+        <h3>Dedicated Project Management</h3>
+        <p>One point of contact. One person accountable. Your project manager handles coordination, scheduling, and quality control so you don't have to manage multiple contractors.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-num">05</div>
+        <h3>Built Around Your Goals</h3>
+        <p>We don't just build structures — we build solutions that serve your business objectives. Every decision we make ties back to what you're trying to achieve.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-num">06</div>
+        <h3>Local. Accountable. Reliable.</h3>
+        <p>We're a Treasure Valley company. Our reputation is built on every project we deliver. When you call us, you talk to real people who care about getting it right.</p>
+      </div>
+    </div>
+    <div class="why-cta-row">
+      <a href="#contact" class="btn btn-gold">Start Your Project Today <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-label">Our Process</div>
+    <h2 class="section-title">From First Call to Final Walkthrough</h2>
+    <p class="section-sub">We make commercial construction simple with a proven four-step process that keeps your project on track.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Consultation</h3>
+        <p>We start with a conversation about your project goals, budget, and timeline to determine if we're the right fit.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Scope & Planning</h3>
+        <p>Our team develops a detailed plan including designs, materials, scheduling, and a transparent cost breakdown.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Build Execution</h3>
+        <p>We break ground and manage every phase — coordinating trades, pulling permits, and keeping you updated weekly.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>Final Delivery</h3>
+        <p>A thorough walkthrough ensures everything meets your standards. We don't consider it done until you're satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS ==================== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Projects Built With Precision</h2>
+    <p class="section-sub">A selection of commercial spaces we've brought to life across the Treasure Valley.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-img">Office Build-Out</div>
+        <div class="project-overlay">
+          <h4>Corporate Office Build-Out</h4>
+          <p>Boise, ID — 8,500 sq ft</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-img">Retail Renovation</div>
+        <div class="project-overlay">
+          <h4>Retail Space Renovation</h4>
+          <p>Meridian, ID — 4,200 sq ft</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-img">Tenant Improvement</div>
+        <div class="project-overlay">
+          <h4>Medical Office TI</h4>
+          <p>Nampa, ID — 6,000 sq ft</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-img">Restaurant Build</div>
+        <div class="project-overlay">
+          <h4>Restaurant Build-Out</h4>
+          <p>Eagle, ID — 3,800 sq ft</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-img">Industrial Space</div>
+        <div class="project-overlay">
+          <h4>Warehouse Conversion</h4>
+          <p>Boise, ID — 12,000 sq ft</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-img">Custom Home</div>
+        <div class="project-overlay">
+          <h4>Custom Residence</h4>
+          <p>Eagle, ID — 4,500 sq ft</p>
+        </div>
+      </div>
+    </div>
+    <div class="projects-cta">
+      <a href="#contact" class="btn btn-primary">Discuss Your Project With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIAL ==================== -->
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote class="testimonial-quote">"Building With Valor delivered exactly what they promised. Communication was excellent throughout, the project finished on schedule, and the quality of workmanship exceeded what we expected. They made a complex tenant improvement feel seamless."</blockquote>
+      <p class="testimonial-author"><strong>Commercial Property Owner</strong> — Boise, Idaho</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-content">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-sub">Everything you need to know before starting your commercial construction project.</p>
+        <a href="#contact" class="btn btn-primary">Still Have Questions? Let's Talk</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What types of commercial projects do you handle?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a">We specialize in tenant improvements, commercial build-outs, office renovations, retail spaces, restaurant builds, medical offices, warehouse conversions, and general commercial contracting across the Treasure Valley.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Do you handle tenant improvements?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a">Yes, tenant improvements are one of our core services. We work with property owners, landlords, and businesses to customize commercial spaces — from initial design coordination through construction and final finishes.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            How do you approach budgets and timelines?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a">We start with a thorough scope of work to build accurate estimates before any work begins. Our project management approach includes detailed scheduling, regular budget tracking, and proactive communication if anything changes. No surprises.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            What areas do you serve?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a">We serve the entire Treasure Valley including Boise, Meridian, Nampa, Eagle, Kuna, Star, and surrounding areas in southwestern Idaho.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            How do we get started?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-a">Fill out the contact form below or call us at (208) 901-0911. We'll set up a free initial consultation to discuss your project, answer your questions, and determine the best path forward. There's no obligation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA / CONTACT ==================== -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="final-cta-content">
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Ready to Build Something Great?</h2>
+        <p>Whether you're planning a tenant improvement, a full build-out, or a commercial renovation — we're here to make it happen. Request a free consultation and let's discuss how we can help you move forward.</p>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.6)">No high-pressure sales. Just a straightforward conversation about your project, your goals, and how we can help.</p>
+        <div class="contact-direct">
+          <a href="tel:2089010911">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (208) 901-0911
+          </a>
+          <a href="mailto:chad@buildingwithvalor.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            chad@buildingwithvalor.com
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Boise & Treasure Valley, Idaho
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request a Free Consultation</h3>
+        <p class="form-sub">Tell us about your project and we'll get back to you within 24 hours.</p>
+        <form onsubmit="event.preventDefault();alert('Thank you! We will be in touch within 24 hours.');">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your Company">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(208) 555-1234">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type">
+              <option value="">Select a project type...</option>
+              <option value="tenant-improvement">Tenant Improvement</option>
+              <option value="commercial-buildout">Commercial Build-Out</option>
+              <option value="commercial-remodel">Commercial Remodel</option>
+              <option value="custom-home">Custom Home</option>
+              <option value="general-contracting">General Contracting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="details">Project Details</label>
+            <textarea id="details" name="details" placeholder="Tell us about your project — location, size, timeline, budget range, or any other details that would be helpful."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Request My Free Consultation</button>
+          <p class="form-note">No obligation. We respond within 24 hours on business days.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Building With Valor</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Building With Valor. All rights reserved. Licensed & Insured. Boise & Treasure Valley, Idaho.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== STICKY MOBILE CTA ==================== -->
+<div class="sticky-cta">
+  <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+</div>
+
+<script>
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
