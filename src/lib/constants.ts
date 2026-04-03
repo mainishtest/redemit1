@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
 
 export const NAV_ITEMS = [
   { label: 'Services', href: '/services' },
-  { label: 'Our Work', href: '/case-studies' },
+  { label: 'Portfolio', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Resources', href: '/resources' },
 ] as const
