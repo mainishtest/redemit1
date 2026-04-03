@@ -46,8 +46,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:v
 .btn-primary:hover{background:var(--forest-deep);transform:translateY(-1px);box-shadow:0 4px 16px rgba(44,74,62,0.3)}
 .btn-outline{background:transparent;color:var(--forest);border:2px solid var(--forest)}
 .btn-outline:hover{background:var(--forest);color:var(--white)}
-.btn-gold{background:var(--gold);color:var(--forest-deep)}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,0.35)}
+.btn-gold{background:var(--gold);color:var(--forest-deep);box-shadow:0 2px 12px rgba(201,168,76,0.35)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,0.5)}
 .btn-white{background:var(--white);color:var(--forest-deep)}
 .btn-white:hover{background:var(--cream);transform:translateY(-1px)}
 .btn-nav{padding:10px 20px;font-size:.85rem}
@@ -131,7 +131,10 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:v
 .projects{padding:100px 0;background:var(--white)}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
 .project-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--sage);cursor:pointer;group:true}
-.project-card-img{width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,var(--sage) 0%,var(--forest) 100%);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.project-card-img{width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,var(--sage) 0%,var(--forest) 100%)}
+.project-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.project-card:hover .project-card-img img{transform:scale(1.05)}
+.project-card-label{position:absolute;top:14px;left:14px;background:rgba(30,53,41,0.85);color:var(--white);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:6px;backdrop-filter:blur(4px)}
 .project-overlay{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(transparent,rgba(30,53,41,0.9));color:var(--white);transform:translateY(10px);opacity:0;transition:all .3s}
 .project-card:hover .project-overlay{transform:translateY(0);opacity:1}
 .project-overlay h4{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;margin-bottom:4px}
@@ -250,7 +253,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:v
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         (208) 901-0911
       </a>
-      <a href="#contact" class="btn btn-primary btn-nav">Get a Consultation</a>
+      <a href="#contact" class="btn btn-gold btn-nav">Get a Consultation</a>
     </div>
     <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -482,42 +485,48 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:v
     <p class="section-sub">A selection of commercial spaces we've brought to life across the Treasure Valley.</p>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-card-img">Office Build-Out</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=450&fit=crop" alt="Modern office build-out" loading="lazy"></div>
+        <span class="project-card-label">Office Build-Out</span>
         <div class="project-overlay">
           <h4>Corporate Office Build-Out</h4>
           <p>Boise, ID — 8,500 sq ft</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-card-img">Retail Renovation</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=450&fit=crop" alt="Retail renovation" loading="lazy"></div>
+        <span class="project-card-label">Retail Renovation</span>
         <div class="project-overlay">
           <h4>Retail Space Renovation</h4>
           <p>Meridian, ID — 4,200 sq ft</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-card-img">Tenant Improvement</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=450&fit=crop" alt="Medical office tenant improvement" loading="lazy"></div>
+        <span class="project-card-label">Tenant Improvement</span>
         <div class="project-overlay">
           <h4>Medical Office TI</h4>
           <p>Nampa, ID — 6,000 sq ft</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-card-img">Restaurant Build</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=450&fit=crop" alt="Restaurant build-out" loading="lazy"></div>
+        <span class="project-card-label">Restaurant Build</span>
         <div class="project-overlay">
           <h4>Restaurant Build-Out</h4>
           <p>Eagle, ID — 3,800 sq ft</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-card-img">Industrial Space</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1565610222536-ef125c59da2e?w=600&h=450&fit=crop" alt="Industrial warehouse space" loading="lazy"></div>
+        <span class="project-card-label">Industrial Space</span>
         <div class="project-overlay">
           <h4>Warehouse Conversion</h4>
           <p>Boise, ID — 12,000 sq ft</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-card-img">Custom Home</div>
+        <div class="project-card-img"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=450&fit=crop" alt="Custom home build" loading="lazy"></div>
+        <span class="project-card-label">Custom Home</span>
         <div class="project-overlay">
           <h4>Custom Residence</h4>
           <p>Eagle, ID — 4,500 sq ft</p>
