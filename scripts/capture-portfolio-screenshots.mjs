@@ -19,6 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = resolve(__dirname, '..', 'public', 'images', 'portfolio');
 
 const sites = [
+  { slug: 'tenx-and-company',    url: 'https://www.tenxandcompany.com' },
   { slug: 'building-with-valor', url: 'https://www.buildingwithvalor.com' },
   { slug: 'true-gritt-sports',   url: 'https://truegrittsports.org' },
   { slug: 'mainish',             url: 'https://www.mainish.com' },

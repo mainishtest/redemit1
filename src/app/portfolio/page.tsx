@@ -25,6 +25,20 @@ interface PortfolioProject {
 
 const projects: PortfolioProject[] = [
   {
+    name: 'TenX & Company',
+    slug: 'tenx-and-company',
+    url: 'https://www.tenxandcompany.com',
+    industry: 'General Contractor',
+    type: 'Client Website',
+    location: 'Kuna, Idaho',
+    description: 'Premium website for one of Idaho\'s top general contractors, serving Boise, Eagle, and Meridian. Built to position TenX as the trusted choice for commercial construction, custom homes, and farm & ag builds — with a clean free-estimate funnel.',
+    services: ['Website Design & Build', 'Brand Positioning', 'Lead Capture'],
+    gradient: 'from-[#1a1410]/95 via-[#2d1f15]/90 to-[#3d2817]/85',
+    textColor: 'text-amber-100',
+    accentColor: 'bg-amber-400',
+    featured: true,
+  },
+  {
     name: 'Building With Valor',
     slug: 'building-with-valor',
     url: 'https://www.buildingwithvalor.com',
