@@ -67,7 +67,7 @@ function HeroSection() {
       />
 
       <div className="relative section-padding">
-        <div className="section-container pt-[120px] pb-16 md:pt-[140px] md:pb-24">
+        <div className="section-container pt-[100px] pb-10 md:pt-[120px] md:pb-14">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Copy + inline form */}
             <div>
@@ -82,7 +82,7 @@ function HeroSection() {
                 Your Roof Protects Everything. We Protect Your Roof.
               </h1>
 
-              <p className="mt-6 max-w-[520px] text-body-lg text-txt-secondary leading-relaxed text-pretty">
+              <p className="mt-4 max-w-[520px] text-body-lg text-txt-secondary leading-relaxed text-pretty">
                 Free inspections. Honest estimates. Fast repairs. We&apos;re the {REGION}&apos;s trusted local roofers — licensed, insured, and here to help with everything from a small leak to a full replacement.
               </p>
 
@@ -162,7 +162,7 @@ function ProblemSection() {
 
   return (
     <section className="section-padding border-t border-surface-300">
-      <div className="section-container py-16 md:py-24">
+      <div className="section-container py-12 md:py-16">
         <div className="max-w-[800px] mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50">
@@ -180,7 +180,7 @@ function ProblemSection() {
             Most homeowners in {CITY} know something&apos;s off with their roof — but they put it off because they don&apos;t know where to start.
           </p>
 
-          <div className="mt-10 space-y-6">
+          <div className="mt-8 space-y-6">
             {problems.map((item) => (
               <div
                 key={item.title}
@@ -222,7 +222,7 @@ function PainSection() {
   return (
     <section className="section-dark section-padding">
       <div className="section-container section-spacing">
-        <div className="text-center max-w-[700px] mx-auto mb-14">
+        <div className="text-center max-w-[700px] mx-auto mb-8">
           <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
             The Real Cost of Waiting
           </p>
@@ -307,13 +307,13 @@ function SolutionSection() {
     <section className="section-padding">
       <div className="section-container section-spacing">
         <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
             How We Help
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
             Simple, Honest Roofing — Start to Finish
           </h2>
-          <p className="mt-5 text-body-lg text-txt-secondary text-pretty">
+          <p className="mt-4 text-body-lg text-txt-secondary text-pretty">
             No runaround. No mystery pricing. Just a straight answer about your roof and a plan to fix it right the first time.
           </p>
         </div>
@@ -365,7 +365,7 @@ function ServicesSection() {
       <div className="section-container section-spacing">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+            <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
               What We Do
             </p>
             <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -447,8 +447,8 @@ function TrustSection() {
   return (
     <section className="section-padding">
       <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+        <div className="text-center max-w-[680px] mx-auto mb-8">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
             Real Reviews
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -511,8 +511,8 @@ function ProcessSection() {
   return (
     <section className="section-dark section-padding">
       <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-14">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+        <div className="text-center max-w-[680px] mx-auto mb-8">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
             How It Works
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -549,9 +549,9 @@ function ProcessSection() {
 function OfferSection() {
   return (
     <section className="section-padding bg-surface-100">
-      <div className="section-container py-16 md:py-24">
+      <div className="section-container py-12 md:py-16">
         <div className="max-w-[700px] mx-auto text-center">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
             Limited Availability
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -589,7 +589,7 @@ function CTASection() {
       <div className="section-container section-spacing">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
-            <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+            <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
               Your Free Inspection
             </p>
             <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -677,8 +677,8 @@ function FAQSection() {
   return (
     <section className="section-padding">
       <div className="section-container section-spacing">
-        <div className="text-center max-w-[680px] mx-auto mb-16">
-          <p className="text-overline uppercase text-brand-400 tracking-widest mb-4">
+        <div className="text-center max-w-[680px] mx-auto mb-8">
+          <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
             Questions
           </p>
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
@@ -715,7 +715,7 @@ function FAQSection() {
 function FinalCTASection() {
   return (
     <section className="section-padding bg-surface-100">
-      <div className="section-container py-20 md:py-28">
+      <div className="section-container py-12 md:py-16">
         <div className="text-center max-w-[640px] mx-auto">
           <h2 className="text-display-sm text-txt-primary text-balance sm:text-display">
             Don&apos;t Wait Until the Next Storm

@@ -41,7 +41,7 @@ export default function CaseStudyPage({ params }: Props) {
     <>
       {/* Header */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-12 md:pt-44 md:pb-16">
+        <div className="section-container pt-28 pb-8 md:pt-36 md:pb-12">
           <Link
             href="/case-studies"
             className="inline-flex items-center gap-1.5 text-body-sm text-txt-muted hover:text-txt-primary transition-colors mb-10"
@@ -50,7 +50,7 @@ export default function CaseStudyPage({ params }: Props) {
             Back to Case Studies
           </Link>
 
-          <div className="flex flex-wrap gap-2 mb-5">
+          <div className="flex flex-wrap gap-2 mb-3">
             {study.tags.map((tag) => (
               <Badge key={tag} variant="outline">{tag}</Badge>
             ))}
@@ -62,7 +62,7 @@ export default function CaseStudyPage({ params }: Props) {
           <h1 className="mt-3 text-display-sm text-txt-primary text-balance md:text-display-lg">
             {study.title}
           </h1>
-          <p className="mt-5 text-body-lg text-txt-secondary max-w-[680px]">
+          <p className="mt-4 text-body-lg text-txt-secondary max-w-[680px]">
             {study.description}
           </p>
         </div>
@@ -133,7 +133,7 @@ export default function CaseStudyPage({ params }: Props) {
             <p className="mt-5 text-body-lg text-txt-secondary">
               Let&apos;s talk about what&apos;s possible for your business.
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
                   Get Your Free Audit

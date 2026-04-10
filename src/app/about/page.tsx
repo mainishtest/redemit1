@@ -52,13 +52,13 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
+        <div className="section-container pt-28 pb-10 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">About Us</p>
+            <p className="text-overline uppercase text-txt-muted tracking-widest mb-3">About Us</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               We Help Local Businesses Get More Customers
             </h1>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               Redemit One exists because most marketing agencies don&apos;t understand local business. They sell vanity metrics and generic packages. We build systems that actually fill your schedule.
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
       <div className="section-padding"><div className="section-container section-divider" /></div>
 
       {/* Story */}
-      <section className="section-padding py-20 md:py-28">
+      <section className="section-padding py-12 md:py-16">
         <div className="section-container max-w-[680px]">
           <h2 className="text-heading-lg text-txt-primary">The Short Version</h2>
           <div className="mt-6 space-y-5 text-body-lg text-txt-secondary leading-relaxed">
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="section-padding py-20 bg-surface-0">
+      <section className="section-padding py-12 bg-surface-0">
         <div className="section-container">
           <div className="accent-line mb-10" />
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
@@ -111,7 +111,7 @@ export default function AboutPage() {
             label="Our Principles"
             title="What We Believe"
             align="left"
-            className="max-w-lg"
+            className="max-w-lg mb-8"
           />
 
           <div className="mt-14 grid gap-px bg-surface-300/30 rounded-xl overflow-hidden md:grid-cols-3">
@@ -140,6 +140,7 @@ export default function AboutPage() {
             label="The Team"
             title="Real Marketers. Not Junior Account Managers."
             description="Your business is never handed off to someone learning on the job. Every person at Redemit One has hands-on experience driving leads for local businesses."
+            className="mb-8"
           />
 
           {/* Team network visual */}
@@ -174,7 +175,7 @@ export default function AboutPage() {
             <p className="mt-5 text-body-lg text-txt-secondary">
               Get a free audit of your website and marketing. No fluff, no sales pitch — just a clear look at where you&apos;re leaving money on the table.
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
                   Get Your Free Audit

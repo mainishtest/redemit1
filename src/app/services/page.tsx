@@ -30,13 +30,13 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
+        <div className="section-container pt-28 pb-10 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Our Services</p>
+            <p className="text-overline uppercase text-txt-muted tracking-widest mb-3">Our Services</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               Everything Your Business Needs to Grow
             </h1>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               We don&apos;t do one thing. We build your entire marketing system — website, ads, lead capture, and follow-up — so customers keep coming in.
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
       <div className="section-padding"><div className="section-container section-divider" /></div>
 
       {/* Services Detail */}
-      <section className="section-padding py-20 md:py-28">
+      <section className="section-padding py-12 md:py-16">
         <div className="section-container space-y-24 md:space-y-32">
           {SERVICES.map((service, i) => {
             const Icon = iconMap[service.icon]
@@ -62,7 +62,7 @@ export default function ServicesPage() {
                 <div className={`grid gap-12 lg:grid-cols-2 lg:gap-20 items-start ${isEven ? '' : 'lg:[direction:rtl]'}`}>
                   {/* Content */}
                   <div className={isEven ? '' : 'lg:[direction:ltr]'}>
-                    <div className="flex items-center gap-3 mb-5">
+                    <div className="flex items-center gap-3 mb-3">
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-100 border border-surface-300/40 text-txt-muted">
                         {Icon && <Icon className="h-[18px] w-[18px]" />}
                       </div>
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                       {service.title}
                     </h2>
 
-                    <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed">
+                    <p className="mt-3 text-body-lg text-txt-secondary leading-relaxed">
                       {service.longDescription}
                     </p>
 
@@ -126,7 +126,7 @@ export default function ServicesPage() {
             <p className="mt-5 text-body-lg text-txt-secondary">
               Get a free audit of your website and marketing. We&apos;ll show you exactly where you&apos;re losing leads and how to fix it.
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
                   Get Your Free Audit

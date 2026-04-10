@@ -180,7 +180,7 @@ export default function VibeCodingCheatCodePage() {
         <div className="absolute top-0 right-1/4 h-[500px] w-[600px] bg-brand-400/[0.03] rounded-full blur-[120px]" />
 
         <div className="relative section-padding">
-          <div className="section-container pt-32 pb-12 md:pt-40 md:pb-16">
+          <div className="section-container pt-28 pb-8 md:pt-36 md:pb-12">
             <Link
               href="/resources"
               className="inline-flex items-center gap-1.5 text-body-sm text-txt-muted hover:text-txt-primary transition-colors mb-8"
@@ -195,7 +195,7 @@ export default function VibeCodingCheatCodePage() {
                 <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
                   The &ldquo;VIBE Coding&rdquo; System Smart Founders Are Using to Build Faster Than Everyone Else
                 </h1>
-                <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed max-w-[540px]">
+                <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed max-w-[540px]">
                   Turn ideas into live funnels, offers, and revenue-generating assets using AI — without developers, delays, or overthinking.
                 </p>
 
@@ -223,7 +223,7 @@ export default function VibeCodingCheatCodePage() {
           Centered narrow text block
           Generous spacing, larger body text
           ───────────────────────────────────── */}
-      <section className="section-padding py-20 md:py-28">
+      <section className="section-padding py-12 md:py-16">
         <div className="section-container max-w-[680px] mx-auto">
           <div className="space-y-6 text-body-lg leading-relaxed">
             <p className="text-display-sm text-txt-primary leading-tight">
@@ -324,19 +324,19 @@ export default function VibeCodingCheatCodePage() {
           Centered, visual divider, dark for impact
           Introduce VIBE as the system
           ───────────────────────────────────── */}
-      <section className="section-dark section-padding py-20 md:py-28">
+      <section className="section-dark section-padding py-12 md:py-16">
         <div className="section-container">
           {/* Visual divider — accent line */}
-          <div className="accent-line max-w-[200px] mx-auto mb-12" />
+          <div className="accent-line max-w-[200px] mx-auto mb-8" />
 
           <div className="mx-auto max-w-[720px] text-center">
-            <p className="text-overline uppercase text-brand-400 tracking-widest mb-5">
+            <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">
               The System
             </p>
             <h2 className="text-display-sm text-txt-primary md:text-display">
               VIBE Coding Is Your Execution Shortcut
             </h2>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               VIBE Coding is a system for turning ideas into live assets — fast. It combines AI, structured thinking, and rapid execution to eliminate friction and compress build time dramatically.
             </p>
             <p className="mt-4 text-body-lg text-txt-primary font-medium">
@@ -433,7 +433,7 @@ export default function VibeCodingCheatCodePage() {
           High contrast, centered
           Inline email form
           ───────────────────────────────────── */}
-      <section className="section-dark section-padding py-20 md:py-28" id="get-access">
+      <section className="section-dark section-padding py-12 md:py-16" id="get-access">
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-display-sm text-txt-primary md:text-display">
@@ -477,7 +477,7 @@ export default function VibeCodingCheatCodePage() {
           Full-width, authority-driven
           Clean and simple
           ───────────────────────────────────── */}
-      <section className="section-padding py-20 md:py-28 bg-surface-0">
+      <section className="section-padding py-12 md:py-16 bg-surface-0">
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-400 text-caption font-medium mb-6">
@@ -504,7 +504,7 @@ export default function VibeCodingCheatCodePage() {
               ))}
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl" className="shadow-glow-sm">
                   Book Your Strategy Call

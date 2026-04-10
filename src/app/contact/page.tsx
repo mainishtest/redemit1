@@ -20,13 +20,13 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
+        <div className="section-container pt-28 pb-10 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Get Started</p>
+            <p className="text-overline uppercase text-txt-muted tracking-widest mb-3">Get Started</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               Get Your Free Marketing Audit
             </h1>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               Tell us about your business and we&apos;ll show you exactly where you&apos;re losing leads — and how to fix it. No commitment, no pressure.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
       <div className="section-padding"><div className="section-container section-divider" /></div>
 
       {/* Form + Info */}
-      <section className="section-padding py-20 md:py-28">
+      <section className="section-padding py-12 md:py-16">
         <div className="section-container">
           <div className="grid gap-14 lg:grid-cols-5 lg:gap-20">
             {/* Info Side */}

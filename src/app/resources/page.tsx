@@ -74,13 +74,13 @@ export default function ResourcesPage() {
         <div className="absolute top-0 left-1/3 h-[400px] w-[500px] bg-brand-400/[0.02] rounded-full blur-[120px]" />
 
         <div className="relative section-padding">
-          <div className="section-container pt-36 pb-12 md:pt-44 md:pb-16">
+          <div className="section-container pt-28 pb-8 md:pt-36 md:pb-12">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-overline uppercase text-brand-400 tracking-widest mb-5">Free Resources — No Fluff</p>
+              <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">Free Resources — No Fluff</p>
               <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
                 The Same Playbooks We Use for Our Clients
               </h1>
-              <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+              <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
                 Practical guides on running ads, building landing pages, and generating leads. Not theory — the exact systems we use to help local businesses get more customers. Free.
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Strategy Call CTA */}
-      <section className="section-padding py-20 md:py-28 bg-surface-0">
+      <section className="section-padding py-12 md:py-16 bg-surface-0">
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-400 text-caption font-medium mb-6">
@@ -219,7 +219,7 @@ export default function ResourcesPage() {
                 <span className="text-body-sm text-txt-secondary">Actionable next steps</span>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="mt-6">
               <Link href="/contact">
                 <Button variant="primary" size="xl" className="shadow-glow-sm">
                   Get Your Free Audit

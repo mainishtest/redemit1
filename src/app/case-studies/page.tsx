@@ -22,13 +22,13 @@ export default function CaseStudiesPage() {
     <>
       {/* Hero */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
+        <div className="section-container pt-28 pb-10 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Case Studies</p>
+            <p className="text-overline uppercase text-txt-muted tracking-widest mb-3">Case Studies</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               Proof Over Promises
             </h1>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               We let the numbers do the talking. Here&apos;s what happens when your website, ads, and lead systems actually work together.
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
       <div className="section-padding"><div className="section-container section-divider" /></div>
 
       {/* Case Studies Grid */}
-      <section className="section-padding py-20">
+      <section className="section-padding py-12">
         <div className="section-container">
           <div className="space-y-6">
             {CASE_STUDIES.map((study) => (
@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
             <p className="mt-5 text-body-lg text-txt-secondary">
               Every engagement starts with a free audit. We&apos;ll show you exactly where you&apos;re losing leads and how to fix it.
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
                   Get Your Free Audit

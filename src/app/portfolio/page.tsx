@@ -233,25 +233,23 @@ export default function PortfolioPage() {
     <>
       {/* Hero */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-16 md:pt-44 md:pb-20">
+        <div className="section-container pt-28 pb-10 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline uppercase text-txt-muted tracking-widest mb-5">Our Work</p>
+            <p className="text-overline uppercase text-txt-muted tracking-widest mb-3">Our Work</p>
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               Websites That Get Results
             </h1>
-            <p className="mt-6 text-body-lg text-txt-secondary leading-relaxed">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed">
               From local contractors to tech startups — every site we build is designed to look great, load fast, and turn visitors into customers.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="section-padding"><div className="section-container section-divider" /></div>
-
       {/* Client Projects */}
-      <section className="section-padding py-20 md:py-28">
+      <section className="section-padding py-10 md:py-14 border-t border-light-300/60">
         <div className="section-container">
-          <div className="mb-12">
+          <div className="mb-8">
             <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">Client Projects</p>
             <h2 className="text-heading-lg text-txt-primary">Websites We&apos;ve Built & Launched</h2>
             <p className="mt-3 text-body text-txt-secondary max-w-xl">
@@ -268,9 +266,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Demo Projects */}
-      <section className="section-padding py-20 md:py-28 bg-light-100">
+      <section className="section-padding py-10 md:py-14 bg-light-100">
         <div className="section-container">
-          <div className="mb-12">
+          <div className="mb-8">
             <p className="text-overline uppercase text-brand-400 tracking-widest mb-3">Demo Concepts</p>
             <h2 className="text-heading-lg text-txt-primary">Landing Pages We&apos;ve Designed</h2>
             <p className="mt-3 text-body text-txt-secondary max-w-xl">
@@ -287,16 +285,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-spacing section-padding">
+      <section className="section-padding py-14 md:py-20">
         <div className="section-container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-display-sm text-txt-primary md:text-display">
               Want a Website That Actually Works?
             </h2>
-            <p className="mt-5 text-body-lg text-txt-secondary">
+            <p className="mt-4 text-body-lg text-txt-secondary">
               Get a free audit of your current site. We&apos;ll show you what&apos;s working, what&apos;s not, and exactly how to fix it.
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <Link href="/contact">
                 <Button variant="primary" size="xl">
                   Get Your Free Audit

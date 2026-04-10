@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <section className="section-padding">
-      <div className="section-container max-w-[680px] pt-36 pb-24 md:pt-44 md:pb-32">
+      <div className="section-container max-w-[680px] pt-28 pb-14 md:pt-36 md:pb-20">
         <h1 className="text-display-sm text-txt-primary">Terms of Service</h1>
         <div className="mt-8 space-y-7 text-body text-txt-secondary leading-relaxed">
           <p className="text-caption text-txt-muted">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>

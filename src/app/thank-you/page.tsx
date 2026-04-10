@@ -14,7 +14,7 @@ export default function ThankYouPage() {
     <>
       {/* Confirmation */}
       <section className="section-padding">
-        <div className="section-container pt-36 pb-12 md:pt-44 md:pb-16">
+        <div className="section-container pt-28 pb-8 md:pt-36 md:pb-12">
           <div className="mx-auto max-w-2xl text-center">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-400/10 text-brand-400 mb-6">
               <CheckCircle2 className="h-7 w-7" />
@@ -22,7 +22,7 @@ export default function ThankYouPage() {
             <h1 className="text-display-sm text-txt-primary text-balance md:text-display-lg">
               You&apos;re In. Now Book Your Call.
             </h1>
-            <p className="mt-5 text-body-lg text-txt-secondary leading-relaxed max-w-lg mx-auto">
+            <p className="mt-4 text-body-lg text-txt-secondary leading-relaxed max-w-lg mx-auto">
               Your application has been received. Pick a time below that works for you and we&apos;ll be ready to dive into your growth strategy.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function ThankYouPage() {
       <div className="section-padding"><div className="section-container section-divider" /></div>
 
       {/* Calendly Embed */}
-      <section className="section-padding py-16 md:py-24">
+      <section className="section-padding py-12 md:py-16">
         <div className="section-container">
           <div className="mx-auto max-w-3xl">
             <div className="text-center mb-10">
@@ -60,7 +60,7 @@ export default function ThankYouPage() {
       </section>
 
       {/* Fallback */}
-      <section className="section-padding pb-24">
+      <section className="section-padding pb-12">
         <div className="section-container">
           <div className="mx-auto max-w-lg text-center">
             <p className="text-body-sm text-txt-muted">
