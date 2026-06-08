@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, BarChart3, Target, GitBranch, PenTool } from 'lucide-react'
+import { ArrowRight, BarChart3, Target, GitBranch, PenTool, Video } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'
 import { MediaBuyingVisual, OfferCreationVisual, FunnelStrategyVisual, CreativeCopyVisual } from '@/components/illustrations/service-visuals'
 import { SERVICES } from '@/lib/constants'
@@ -69,6 +69,29 @@ export function ServicesOverview() {
             )
           })}
         </div>
+
+        {/* Video Marketing Feature Banner */}
+        <Link
+          href="/video-marketing"
+          className="group mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-xl bg-brand-500/8 border border-brand-500/20 p-8 md:p-10 transition-all duration-300 hover:bg-brand-500/12"
+        >
+          <div className="flex items-start gap-5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-500/15 text-brand-500">
+              <Video className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-overline uppercase text-brand-500 tracking-widest mb-1">New Service</p>
+              <h3 className="text-heading-sm text-ink-primary">Video Marketing</h3>
+              <p className="mt-1.5 text-body-sm text-ink-secondary leading-relaxed max-w-xl">
+                We film, produce, and release professional marketing videos for your business — then distribute them across YouTube, Facebook, Instagram, TikTok, and more. Packages from $1k/video.
+              </p>
+            </div>
+          </div>
+          <span className="inline-flex shrink-0 items-center gap-1.5 text-body-sm font-medium text-brand-500 group-hover:text-brand-600 transition-colors duration-300">
+            See pricing
+            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </Link>
       </div>
     </section>
   )
