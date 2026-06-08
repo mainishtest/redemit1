@@ -93,6 +93,14 @@ export function Footer() {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link
+                      href="/video-marketing"
+                      className="text-body-sm text-txt-secondary hover:text-txt-primary transition-colors duration-200"
+                    >
+                      Video Marketing
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

@@ -18,6 +18,7 @@ export const SITE_CONFIG = {
 
 export const NAV_ITEMS = [
   { label: 'Services', href: '/services' },
+  { label: 'Video Marketing', href: '/video-marketing' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Resources', href: '/resources' },
@@ -93,6 +94,60 @@ export const SERVICES = [
     platforms: [],
   },
 ] as const
+
+export const VIDEO_PRICING = [
+  {
+    id: 'single',
+    videos: 1,
+    pricePerVideo: 5000,
+    total: 5000,
+    label: 'Starter',
+    description: 'Perfect for testing video marketing or a single campaign launch.',
+    highlight: false,
+  },
+  {
+    id: 'double',
+    videos: 2,
+    pricePerVideo: 4000,
+    total: 8000,
+    label: 'Growth',
+    description: 'Two professionally produced marketing videos to build momentum.',
+    highlight: false,
+  },
+  {
+    id: 'quad',
+    videos: 4,
+    pricePerVideo: 3000,
+    total: 12000,
+    label: 'Pro',
+    description: 'Four videos to cover your core services and dominate your market.',
+    highlight: true,
+  },
+  {
+    id: 'six',
+    videos: 6,
+    pricePerVideo: 2000,
+    total: 12000,
+    label: 'Scale',
+    description: 'Six videos for consistent brand presence across all channels.',
+    highlight: false,
+  },
+  {
+    id: 'twelve',
+    videos: 12,
+    pricePerVideo: 1000,
+    total: 12000,
+    label: 'Dominate',
+    description: 'Twelve videos for full-year content coverage and maximum reach.',
+    highlight: false,
+  },
+] as const
+
+export const VIDEO_SYNDICATION = {
+  pricePerVideo: 500,
+  description: 'We distribute your finished video across YouTube, Facebook, Instagram Reels, TikTok, LinkedIn, and Google Business — putting it in front of customers everywhere they are.',
+  platforms: ['YouTube', 'Facebook', 'Instagram Reels', 'TikTok', 'LinkedIn', 'Google Business'],
+} as const
 
 export const RESULTS = [
   { metric: '150+', label: 'Local Businesses Helped' },
